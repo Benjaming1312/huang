@@ -8,7 +8,7 @@ module.exports = function () {
     // Show image per view
     slidesPerView: 'auto',
     // Space
-    spaceBetween: 30,
+    spaceBetween: 0,
     // Grab
     grabCursor: true,
     // Loop
@@ -21,10 +21,10 @@ module.exports = function () {
     // effect
     effect: 'fade',
     // navigation
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev'
+    // },
     // Dot pagination
     pagination: {
       el: '.swiper-pagination',
@@ -44,7 +44,12 @@ module.exports = function () {
   }
 
 
-  const swiper = new Swiper('.swiper-container', options)
+  if ($(window).width() > 768) {
+    const swiper = new Swiper('.swiper-container.hidden-xs', options)
+  }
+  else {
+    const swiper = new Swiper('.swiper-container.visible-xs', options)
+  }
 
 
   // Text-content

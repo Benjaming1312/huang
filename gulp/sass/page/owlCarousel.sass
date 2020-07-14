@@ -3,7 +3,21 @@
   width: 100%
   position: relative
   +trans
-  margin-bottom: 42px
+  .col-xs-12
+    padding: 0
+  .swiper-pagination
+    text-align: right
+    padding-right: 30px
+    padding-bottom: 15px
+    @media #{$mobile}
+      padding-right: 15px
+    .swiper-pagination-bullet
+      background: white
+      opacity: 1
+      &.swiper-pagination-bullet-active
+        background: #d7374b
+
+
   .text-content
     position: absolute
     top: 25%
@@ -17,6 +31,8 @@
       padding: 30px
       h4
         line-height: 30px
+  img
+    width: 100%
   // @media #{$mobile}
   //   margin-top: 65px
   // .col-xs-12

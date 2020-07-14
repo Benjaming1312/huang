@@ -1,58 +1,69 @@
 .idx.section-1
-  background: #f4f4f2
-  padding: 55px 50px
   @media #{$mobile}
-    padding: 25px 20px
+    padding: 0
   .row
     +max-width
-    display: flex
+    padding: 45px 0
     @media #{$mobile}
-      flex-wrap: wrap
-    .text
-      background: white
-      padding: 25px 20px
-      position: relative
-      @media #{$mobile}
-        padding-bottom: 0
-    .module-title
-      &::after
-        width: 100%
-    p
-      color: #404041
-      font-size: 18px
-      letter-spacing: 3px
-      font-weight: 300
+      padding: 25px 0
+      margin-bottom: 30px
+  >.content
+    border-bottom: 1px solid #d7374b
+    @media #{$mobile}
+      padding: 0 15px
+    &:nth-of-type(1)
+      background: #eaeaea
+    &:nth-of-type(2)
+      background: #bfbfbf
+    &:nth-of-type(3)
+      background: #a3a3a3
+      border: 0
+  .img
+    @media #{$mobile}
+      text-align: center
+      margin-bottom: 30px
+  .text
+    .title
+      margin-top: 0
+      font-size: 29px
+      font-weight: bold
+      color: #e5516a
       margin-bottom: 15px
-      line-height: 30px
-    .more
-      position: absolute
-      width: 100%
-      bottom: -15px
-      left: 0px
-      text-align: right
-      @media #{$mobile}
+  ul
+    list-style: none
+    padding-left: 0
+    li
+      color: $color-b
+      line-height: 50px
+      font-size: 17px
+      font-weight: 500
+      &::before
+        content: ''
+        display: inline-block
+        $w: 8px
+        width: $w
+        height: $w
+        background: #e5516a
+        border-radius: 50%
+        margin-right: 7.5px
         position: relative
-        margin-top: 15px
-        bottom: -15px
-        right: -20px
-        left: initial
-      a.btn
-        margin-bottom: 0
-        margin-right: 0
-        width: 70%
-        height: 45px
-        background: #cecece
-        border: 0
-        font-weight: 400
-        +trans
-        @media #{$mobile}
-          width: 90%
-        &:hover
-          &::after
-            transform: translateX(15px)
-        &::after
-          content: '>'
-          font-size: 18px
-          position: absolute
-          right: 30px
-          +trans
+        top: -2px
+  p
+    font-size: 17px
+    line-height: 50px
+    font-weight: 500
+    color: $color-b
+  .btn
+    position: absolute
+    right: 60px
+    bottom: 25px
+    background-size: contain!important
+    background-repeat: no-repeat!important
+    background-position: center!important
+    border: 0
+    +trans
+    @media #{$mobile}
+      position: static
+      float: right
+    &:hover
+      opacity: 0.7

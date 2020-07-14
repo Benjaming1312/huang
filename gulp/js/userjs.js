@@ -9,12 +9,15 @@
 const aosInit = require('./aos')
 const gotop = require('./scrollTo')
 const swiperJS = require('./swiper/index.js')
+const scollFn = require('./scrollTrigger/index.js')
+const indexNews = require('./indexNews/index')
 
 $(function () {
   aosInit()
   // owlFn()
   gotop()
   swiperJS()
+  indexNews()
 })
 
 // owlFn()
