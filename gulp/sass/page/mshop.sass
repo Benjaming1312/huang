@@ -26,3 +26,32 @@
 .module-fav,
 .module-misc
   display: none
+
+.module-.module-
+  margin-top: 30px
+  margin-bottom: 30px
+  @media #{$mobile}
+    padding: 0 15px
+  h5
+    padding-bottom: 15px
+    margin-bottom: 0
+    padding-top: 0
+    a
+      color: $color-red
+      +trans
+      &::before
+        content: ''
+        display: inline-block
+        +tr3($color-red, $color-n, $color-n, $color-n)
+        transform: rotate(-90deg)
+        position: relative
+        top: 2px
+        +trans
+      &:hover
+        &::before
+          margin-right: 15px
+  .msg
+    margin-bottom: 30px
+  h3
+    +title
+    border: 0
