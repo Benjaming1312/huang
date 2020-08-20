@@ -1,0 +1,50 @@
+.module-rcglist
+  +max-width
+  margin-left: auto
+  margin-right: auto
+  @media #{$mobile}
+    padding: 0 15px
+  .date
+    font-size: 16px
+    color: #5a5b5b
+    letter-spacing: 1px
+    line-height: 30px
+    margin-bottom: 0
+    font-weight: 500
+  p.title
+    font-size: 20px
+    color: #d7374b
+    font-weight: bold
+    line-height: 35px
+  p
+    color: #5a5b5b
+    line-height: 30px
+    font-size: 16px
+    font-weight: 500
+  .d-txt
+    h5
+      display: none
+  p.more
+    text-align: left
+    padding: 0
+    a
+      border: 0
+      padding: 0
+      margin: 0
+      color: #ed837d
+      font-weight: bold
+      +trans
+      &:hover
+        transform: translateX(15px)
+  .mdetail
+    overflow: initial
+    text-overflow: initial
+    display: block
+    padding-left: 30px
+    cursor: pointer
+    @media #{$mobile}
+      padding-left: 0
+      -webkit-line-clamp: initial!important
+  .d-item
+    margin-bottom: 30px
+    border-bottom: 1px dotted $color-b2
