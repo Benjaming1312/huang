@@ -1,0 +1,130 @@
+@keyframes arrow
+  0%
+    transform: translateY(0%)
+  100%
+    transform: translateY(15px)
+.hire,
+.rule
+  .title
+    margin-bottom: 15px
+
+.hire
+  margin-bottom: 30px
+  .foot-link
+  text-align: left
+  margin-top: 30px
+  p
+    color: #d7374b
+    font-size: 28px
+    letter-spacing: 4px
+    @media #{$mobile}
+      font-size: 20px
+    &::before
+      content: ''
+      display: inline-block
+      +tr3(#d7374b, $color-n, $color-n, $color-n)
+      transform: rotate(-90deg)
+      position: relative
+      top: 2px
+  a
+    margin: 0 7.5px
+    +btn
+    border: 1px solid #d7374b
+    background: #d7374b
+    margin-left: 30px
+    letter-spacing: 0
+    height: 40px
+    &:hover
+      color: #d7374b
+      background: none
+    @media #{$mobile}
+      width: auto
+      margin-left: 0
+      padding: 0 7.5px
+.rule
+  @media screen and (min-width: 768px)
+    // max-width: 00px
+    padding-bottom: 60px
+    +max-width
+    display: flex
+    flex-wrap: wrap
+  @media #{$mobile}
+    padding-bottom: 30px
+  .row:first-child
+    @media screen and (min-width: 768px)
+      width: 100%
+      margin-bottom: 30px
+    @media #{$mobile}
+      margin-bottom: 30px
+  .row:not(:first-child)
+    @media screen and (min-width: 768px)
+      // display: flex
+      // justify-content: center
+      // flex-wrap: wrap
+      margin-bottom: 30px
+      margin-top: 30px
+      width: calc(100% / 4 - 30px)
+      margin: 0 15px
+      position: relative
+    @media #{$mobile}
+      margin-bottom: 60px
+    &::after
+      content: '\f063'
+      display: block
+      font: normal normal normal 14px/1 FontAwesome
+      font-size: inherit
+      text-rendering: auto
+      -webkit-font-smoothing: antialiased
+      font-size: 36px
+      color: #d7374b
+      width: 100%
+      text-align: center
+      margin-top: 30px
+      animation: arrow
+      animation-delay: .5s
+      animation-duration: .5s
+      animation-fill-mode: forwards
+      animation-direction: alternate
+      animation-iteration-count: infinite
+      @media screen and (min-width: 768px)
+        position: absolute
+        top: 25%
+        right: -30px
+        left: initial
+        width: auto
+        animation: none
+        transform: rotate(-90deg)
+  .row:last-child
+    &::after
+      display: none
+  $img: 150px
+  .img
+    text-align: center
+    @media screen and (min-width: 768px)
+      width: 100%
+      margin-top: 0px
+    .svg
+      $w: 90px
+      width: $w
+      height: $w
+      margin: 0 auto
+    figcaption
+      color: #d7374b
+      font-size: 18px
+      font-weight: 500
+  .text
+    @media screen and (min-width: 768px)
+      // width: calc(100% - #{$img})
+      width: 100%
+      display: flex
+      justify-content: center
+    ul, ol
+      padding-left: 17px
+      // padding-left: 25px
+    li, p
+      font-size: 14px
+      line-height: 30px
+      margin-bottom: 15px
+      @media screen and (min-width: 768px)
+        margin-bottom: 0
+        // white-space: nowrap
