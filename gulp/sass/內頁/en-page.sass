@@ -1,0 +1,22 @@
+.en-page
+  .navbar.navbar.navbar #navbar .navbar-nav li a
+    font-size: 16px
+  .navbar.navbar.navbar #navbar .navbar-nav li.dropdown:hover .dropdown-menu li a, .navbar.navbar.navbar #navbar .navbar-nav li.dropdown.open .dropdown-menu li a
+    letter-spacing: 2px
+  footer.foot ul.list-inline>li p.title a
+    font-size: 18px
+    white-space: nowrap
+    letter-spacing: 0
+    @media #{$mobile}
+      font-size: 16px
+      white-space: initial
+      display: flex
+      align-items: flex-end
+      justify-content: center
+      height: 65px
+      padding-bottom: 7.5px
+  footer.foot ul.list-inline>li p.title
+    @media #{$mobile}
+      padding-bottom: 0
+  footer.foot ul.list-inline>li ul li a
+    letter-spacing: 0
