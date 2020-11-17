@@ -1,24 +1,21 @@
 .navbar.navbar.navbar
-  position: absolute
+  position: fixed
   margin-bottom: 0
   z-index: 99
   width: 100%
   border: 0
   box-shadow: none
   border-radius: 0
-  background: rgba(white, .79)
-  // +box-shadow
+  background: rgba(white, .76)
   z-index: 9999
-  padding: 20px 0 20px
-  border-top: 8px solid $color-red
+  padding: 20px 0 15px
   +trans
   @media #{$mobile}
-    padding-top: 5px
+    padding-top: 38px
     padding-bottom: 10px
-    background: white
   .container-fluid
     // width: calc(100% - 160px)
-    padding: 0 30px
+    padding: 0 50px
     margin: 0 auto
     @media #{$mobile}
       padding: 0
@@ -40,7 +37,7 @@
       max-width: 65%
   .navbar-toggle
     border: 0
-    margin-top: 40px
+    margin-top: 60px
     margin-right: 0
     background: none
     border-radius: 0
@@ -50,7 +47,7 @@
     //   &::after
     //     background: #000
     .icon-bar
-      background: $color-red
+      background: $color-b
       width: 30px
       margin-bottom: .5rem
       &::before,
@@ -65,8 +62,8 @@
   // .navbar-header
   #navbar
     padding: 0
-    // @media screen and (min-width: 768px)
-    //   margin-top: 25px
+    @media screen and (min-width: 768px)
+      margin-left: 135px
     @media #{$mobile}
       width: 100%
       margin: 0
@@ -103,10 +100,14 @@
         letter-spacing: 1px
       >li
         @media screen and (min-width: 768px)
-          margin-left: 4vw
+          margin-left: 5.5vw
           padding-bottom: 0
         @media #{$mobile}
-          margin-bottom: 7.5px
+          margin-bottom: 7.5px        
+        &:last-child
+          @media #{$mobile}
+            margin-bottom: 0
+            padding-bottom: 0
         >a
           position: relative
           overflow: hidden
@@ -120,25 +121,16 @@
           text-align: center
           letter-spacing: 2px
           font-weight: 500
+          color: $color-b
           +trans
           @media screen and (min-width: 768px)
             margin-right: 0px
             padding-bottom: 0
           @media #{$mobile}
             text-align: left
+            margin-left: 0
           &:hover
-            color: $color-red
-        &.facebook
-          @media screen and (min-width: 768px)
-            margin-left: 2vw
-          a
-            padding-left: 23px
-            display: inline-block
-            float: left
-            width: auto
-            img
-              width: 23px
-              height: 23px
+            opacity: 0.7
       li
         position: initial
         // padding-bottom: 15px
@@ -191,15 +183,17 @@
                 a
                   padding: 0
                   padding: 7.5px 0
-                  font-size: 17px
+                  font-size: 18px
                   white-space: nowrap
                   transition: $trans
                   color: $color-b
                   padding-left: 15px
-                  font-weight: bold
-                  letter-spacing: 3px
+                  font-weight: normal
+                  letter-spacing: 1px
+                  @media #{$mobile}
+                    padding-left: 12px
                   &:hover
-                    color: $color-red
+                    opacity: 0.7
   .navbar
     &+.search.search.search
       margin-left: 0px
@@ -209,79 +203,150 @@
         margin-left: 0
       input
         width: calc(100% - 28px)
-  .search
+  .member
+    @media screen and (min-width: 768px)
+      position: absolute
+      top: 0
+      right: 0
+      display: flex
+      flex-wrap: nowrap
+      align-items: flex-end
     @media #{$mobile}
       display: flex
       align-items: center
-    .formBS
-      position: absolute
-      top: -55px
-      right: 200px
-      width: 183px
-      border: 1.5px solid #a3a3a3
-      border-radius: 6px
-      background: $color-n
-      padding: 0 5px
-      height: 30px
-      overflow: hidden
+    .navbar-nav
+      margin-left: 7.5px
       @media #{$mobile}
-        position: static
-        margin-top: 0px
-        margin-bottom: 0px
-        width: calc(100% - 100px)
-        display: inline-flex
-        float: left
-      .input-group
-        input
-          border-top: 0
-          border-left: 0
-          border-right: 0
-          border-radius: 10px
-          height: 30px
-          font-size: 14px
-          padding-top: 2px
-          padding-bottom: 0
-          background: $color-n
-          &::placeholder
-            font-size: 14px
-            letter-spacing: 2px
-            font-weight: bold
-            color: #a3a3a3
-            text-transform: uppercase
-            position: relative
-            top: -4px
-            @media #{$mobile}
-              top: 0
-        .input-group-btn
+        display: flex
+        flex-wrap: nowrap
+        position: absolute
+        top: 0
+        margin: 0 
+        width: 100%
+      li
+        @media #{$mobile}
+          width: calc(100% / 3)
+          text-align: center
+        a
+          padding: 0
+          margin: 0
+          color: #58595b
+          font-size: 16px
+          font-weight: bold
+          margin: 0 15px
           position: relative
-          z-index: 9999
-          top: -5px
-          .btn.svg
-            $w: 15px
-            width: $w!important
-            height: $w!important
-            border: 0
-  .lang.lang.lang.lang.lang
-    position: absolute
-    top: -50px
-    right: 30px
-    display: flex
-    flex-wrap: nowrap
+          +trans
+          border-bottom: 0
+          &:hover
+            opacity: 0.7
+          @media #{$mobile}
+            white-space: nowrap
+            width: 100%
+            text-align: center
+            margin: 0
+            padding: 7.5px
+            border: 1px solid #58595b
+          &::after
+            @media screen and (min-width: 768px)
+              content: '|'
+              font-size: 16px
+              color: #58595b
+              position: absolute
+              right: -15px
+        &:nth-of-type(1),
+        &:nth-of-type(2),
+          a
+            @media #{$mobile}
+              border-right: 0
+        &:nth-of-type(1),
+        &:nth-of-type(2),
+        &:nth-of-type(3)
+          a
+            &::before
+              content: ''
+              $w: 15px
+              width: $w
+              height: $w
+              display: inline-block
+              margin-right: 3.5px
+        &:nth-of-type(1),
+          a
+            &::before
+              background: url(#{$url}member-1.svg)center center no-repeat
+        &:nth-of-type(2),
+          a
+            &::before
+              background: url(#{$url}member-2.svg)center center no-repeat
+        &:nth-of-type(3)
+          a
+            &::before
+              background: url(#{$url}member-3.svg)center center no-repeat
+            &::after
+              display: none
+  .formBS[role="search"]
+    width: 125px
+    border-bottom: 1px solid #58595b
+    border-radius: 0px
+    background: $color-n
+    padding: 0 5px
+    height: 30px
+    overflow: hidden
     @media #{$mobile}
       position: static
-      width: 100px
+      margin-top: 0px
+      margin-bottom: 0px
+      width: calc(100% - 100px)
       display: inline-flex
       float: left
-      padding: 0 15px
-    a
-      white-space: nowrap
-      display: block
-      font-size: 16px!important
-      color: #a3a3a3!important
-      &:hover
-        color: $color-red!important
-      &:first-child
-        &::after
-          content: '|'
-          color: #a3a3a3!important
-          margin: 0 7.5px
+    .input-group
+      input
+        border-top: 0
+        border-left: 0
+        border-right: 0
+        border-radius: 10px
+        height: 30px
+        font-size: 14px
+        padding: 0
+        background: $color-n
+        margin-left: 7.5px
+        &::placeholder
+          font-size: 14px
+          letter-spacing: 0px
+          font-weight: bold
+          color: #a3a3a3
+          position: relative
+          @media #{$mobile}
+            top: 0
+      .input-group-btn
+        position: relative
+        z-index: 9999
+        padding-bottom: 0
+        .btn.svg
+          $w: 15px
+          width: $w!important
+          height: $w!important
+          border: 0
+          padding: 0
+  .formBS.formBS.formBS.formBS
+    @media #{$mobile}
+      width: 100%
+      margin-top: 7.5px
+      padding-left: 7.5px
+      padding-right: 7.5px
+      border-bottom: 0
+      border: 0
+      overflow: initial
+    .input-group
+      @media #{$mobile}
+        width: 100%
+        border-bottom: 1px solid $color-b
+        border-radius: 0
+    input
+      @media #{$mobile}
+        margin: 0
+        border: 0
+      &::placeholder
+        @media #{$mobile}
+          padding-left: 7.5px
+    button
+      margin-right: 7.5px

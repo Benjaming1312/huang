@@ -1,39 +1,72 @@
 footer.foot
-  background: #d7374b
-  padding: 45px 0
+  margin-top: 40px
+  padding: 0
+  background: none
   .row
-    +max-width
-  ul.list-inline
-    padding: 0
-    margin: 0
-    display: flex
-    flex-wrap: wrap
-    @media #{$mobile}
-      flex-wrap: wrap
-    >li
-      width: calc(100% / 6)
-      text-align: center
-      padding: 0
+    &:nth-child(2)
+      background-size: cover!important
+      background-position: center left!important
+      background-repeat: no-repeat!important
+      padding: 30px 0
+      @media screen and (min-width: 768px)
+        display: flex
+        align-items: flex-end
       @media #{$mobile}
-        width: calc(100% / 2)
-        margin-bottom: 30px
-      p.title
-        border-bottom: 1px solid white
-        padding-bottom: 20px
-        margin-bottom: 20px
-        a
-          font-size: 20px
-          letter-spacing: 2px
+        padding-top: 30px
+  .info
+    .col-sm-6:not(.social)
+      position: relative
+      &:nth-child(2)
+        @media screen and (min-width: 768px)
+          padding-left: 30px
+        &::before
+          @media screen and (min-width: 768px)
+            content: ''
+            border-left: 1px solid #c7c9ca
+            height: 55px
+            width: 1px
+            position: absolute
+            left: 12.5px
+            top: 12.5px
       ul
+        padding: 7.5px 0
         list-style: none
-        padding-left: 0
         li
-          a
-            line-height: 30px
+          white-space: nowrap
+          margin-bottom: 15px
+          color: #231f20
+          display: flex
+          align-items: center
+          font-size: 16px
+          @media #{$mobile}
             font-size: 16px
-            font-weight: 300
-            letter-spacing: 2px
-
+          &:last-child
+            margin-bottom: 0
+          *
+            color: #231f20
+            font-size: 16px
+            @media #{$mobile}
+              font-size: 16px
+          .svg
+            margin-right: 7.5px
+            min-width: 16px!important
+            height: 16px!important
+    .social
+      text-align: right
+      width: 100%
+      padding-right: 7.5px
+      @media #{$mobile}
+        padding-right: 0
+      .list-inline
+        margin-bottom: 0
+        a
+          +trans
+          &:hover
+            opacity: 0.3
+  iframe
+    max-height: 194px
+    @media #{$mobile}
+      width: 100%
   //   display: flex
   //   align-items: center
   //   flex-wrap: nowrap
@@ -60,7 +93,7 @@ footer.foot
 div.design
   padding-top: 7.5px
   padding-bottom: 7.5px
-  background: #a3a3a3
+  background: white
   // background: url(#{$url}foot-bg.svg) center center no-repeat
   // background-size: cover
   // padding-top: 51px
@@ -109,7 +142,7 @@ div.design
 
 .right
   position: fixed
-  top: 45%
+  bottom: 15%
   width: 38px
   right: 0px
   z-index: 9999

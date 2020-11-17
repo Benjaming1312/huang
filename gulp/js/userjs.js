@@ -8,20 +8,12 @@
 // const owlFn = require('./owlCarousel')
 const aosInit = require('./aos')
 const gotop = require('./scrollTo')
-const swiperJS = require('./swiper/index.js')
-const scollFn = require('./scrollTrigger/index.js')
-const indexNews = require('./indexNews/index')
-const pageNews = require('./pageNews/index')
-const en_page = require('./en.js')
+const index = require('./index/index.js')
 
 $(function () {
+  index()
   aosInit()
-  // owlFn()
   gotop()
-  swiperJS()
-  indexNews()
-  pageNews()
-  en_page()
 })
 
 // owlFn()

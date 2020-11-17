@@ -34,46 +34,37 @@ html
   transition: $trans
 
 =btn
-  background: $color-orange
-  border-color: $color-orange
-  color: white
+  background: $color-n
+  border: 1px solid $color-b
   font-size: 16px
+  color: $color-b
   +trans
-  height: 40px
   display: inline-flex
   align-items: center
   font-weight: 400
   border-radius: 0
   &:hover
-    background: $color-red
-    border-color: $color-red
-    color: white
-    span
-      color: white
+    background: $color-n
+    color: $color-b
 
 =title
-  color: #d7374b
-  font-size: 29px
+  color: #343333
+  font-size: 26px
   font-weight: 600
   text-align: center
-  letter-spacing: 2.5px
-  margin-bottom: 0
+  letter-spacing: 5px
+  margin-bottom: 15px 
   @media #{$mobile}
     margin-bottom: 15px
 
 =sub-title
-  font-size: 26px
-  color: #ed837d
+  font-size: 18px
+  color: #e0a55f
   text-align: center
   font-weight: 500
-  letter-spacing: 5px
-  margin-top: 7.5px
+  letter-spacing: 3.5px
   @media #{$mobile}
     margin-bottom: 15px
-
-
-
-
 .page
   *
     color: #444
@@ -158,14 +149,6 @@ body:not(.page_mobilehome)
   margin-bottom: 40px
   @media #{$mobile}
     margin-bottom: 20px
-  &::after
-    content: ''
-    display: block
-    background: #e6e7e8
-    height: 1px
-    width: 289px
-    margin: 0 auto
-    margin-top: 22px
   h4.title
     +title
   h4.sub-title

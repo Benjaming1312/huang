@@ -1,5 +1,15 @@
-- var url = '/ezfiles/814/1814/img/864/'
+- var url = '/ezfiles/843/1843/img/1309/'
 nav.navbar
+	.member
+		<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch&amp;Lang=zh-tw">
+			<div class="input-group">
+				<span class="input-group-btn">
+					button.btn.svg(type="submit" style="background:url("+url+"search.svg); width: 11px; height: 11px;")
+				</span>
+				<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
+			</div>
+		</form>
+		.user-append
 	.container-fluid
 		.navbar-header
 			button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
@@ -8,70 +18,60 @@ nav.navbar
 				span.icon-bar
 				span.icon-bar
 			// LOGO放置處
-			a.navbar-brand.svg(href='/' style="background: url("+url+"logo.svg); width: 217px; height: 56px;")
+			a.navbar-brand.svg(href='/' style="background: url("+url+"logo.svg); width: 87px; height: 66px;")
 		#navbar.navbar-collapse.collapse
-			ul.nav.navbar-nav.navbar-right
-				li.dropdown(data-aos-delay="100", data-aos="fade-in")
-					a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 關於宇越
-					ul.dropdown-menu(role='menu')
-						li
-							a(href="") 公司介紹
-						li
-							a(href="") 歷史沿革
-						li
-							a(href="") 公司組織
-						li
-							a(href="") 經營團隊
-						li
-							a(href="") 公司治理
+			ul.nav.navbar-nav
+				li(data-aos-delay="100", data-aos="fade-in")
+					a(href="") 首頁
 				li.dropdown(data-aos-delay="200", data-aos="fade-in")
-					a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 科學技術 
+					a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 關於我們
 					ul.dropdown-menu(role='menu')
 						li
-							a(href="") CAR技術
+							a(href="") 品牌故事
 						li
-							a(href="") 慢病毒
+							a(href="") 經營理念
 						li
-							a(href="") 血液性疾病
+							a(href="") 公司簡介
 				li.dropdown(data-aos-delay="300", data-aos="fade-in")
-					a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 開發進程
+					a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 產品型錄
 					ul.dropdown-menu(role='menu')
 						li
-							a(href="") 產品開發
+							a(href="") 現代風格
 						li
-							a(href="") 臨床試驗進度
-						li
-							a(href="") 科學發表
-				li(data-aos="fade-in", data-aos-delay="400")
+							a(href="") 原木風格
+				li(data-aos-delay="400", data-aos="fade-in")
 					a(href="") 最新消息
-				li.dropdown(data-aos-delay="500", data-aos="fade-in")
-					a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 投資人專區
-					ul.dropdown-menu(role='menu')
-						li
-							a(href="") 投資人總覽
-						li
-							a(href="") 財務資訊
-						li
-							a(href="") 股東會相關訊息
-						li
-							a(href="") 重要公告
-				li.dropdown(data-aos-delay="600", data-aos="fade-in")
-					a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 聯絡我們
-					ul.dropdown-menu(role='menu')
-						li
-							a(href="") 人才招募
-				li.search(data-aos="fade-in", data-aos-delay="700")
-					<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch&amp;Lang=zh-tw">
-						<div class="input-group">
-							<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
-							<span class="input-group-btn">
-								button.btn.svg(type="submit" style="background:url("+url+"search.svg); width: 11px; height: 11px;")
-							</span>
-						</div>
-					</form>
-					.lang
-						a(href="") 繁中
-						a(href="") EN
+				li(data-aos-delay="500", data-aos="fade-in")
+					a(href="") 聯繫我們
+				li(data-aos-delay="600", data-aos="fade-in")
+					a(href="") BLOG
+				//- li.dropdown(data-aos-delay="300", data-aos="fade-in")
+				//- 	a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 開發進程
+				//- 	ul.dropdown-menu(role='menu')
+				//- 		li
+				//- 			a(href="") 產品開發
+				//- 		li
+				//- 			a(href="") 臨床試驗進度
+				//- 		li
+				//- 			a(href="") 科學發表
+				//- li(data-aos="fade-in", data-aos-delay="400")
+				//- 	a(href="") 最新消息
+				//- li.dropdown(data-aos-delay="500", data-aos="fade-in")
+				//- 	a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 投資人專區
+				//- 	ul.dropdown-menu(role='menu')
+				//- 		li
+				//- 			a(href="") 投資人總覽
+				//- 		li
+				//- 			a(href="") 財務資訊
+				//- 		li
+				//- 			a(href="") 股東會相關訊息
+				//- 		li
+				//- 			a(href="") 重要公告
+				//- li.dropdown(data-aos-delay="600", data-aos="fade-in")
+				//- 	a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 聯絡我們
+				//- 	ul.dropdown-menu(role='menu')
+				//- 		li
+				//- 			a(href="") 人才招募
 				//- li.dropdown(data-aos="fade-in" data-aos-delay="300")
 				//- 	a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 關於協會
 				//- 	ul.dropdown-menu(role='menu')

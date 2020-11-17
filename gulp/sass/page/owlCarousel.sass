@@ -5,32 +5,21 @@
   +trans
   .col-xs-12
     padding: 0
-  .swiper-pagination
-    text-align: right
-    padding-right: 30px
-    padding-bottom: 15px
-    @media #{$mobile}
-      padding-right: 15px
-    .swiper-pagination-bullet
-      background: white
-      opacity: 1
-      &.swiper-pagination-bullet-active
-        background: #d7374b
 
 
-  .text-content
+  .text
     position: absolute
-    top: 25%
-    left: 25%
+    top: 35%
+    left: 7.5%
     width: 50%
     height: 50%
     display: block
     z-index: 3
-    .box
-      background: rgba(white, .7)
-      padding: 30px
-      h4
-        line-height: 30px
+    @media #{$mobile}
+      top: 50%
+      left: 0
+      display: inline-block
+      height: auto
   img
     width: 100%
   // @media #{$mobile}
@@ -54,57 +43,55 @@
   //       width: 90%
   // .owl-carousel
   //   z-index: 3
-  // .owl-dots
-  //   position: absolute
-  //   bottom: 30px
-  //   width: 100%
-  //   text-align: right
-  //   z-index: 9999
-  //   padding-right: 40px
-  //   padding-bottom: 15px
-  //   @media #{$mobile}
-  //     padding-right: 7.5px
-  //     padding-bottom: 5px
-  //     bottom: 0
-  //   .owl-dot
-  //     opacity: 1
-  //     border-radius: 0
-  //     margin-right: 5px
-  //     border: 0
-  //     span
-  //       opacity: 1
-  //       border-radius: 0
-  //       // background: rgba(white)
-  //       // background: url(#{$url}owl-dot.svg) center center no-repeat
-  //       // background-size: contain
-  //       // background-position: center
-  //       background: white
-  //       border-radius: 50%
-  //       $w: 10px
-  //       width: $w
-  //       height: $w
-  //       display: inline-block
-  //       +trans
-  //       @media #{$mobile}
-  //         $w: 8px
-  //         width: $w
-  //         height: $w
-  //     &.active
-  //       span
-  //         background: #fff
-  //         // background: url(#{$url}owl-dot-active.svg) center center no-repeat
-  //         $w: 15px
-  //         width: $w
-  //         height: $w
-  //         transform: translateX(2.5px)
-  //         @media #{$mobile}
-  //           $w: 12px
-  //           width: $w
-  //           height: $w
-  //           transform: translateX(1.5px)
-          //   width: 4.5px
-          //   height: 4.5px
-          //   top: 0
+  .owl-dots
+    position: absolute
+    bottom: 30px
+    width: 100%
+    text-align: center
+    z-index: 9999
+    @media #{$mobile}
+      padding-right: 7.5px
+      padding-bottom: 5px
+      bottom: 0
+    .owl-dot
+      opacity: 1
+      border-radius: 0
+      margin: 0 5px
+      border: 0
+      span
+        opacity: 1
+        border-radius: 0
+        // background: rgba(white)
+        // background: url(#{$url}owl-dot.svg) center center no-repeat
+        // background-size: contain
+        // background-position: center
+        background: white
+        border-radius: 50%
+        $w: 10px
+        width: $w
+        height: $w
+        display: inline-block
+        +trans
+        border: 2px solid white
+        background: $color-n
+        @media #{$mobile}
+          $w: 10px
+          width: $w
+          height: $w
+      &.active
+        span
+          background: #fff
+          // background: url(#{$url}owl-dot-active.svg) center center no-repeat
+          $w: 10px
+          width: $w
+          height: $w
+          transform: translateX(2.5px)
+          background: white
+          @media #{$mobile}
+            $w: 10px
+            width: $w
+            height: $w
+            top: 0
 
 
 // .mads-li
