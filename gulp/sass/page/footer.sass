@@ -31,6 +31,9 @@ footer.foot
       ul
         padding: 7.5px 0
         list-style: none
+        @media #{$mobile}
+          margin-bottom: 0
+          padding-bottom: 0
         li
           white-space: nowrap
           margin-bottom: 15px
@@ -41,7 +44,8 @@ footer.foot
           @media #{$mobile}
             font-size: 16px
           &:last-child
-            margin-bottom: 0
+            @media screen and (min-width: 768px)
+              margin-bottom: 0
           *
             color: #231f20
             font-size: 16px
@@ -57,8 +61,11 @@ footer.foot
       padding-right: 7.5px
       @media #{$mobile}
         padding-right: 0
+        text-align: center
       .list-inline
         margin-bottom: 0
+        margin: 0
+        margin-bottom: 7.5px        
         a
           +trans
           &:hover
@@ -131,7 +138,7 @@ div.design
     a
       position: absolute
       right: 30px
-      font-weight: bold
+      font-weight: normal
       @media #{$mobile}
         position: static
         display: block

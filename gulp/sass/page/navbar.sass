@@ -8,11 +8,13 @@
   border-radius: 0
   background: rgba(white, .76)
   z-index: 9999
-  padding: 20px 0 15px
+  padding: 15px 0 15px
   +trans
   @media #{$mobile}
     padding-top: 38px
     padding-bottom: 10px
+  &.scroll
+    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.25)
   .container-fluid
     // width: calc(100% - 160px)
     padding: 0 50px
@@ -70,7 +72,7 @@
       // background: #000
       padding-bottom: 0px
       box-shadow: none
-      background: #fff
+      background: rgba(white, .76)
       a
         border: 0
         color: white
@@ -103,7 +105,7 @@
           margin-left: 5.5vw
           padding-bottom: 0
         @media #{$mobile}
-          margin-bottom: 7.5px        
+          margin-bottom: 15px
         &:last-child
           @media #{$mobile}
             margin-bottom: 0
@@ -232,7 +234,7 @@
           margin: 0
           color: #58595b
           font-size: 16px
-          font-weight: bold
+          font-weight: 500
           margin: 0 15px
           position: relative
           +trans
@@ -331,11 +333,12 @@
     @media #{$mobile}
       width: 100%
       margin-top: 7.5px
-      padding-left: 7.5px
-      padding-right: 7.5px
+      padding-left: 15px
+      padding-right: 15px
+      padding-bottom: 0px
       border-bottom: 0
       border: 0
-      overflow: initial
+      height: auto
     .input-group
       @media #{$mobile}
         width: 100%
@@ -350,3 +353,6 @@
           padding-left: 7.5px
     button
       margin-right: 7.5px
+
+.mnavbar
+  display: none

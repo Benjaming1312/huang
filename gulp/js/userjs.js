@@ -9,8 +9,10 @@
 const aosInit = require('./aos')
 const gotop = require('./scrollTo')
 const index = require('./index/index.js')
+const onScroll = require('./navbar.js')
 
 $(function () {
+  onScroll()
   index()
   aosInit()
   gotop()

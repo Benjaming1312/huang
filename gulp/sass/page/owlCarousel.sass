@@ -5,6 +5,8 @@
   +trans
   .col-xs-12
     padding: 0
+  .row
+    position: relative
 
 
   .text
@@ -92,7 +94,20 @@
             width: $w
             height: $w
             top: 0
-
+  .find-out
+    width: 32%
+    height: 50%
+    position: absolute
+    bottom: 0
+    right: 0
+    background-size: cover!important
+    background-repeat: no-repeat!important
+    background-position: bottom!important
+    // background-color: #000!important
+    z-index: 2
+    @media #{$mobile}
+      width: 35%
+      height: 25%
 
 // .mads-li
 //   // margin-top: 112px

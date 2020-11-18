@@ -4,7 +4,7 @@ module.exports = function () {
   $('.hdmenu').hide()
 
   if ($(window).width() < 768) {
-    $('.member .formBS').appendTo($('nav.navbar'))
+    $('.member .formBS').appendTo($('#navbar'))
 
   }
   if (is('.idx')) {
