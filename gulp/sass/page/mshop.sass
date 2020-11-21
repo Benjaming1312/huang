@@ -1,22 +1,78 @@
+#Dyn_head
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  background: rgba(255,255,255,0.7)
+  z-index: 1000
+
+.page_mobilehome .row .col .mcol
+  @media #{$pad-vertical}
+    padding: 0
+
+.page_mobilechgpasswd,
+.page_mobilecmhome,
+.page_mobileacctinfo,
+.page_mobile_mecorderlist,
+.page_mobile_mecdeliveraddrlist,
+.page_mobile_meccart,
+.page_mobile_mecbillto
+  .gotop-section
+    margin-top: 0
+
 .module-login,
 .module-forgetpsw,
 .module-register,
 .module-memmenu,
 .module-changepwd,
-.module-viewcart
-  max-width: 500px!important
+.module-viewcart,
+.module-formlist,
+.module-orderlist,
+.module-consignee,
+.module-billto,
+.module-submitorder,
+.module-,
+.md_middle,
+.module-favlist
+  +max-width
+  max-width: 750px!important
   margin-left: auto
   margin-right: auto
-  padding-bottom: 60px
+  padding-bottom: 30px
+  @media screen and (min-width: 768px)
+    margin-top: 130px
   @media #{$mobile}
+    margin-top: 130px
+    padding: 0px 15px
     padding-bottom: 30px
-    margin: 30px
   .mt
+    text-align: center
+    margin-top: 15px
     h3
-      +title
+      color: #535353
+      font-size: 28px
+      font-weight: 400
+      text-align: center
+      letter-spacing: 0px
+      margin-bottom: 0
+      border: 0
+      @media #{$mobile}
+        margin-bottom: 15px
+  .form-btn
+    margin-top: 30px
 
+.mbtn,
 .btn
   +btn
+
+
+.module-orderlist,
+.module-consignee,
+.module-billto,
+.module-viewcart
+  max-width: 900px!important
+  margin-left: auto
+  margin-right: auto
 
 .module-forgetpsw,
 .module-changepwd
@@ -24,34 +80,219 @@
     margin-top: 15px
 
 .module-fav,
-.module-misc
+.postedform
   display: none
 
-.module-.module-
-  margin-top: 30px
-  margin-bottom: 30px
+.mcart-item.d-item
+  .mbox
+    @media screen and (min-width: 768px)
+      display: flex
+      align-items: center
+    // .d-img,
+    .d-txt
+      @media screen and (min-width: 768px)
+        width: calc(100% - 12% - 360px)
+      h5
+        @media screen and (min-width: 768px)
+          margin-bottom: 0
+    // .d-cart
+    //   padding-bottom: 0
+    //   display: inline-flex
+  //   .d-cart
+//     width: 460px
+
+
+.ok.ok span:before,
+.ok.ok span:after,
+.close.close span:before,
+.close.close span:after
+  background: $color-brown
+
+// .module-cglist
+//   .mt
+//     display: none
+.module-sublist
+  display: none
+.mpgbar
+  +max-width
+  padding: 0 7.5px
+  margin-bottom: 15px
   @media #{$mobile}
     padding: 0 15px
-  h5
-    padding-bottom: 15px
-    margin-bottom: 0
-    padding-top: 0
-    a
-      color: $color-red
-      +trans
-      &::before
-        content: ''
-        display: inline-block
-        +tr3($color-red, $color-n, $color-n, $color-n)
-        transform: rotate(-90deg)
-        position: relative
-        top: 2px
-        +trans
-      &:hover
-        &::before
-          margin-right: 15px
-  .msg
-    margin-bottom: 30px
+  .mbtn, .btn
+    padding-left: 15px
+    padding-right: 15px
+
+.mecmemcouponlist,
+.mecrequirerecord
+  display: none
+
+.list-group-item
+  a
+    +trans
+    &:hover
+      background: #ded1c6
+      color: $color-brown
+
+.module-billto
+  @media #{$mobile}
+    padding: 0 15px
+  >.mt
+    text-align: center
+    h3
+      font-size: 32px
+      color: $color-b
+      border: 0
+      letter-spacing: 0.2rem
+      font-weight: 500
+      text-align: center
+      margin-bottom: 0px
+      line-height: 60px
+      // &::before
+      //   content: ''
+      //   display: inline-block
+      //   width: 30px
+      //   height: 30px
+      //   background: url(#{$url}title-icon.svg) center center no-repeat
+      //   background-size: contain
+      //   margin-right: 15px
+
+
+.module-ecconsignee,
+.module-ecdeliver,
+.module-ecpay,
+.ecconsignee-add.ecconsignee-add
   h3
-    +title
-    border: 0
+    color: #000
+  .mbtn
+    +btn
+    width: 150px
+    span
+      color: white
+.mcart-operate.mcart-operate
+  .mbtn
+    +btn
+    height: 40px
+.ecconsignee-list li.defaultAddr .mtag
+  white-space: nowrap
+.module-consignee
+  .mbtn
+    +btn
+    height: 40px
+    width: 150px
+    margin: 0
+    margin-bottom: 15px
+    span
+      color: white
+      white-space: nowrap
+
+.module-ecpay
+  .mt
+    margin-bottom: 15px
+
+.ecconsignee-list .consignee-info 
+  .mfield.eccons-name.eccons-name.eccons-name
+    background: $color-brown-d
+    *
+      color: white
+      margin-bottom: 0
+      padding: 0 2.5px
+  & + .form-btn
+    display: flex
+    flex-wrap: nowrap
+    margin-top: 0
+    .mbtn
+      display: inline-block
+
+.ecconsignee-list li .form-btn
+  position: static!important
+  display: flex!important
+  justify-content: flex-end
+  background: #eee!important
+  padding-right: 10px
+
+
+.module-viewcart
+  .form-btn
+    margin-top: 0
+
+.showother ul > li.active,
+.ecpay-list ul > li.active > div
+  border-color: #bca792
+.ecorder-form .showother > .mbox > div[class$="-add"] .form-btn .mbtn-top
+  white-space: nowrap
+
+.ecorder-form > .module
+  padding-top: 30px 
+  margin-bottom: 15px
+  padding-bottom: 0px
+  &:nth-of-type(1)
+    padding-top: 15px
+  > .mt h3
+    font-weight: 600
+    font-size: 18px
+    line-height: 25px
+    border-left: 5px solid #bca792
+    color: #535353
+    padding-left: 7.5px
+
+.ecconsignee-list li.active .consignee-info .mfield.eccons-name
+  background: #db8526
+  @media #{$mobile}
+    padding: 5px
+  *
+    color: white
+    @media #{$mobile}
+      margin-bottom: 0
+
+.showother.open,
+  @media #{$mobile}
+    z-index: 9999
+  .showpanel-btn,
+  .consignee-btn-add
+    @media #{$mobile}
+      white-space: nowrap
+
+.ok span:before, .ok span:after, .close span:before, .close span:after
+  background: $color-green
+
+.module-viewcart
+  @media #{$mobile}
+    padding: 0 15px
+
+.module-billto>.mt h3
+  white-space: nowrap
+  font-size: 26px
+
+.mdialog
+  z-index: 99999
+.mdialog .mdialog-foot .mbtn
+  justify-content: center
+
+.mcart-info + .form-btn
+  margin-top: 0
+
+#_pop_login
+  margin-top: 5vh
+  margin-left: 5vw
+  max-width: 90vw
+  max-height: 90vh
+
+.module-register
+  .help-block
+    font-size: 14px
+
+.mpopdiv
+  .mt
+    h4
+      color: $color-brown-d
+  .module-login
+    margin-top: 0
+
+.module-cglist,
+.module-rcglist,
+  .mt
+    display: none
+
+.mb
+  padding-top: 0

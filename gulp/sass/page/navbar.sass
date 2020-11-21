@@ -11,8 +11,8 @@
   padding: 15px 0 15px
   +trans
   @media #{$mobile}
-    padding-top: 38px
-    padding-bottom: 10px
+    padding-top: 10px
+    padding-bottom: 0px
   &.scroll
     box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.25)
   .container-fluid
@@ -39,19 +39,25 @@
       max-width: 65%
   .navbar-toggle
     border: 0
-    margin-top: 60px
+    margin-top: 30px
     margin-right: 0
     background: none
     border-radius: 0
     .sr-only
       display: none
-    //   &::before,
-    //   &::after
-    //     background: #000
+    &:not(.collapsed)
+      .icon-bar
+        &:nth-of-type(3)
+          opacity: 0
+        &:nth-of-type(2)
+          transform: rotate(45deg) translate(10px, 10px)
+        &:nth-of-type(4)
+          transform: rotate(-45deg)
     .icon-bar
       background: $color-b
       width: 30px
       margin-bottom: .5rem
+      +trans
       &::before,
       &::after
         display: none
@@ -61,7 +67,9 @@
     padding-bottom: 0px
     @media #{$mobile}
       padding-bottom: 15px
-  // .navbar-header
+  .navbar-header
+    @media #{$mobile}
+      padding-bottom: 15px
   #navbar
     padding: 0
     @media screen and (min-width: 768px)
@@ -73,6 +81,7 @@
       padding-bottom: 0px
       box-shadow: none
       background: rgba(white, .76)
+      border-top: 1px solid #ccc
       a
         border: 0
         color: white
@@ -94,7 +103,7 @@
         width: 100%
         padding: 0 5px
         margin-top: 0
-        margin-top: 15px
+        margin-top: 7.5px
       *
         color: $color-b
         font-size: 18px
@@ -216,6 +225,7 @@
     @media #{$mobile}
       display: flex
       align-items: center
+      justify-content: center
     .navbar-nav
       margin-left: 7.5px
       @media #{$mobile}
@@ -225,10 +235,14 @@
         top: 0
         margin: 0 
         width: 100%
+        justify-content: center
+        margin-top: 7.5px!important
       li
         @media #{$mobile}
-          width: calc(100% / 3)
           text-align: center
+          margin-bottom: 0!important
+          padding-bottom: 0!important
+          overflow: initial!important
         a
           padding: 0
           margin: 0
@@ -239,6 +253,7 @@
           position: relative
           +trans
           border-bottom: 0
+          overflow: initial!important
           &:hover
             opacity: 0.7
           @media #{$mobile}
@@ -246,20 +261,22 @@
             width: 100%
             text-align: center
             margin: 0
-            padding: 7.5px
             border: 1px solid #58595b
+            padding: 5px 15px!important
           &::after
-            @media screen and (min-width: 768px)
-              content: '|'
-              font-size: 16px
-              color: #58595b
-              position: absolute
-              right: -15px
+            content: '|'
+            font-size: 16px
+            color: #58595b
+            position: absolute
+            right: -15px
+            @media #{$mobile}
+              z-index: 3
+              right: -5px
         &:nth-of-type(1),
         &:nth-of-type(2),
           a
-            @media #{$mobile}
-              border-right: 0
+            // @media #{$mobile}
+            //   border-right: 0
         &:nth-of-type(1),
         &:nth-of-type(2),
         &:nth-of-type(3)
@@ -279,10 +296,6 @@
           a
             &::before
               background: url(#{$url}member-2.svg)center center no-repeat
-        &:nth-of-type(3)
-          a
-            &::before
-              background: url(#{$url}member-3.svg)center center no-repeat
             &::after
               display: none
   .formBS[role="search"]

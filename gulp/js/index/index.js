@@ -2,10 +2,11 @@ const is = require('../is')
 module.exports = function () {
   $('.hdmenu .nav.navbar-nav').appendTo($('.user-append'))
   $('.hdmenu').hide()
+  
 
   if ($(window).width() < 768) {
     $('.member .formBS').appendTo($('#navbar'))
-
+    $('.navbar .member').prependTo($('#navbar'))
   }
   if (is('.idx')) {
     $('.idx .owl-carousel').owlCarousel({
