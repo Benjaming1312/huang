@@ -1,6 +1,9 @@
 const is = require('./is')
 
 module.exports = function () {
+  if (is('.idx')) {
+    return
+  }
   if (!is('.figBS')) {
     $('.module-misc').remove()
     return
