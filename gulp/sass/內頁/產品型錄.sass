@@ -5,11 +5,16 @@
     padding-left: 30px
     padding-right: 30px
   aside.col-sm-3
+    @media screen and (min-width: 768px)
+      padding-left: 0
+      position: relative
     @media #{$pad-vertical}
       width: 30%
     @media #{$mobile}
       margin-bottom: 30px
   main.col-sm-9
+    @media screen and (min-width: 768px)
+      padding-right: 0
     @media #{$pad-vertical}
       width: 70%
     .module-cglist
@@ -29,6 +34,7 @@
     a
       border: 0
       color: $color-b
+      font-size: 18px
       &.active
         color: $color-yellow
     .panel-heading
@@ -68,6 +74,17 @@
         justify-content: space-around
     .d-item
       padding: 0.5px
+      &:hover
+        .d-img
+          img
+            transform: scale(1.2)
+            opacity: 0.5
+      .d-img
+        position: relative
+        overflow: hidden
+        img
+          +trans
+          transition-duration: .7s
       .mbox
         background: none
         text-align: center
@@ -83,6 +100,14 @@
           font-size: 14px
       .mpro-btns
         margin-top: 15px
+        .mbtn
+          +btn
+          background: $color-yellow
+          border-color: $color-yellow
+          color: white
+          &:hover
+            color: $color-yellow
+            background: white
       .mbtn
         font-size: 14px
         padding: 3.5px 15px

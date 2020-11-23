@@ -28,7 +28,7 @@
 .module-viewcart,
 .module-formlist,
 .module-orderlist,
-.module-consignee,
+.module-consignee.module-consignee,
 .module-billto,
 .module-submitorder,
 .module-,
@@ -40,9 +40,9 @@
   margin-right: auto
   padding-bottom: 30px
   @media screen and (min-width: 768px)
-    margin-top: 130px
+    margin-top: 0px
   @media #{$mobile}
-    margin-top: 130px
+    margin-top: 0px
     padding: 0px 15px
     padding-bottom: 30px
   .mt
@@ -60,6 +60,22 @@
         margin-bottom: 15px
   .form-btn
     margin-top: 30px
+  .mbtn,
+  .btn
+    background: $color-yellow
+    border-color: $color-yellow
+    color: white
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    &:hover
+      color: $color-yellow
+      background: none
+  a:focus
+    color: $color-yellow
+  .mfield.eccons-name.eccons-name
+    *
+      background: $color-yellow
 
 .mbtn,
 .btn
@@ -131,8 +147,8 @@
   a
     +trans
     &:hover
-      background: #ded1c6
-      color: $color-brown
+      background: $color-yellow
+      color: white
 
 .module-billto
   @media #{$mobile}
@@ -167,12 +183,27 @@
   .mbtn
     +btn
     width: 150px
+    background: $color-yellow
+    border-color: $color-yellow
+    color: white
+    &:hover
+      color: $color-yellow
+      background: none
+      span
+        color: $color-yellow
     span
       color: white
 .mcart-operate.mcart-operate
   .mbtn
     +btn
     height: 40px
+    background: $color-yellow
+    border-color: $color-yellow
+    color: white
+    &:hover,
+    &:focus
+      background: none
+      color: $color-yellow
 .ecconsignee-list li.defaultAddr .mtag
   white-space: nowrap
 .module-consignee
@@ -218,7 +249,7 @@
 
 .showother ul > li.active,
 .ecpay-list ul > li.active > div
-  border-color: #bca792
+  border-color: $color-yellow
 .ecorder-form .showother > .mbox > div[class$="-add"] .form-btn .mbtn-top
   white-space: nowrap
 
@@ -232,7 +263,7 @@
     font-weight: 600
     font-size: 18px
     line-height: 25px
-    border-left: 5px solid #bca792
+    border-left: 5px solid $color-yellow
     color: #535353
     padding-left: 7.5px
 

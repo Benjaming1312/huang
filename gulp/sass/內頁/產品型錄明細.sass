@@ -68,7 +68,7 @@
     span
       font-size: 20px
       font-weight: bolder
-      color: $color-yellow
+      color: #b53636
   .mbtn.addfav.addfav.addfav.addfav.addfav
     filter: drop-shadow(0 0 0 white)
     background: url(/ezfiles/835/1835/img/1180/fav.svg)!important
@@ -88,7 +88,7 @@
     @media #{$mobile}
       padding-top: 30px
   .mpro-preview.col-sm-5
-    max-width: 530px
+    max-width: 550px
     @media #{$pad-vertical}
       max-width: 50%
     .carousel-module
@@ -97,7 +97,7 @@
       .main
         .swiper-slide
           padding-top: 100%
-          background-size: 80%!important
+          background-size: 100%!important
           background-position: center!important
           background-repeat: no-repeat!important
     .hash-link-container
@@ -113,26 +113,27 @@
       padding: 7.5px 0
       margin-left: auto
       margin-right: auto
-      @media #{$mobile}
+      margin: 0 -7.5px
+      // @media #{$mobile}
+      //   margin: 0
         // padding-left: 0
         // padding-right: 0
       .swiper-wrapper
         display: flex
         flex-wrap: wrap
         justify-content: flex-start
-        margin: 0 0px
+        margin-right: 0
         @media #{$mobile}
-          margin: 0 -7.5px
+          margin: 0
         .swiper-slide
           margin: 0px 7.5px 15px
           width: calc(100% / 5 - 15px)
           @media #{$mobile}
-            width: calc(100% / 2 - 15px)
+            width: calc(100% / 4 - 15px)
           a
             display: block
             padding-top: 100%
-            background-size: 80%!important
-            background-size: 100% 100%!important
+            background-size: cover!important
             background-repeat: no-repeat!important
             background-position: center!important
             border: 1px  solid #ccc
@@ -167,28 +168,34 @@
       opacity: 1
   .mpro-wrap
     display: flex
+    margin-bottom: 30px
     @media #{$mobile}
       display: block
       margin: 0 -15px
+      margin-bottom: 15px
     @media #{$pad-horizantal}
       margin: 0 -15px
+      margin-bottom: 30px
     @media #{$pad-vertical}
       margin: 0 -15px
+      margin-bottom: 30px
   .mpro-panel.col-sm-7
-    padding-left: 30px
+    padding-left: 60px
     @media #{$mobile}
-      padding-left: 0
+      padding: 0
       width: 100%
-    .mbtn
-      +btn
-      margin: 0
-      height: 40px
-      background: #4a3023
-      font-weight: 300
-      font-size: 14px
-      &:hover
-        color: #4a3023
-        border-color: #4a3023
+    .maddtocart
+      .mbtn
+        +btn
+        background: $color-yellow
+        border-color: $color-yellow
+        color: white
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        &:hover
+          background: none
+          color: $color-yellow
     .ad-pro-btns
       display: flex
     .maddnum
@@ -347,6 +354,3 @@
   .desc
     .content
       margin-bottom: 30px
-
-.maddtocart
-  display: none

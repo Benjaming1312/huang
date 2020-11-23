@@ -119,31 +119,62 @@ body:not(.page_mobilehome)
 
 .module-
   +max-width
-  margin-left: auto
-  margin-right: auto
-  margin-bottom: 60px
-  @media #{$mobile}
-    margin-bottom: 30px
-  .mt
+  .msg
     margin-bottom: 15px
-    h3
-      color: $color-green
-      border-bottom: 1px solid #ccc
-      padding: 0
-      padding-bottom: 15px
-      line-height: 2.5rem
-      font-size: 28px
-      font-weight: bold
-  h5
-    background: none!important
-    padding-left: 0!important
-    border-bottom: 1px dotted #ccc
-    padding-bottom: 15px
-    margin-bottom: 15px
-    padding-top: 30px
-    a
-      font-size: 20px
-      color: $color-blue
+    *
+      color: $color-yellow
+  .listBS
+    margin: 0
+    @media #{$mobile}
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-around
+  .d-item
+    padding: 0.5px
+    &:hover
+      .d-img
+        img
+          transform: scale(1.2)
+          opacity: 0.5
+    .d-img
+      position: relative
+      overflow: hidden
+      img
+        +trans
+        transition-duration: .7s
+    .mbox
+      background: none
+      text-align: center
+      padding-bottom: 0px
+    .d-txt
+      h5
+        margin-bottom: 15px
+      a
+        font-size: 16px
+        color: $color-b
+    .mpro-price
+      *
+        font-size: 14px
+    .mpro-btns
+      margin-top: 15px
+      .mbtn
+        +btn
+        background: $color-yellow
+        border-color: $color-yellow
+        color: white
+        &:hover
+          color: $color-yellow
+          background: white
+    .mbtn
+      font-size: 14px
+      padding: 3.5px 15px
+      background: $color-brown-d
+      border: 0
+      font-weight: 300
+      &:hover
+        background: rgba($color-brown, .7)
+        color: white
+        opacity: 1      
 
 .module-title
   margin-bottom: 40px

@@ -4,6 +4,11 @@ module.exports = function () {
   if (is('.idx')) {
     return
   }
+
+  if (is('.module-ecptdetail')) {
+    return
+  }
+
   if (!is('.figBS')) {
     $('.module-misc').remove()
     return
@@ -37,8 +42,9 @@ function appendOwlItem () {
   }
   else {
     $('.owl-item').each(function () {
-      $(this).find('.figBS').prependTo('.mcont')
+      $(this).find('.figBS').appendTo('.mcont')
     })
+    $('.mpgdetail').appendTo('.mcont')
   }
 }
 

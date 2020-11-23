@@ -54,3 +54,20 @@
     border-left: 5px solid $color-yellow
     padding-left: 7.5px
     color: $color-yellow
+    font-size: 20px
+  ol
+    list-style-type: none
+    padding-left: 0
+    li
+      line-height: 30px
+      margin-bottom: 15px
+      color: #b53636
+      &::before
+        content: ''
+        +tr3(#b53636, $color-n, $color-n, $color-n)
+        display: inline-block
+        transform: rotate(-90deg)
+        border-width: 7.5px
+        position: relative
+        top: 2px
+        margin-right: 7.5px

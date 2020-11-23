@@ -37,10 +37,19 @@
     line-height: 30px
   header.desc
     font-size: 18px
-    color: #20438e
+    color: #b53636
     line-height: 36px
   footer.desc
     background: none
     font-size: 18px
     color: #20438e
     line-height: 36px
+  .btn
+    +btn
+    $color: #e9a250
+    background: $color
+    border-color: $color
+    color: white
+    &:hover
+      background: white
+      color: $color

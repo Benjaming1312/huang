@@ -23,6 +23,7 @@ $(function () {
   onScroll()
   gotop()
   mshop()
+  blog_detail()
 
   setTimeout(() => {
     index()
@@ -30,7 +31,6 @@ $(function () {
     product_detail()
     about()
     same_as_news()
-    blog_detail()
     collapseAside()
 
     aosInit()

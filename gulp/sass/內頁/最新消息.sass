@@ -1,9 +1,5 @@
 .module-rcglist:not(.same_as_news)
   +max-width
-  @media #{$pad-horizantal}
-    padding: 0 30px
-  @media #{$pad-vertical}
-    padding: 0 30px
   @media #{$mobile}
     padding: 0 30px
   .listBS
@@ -55,7 +51,7 @@
         display: block
         width: 100%
         margin-top: 30px
-  $w: 300px
+  $w: 260px
   .d-img.d-img
     @media screen and (min-width: 768px)
       max-width: $w
@@ -80,3 +76,12 @@
       -webkit-box-orient: vertical
     @media #{$mobile}
       width: 100%
+    h5
+      .mdate
+        font-size: 14px
+        color: #999
+        letter-spacing: 0
+      a
+        display: block
+        color: $color-yellow
+        letter-spacing: 0
