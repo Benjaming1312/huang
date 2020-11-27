@@ -41,8 +41,9 @@ function appendOwlItem () {
     }, 100)
   }
   else {
-    $('.owl-item').each(function () {
-      $(this).find('.figBS').appendTo('.mcont')
+    $('.mcarousel.vert .figBS').each(function () {
+      // $(this).find('.figBS').appendTo('.mcont')
+      $(this).appendTo('.mcont')
     })
     $('.mpgdetail').appendTo('.mcont')
   }
