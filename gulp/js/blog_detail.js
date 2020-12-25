@@ -26,6 +26,11 @@ module.exports = function () {
   }
 
   assignAOS()
+
+  // Type 2
+  if (is('.blog-news')) {
+    $('.module-detail').addClass('type-2')
+  }
 }
 
 function assignAOS () {

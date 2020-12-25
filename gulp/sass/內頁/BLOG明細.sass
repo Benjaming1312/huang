@@ -79,4 +79,54 @@
         margin-right: 7.5px
         position: relative
         top: -1px
-
+  // Type-2
+  &.type-2
+    .row
+      margin-bottom: 15px
+      @media screen and (min-width: 768px)
+        display: flex
+      @media #{$mobile}
+        margin-bottom: 15px
+    .figBS
+      display: none
+    .mpgdetail
+      +max-width
+      width: 100%
+    .img
+      margin-bottom: 0
+      @media #{$mobile}
+        margin-bottom: 7.5px
+      img
+        width: 100%
+    .text
+      @media screen and (min-width: 768px)
+        display: flex
+        align-items: center
+        justify-content: center
+      .content
+        @media screen and (min-width: 768px)
+          width: 90%
+          min-height: 50%
+        p
+          margin-bottom: 15px
+          font-size: 13px
+          line-height: 25px
+        &.col-sm-6
+          @media screen and (min-width: 768px)
+            width: 50%
+            margin-bottom: 0px
+          p
+            @media screen and (min-width: 768px)
+              margin-bottom: 0
+          h5
+            @media screen and (min-width: 768px)
+              white-space: nowrap
+      .module-title
+        .title
+          margin-top: 0
+          text-align: left
+          @media #{$mobile}
+            margin-top: 15px
+        .row
+          display: flex
+          flex-wrap: wrap
