@@ -45,14 +45,19 @@
         &.collapsed
           .fa
             &::before
-              content: '\f067'
+              content: ''
       .fa
         float: right
         position: relative
         top: 5px
         color: $color-b
         &::before
-          content: '\f068'
+          content: ''
+          +tr3($color-b, $color-n, $color-n, $color-n)
+          transform: rotate(-90deg)
+          // border-width: 6px
+          position: relative
+          top: 15px
     p
       padding: 10px 15px
       margin-bottom: 0

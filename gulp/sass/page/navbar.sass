@@ -83,6 +83,9 @@
       background: rgba(white, .76)
       border-top: 1px solid #ccc
       padding-bottom: 15px
+      max-height: calc(100vh - 100px)
+      overflow: auto
+      overscroll-behavior: contain
       a
         border: 0
         color: white
@@ -112,7 +115,7 @@
         letter-spacing: 1px
       >li
         @media screen and (min-width: 768px)
-          margin-left: 5.5vw
+          margin-left: 4.5vw
           padding-bottom: 0
         @media #{$mobile}
           margin-bottom: 15px
@@ -156,10 +159,12 @@
               display: block
             &::before
               @media #{$mobile}
-                content: '+'
-                color: $color-b
+                content: ''
                 float: right
-                font-size: 24px
+                +tr3($color-b, $color-n, $color-n, $color-n)
+                transform: rotate(90deg)
+                border-width: 6px
+                +trans
         &.dropdown
           @media screen and (min-width: 768px)
             position: relative
@@ -173,21 +178,25 @@
             box-shadow: none
             @media #{$mobile}
               margin-top: 5px
+              padding-right: 0px
               // padding: 15px 5px
           &:hover,
           &.open
             .dropdown-toggle
               &::before
                 @media #{$mobile}
-                  content: '-'
+                  transform: rotate(0deg) translate(3px, 3px)
             .dropdown-menu
               border: 0
-              width: 100%
+              width: auto
               @media screen and (min-width: 768px)
                 display: flex
                 flex-wrap: wrap
+                width: auto
+                right: initial
               @media #{$mobile}
                 padding-left: 15px
+                width: 100%
               li
                 padding-bottom: 0
                 @media screen and (min-width: 768px)
@@ -200,6 +209,7 @@
                   transition: $trans
                   color: $color-b
                   padding-left: 15px
+                  padding-right: 25px
                   font-weight: normal
                   letter-spacing: 1px
                   @media #{$mobile}
