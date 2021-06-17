@@ -66,8 +66,20 @@
   .panel-body
     padding-bottom: 0
     padding-top: 0
+    padding-right: 0
   .panel-group
     margin-bottom: 0
+  .panel>.panel-collapse>.panel-body>.panel-group
+    >.panel
+      border: 0
+      >.panel-collapse
+        .panel-group
+          padding-top: 7.5px
+        p
+          padding-top: 0
+          padding-bottom: 0
+        a
+          font-size: 14px
 
   .module-ptlist
     margin-top: 15px
