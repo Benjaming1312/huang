@@ -56,8 +56,6 @@ function prodOwlCarousel () {
         <div class="swiper-container main">
           <div class="swiper-wrapper">
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
       </div>
         <div class="hash-link-container">
           <div class="hash-link swiper-container">
@@ -72,20 +70,34 @@ function prodOwlCarousel () {
       const link = $(this).attr('src')
       $('.swiper-container.main .swiper-wrapper').append(`<div class="swiper-slide" data-hash="prodOwl-${idx}" style="background: url(${link});"></div>`)
 
-      $('.hash-link .swiper-wrapper').append(`<div class="swiper-slide"><a href="#prodOwl-${idx}" style="background: url(${link});"></a></div>`)
+      $('.hash-link .swiper-wrapper').append(`<div class="swiper-slide"><a href="#prodOwl-${idx}" style="background: url(${link});" data-hash-src="${link}"></a></div>`)
+      // $('.hash-link .wrapper').append(`<div class="swiper-slide"><a href="#prodOwl-${idx}" style="background: url(${link});" data-hash-src="${link}"></a></div>`)
     })
 
     setTimeout(() => {
-      const swiper = new Swiper('.swiper-container.main', {
-        spaceBetween: 0,
-        hashNavigation: {
-          watchState: true,
-        },
-        navigation: {          
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        }
+      $('.hash-link a').each(function () {
+        $(this).click(function (e) {
+          e.preventDefault()
+          e.stopPropagation()
+
+          $('.swiper-slide').removeClass('active')
+
+          const link = $(this).data('hash-src')
+
+          $('.swiper-container.main .swiper-wrapper .swiper-slide').eq(0).css('background', `url(${link})`)
+          $(this).parent().addClass('active')
+        })
       })
+      // const swiper = new Swiper('.swiper-container.main', {
+      //   spaceBetween: 0,
+      //   hashNavigation: {
+      //     watchState: true,
+      //   },
+      //   navigation: {          
+      //     nextEl: '.swiper-button-next',
+      //     prevEl: '.swiper-button-prev'
+      //   }
+      // })
     })
 
     // if ($('.swiper-container.hash-link .swiper-slide').length > 4) {

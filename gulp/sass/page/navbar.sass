@@ -6,9 +6,9 @@
   border: 0
   box-shadow: none
   border-radius: 0
-  background: rgba(white, .76)
+  background: rgba(white, 1)
   z-index: 9999
-  padding: 15px 0 15px
+  padding: 15px 0 0px
   +trans
   @media #{$mobile}
     padding-top: 10px
@@ -140,7 +140,6 @@
           +trans
           @media screen and (min-width: 768px)
             margin-right: 0px
-            padding-bottom: 0
           @media #{$mobile}
             text-align: left
             margin-left: 0
@@ -154,6 +153,8 @@
           border: 0
           padding-bottom: 0
           transition: $trans
+          @media screen and (min-width: 768px)
+            padding-bottom: 15px 
           &.dropdown-toggle
             @media #{$mobile}
               display: block
@@ -171,7 +172,7 @@
             z-index: 99999999
           .dropdown-menu
             left: 0
-            background: rgba(#efefef, .7)
+            background: rgba(white, 1)
             border: 0
             width: 100%
             overflow: initial
