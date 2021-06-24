@@ -9,7 +9,7 @@
 const aosInit = require('./aos')
 const gotop = require('./scrollTo')
 const index = require('./index/index.js')
-const onScroll = require('./navbar.js')
+const navbar = require('./navbar.js')
 const product_list = require('./product-list.js')
 const product_detail = require('./product-detail.js')
 const about = require('./aboutus.js')
@@ -20,7 +20,7 @@ const collapseAside = require('./collapseAside.js')
 
 $('body').hide()
 $(function () {
-  onScroll()
+  navbar()
   gotop()
   mshop()
   blog_detail()

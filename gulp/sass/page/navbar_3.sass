@@ -17,13 +17,15 @@
         right: 5px
 
 
-.dropdown-submenu.dropdown-submenu.dropdown-submenu
-  &:hover,
-  &:active,
-  &:focus,
+.dropdown-submenu
+  &:hover
+    @media screen and (min-width: 768px)
+      .dropdown-menu
+        display: block!important
   &.open
-    .dropdown-menu
-      display: block!important
+    @media #{$mobile}
+      .dropdown-menu
+        display: block!important
       // @media #{$mobile}
       //   position: static
     // .sub-toggle

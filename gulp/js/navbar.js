@@ -13,10 +13,10 @@ module.exports = function () {
     }
   })
 
-  $('.dropdown-submenu').on('click', function (e) {
+  $('.dropdown-submenu .sub-toggle').on('click', function (e) {
     e.preventDefault()
     e.stopPropagation()
-    $(this).toggleClass('open')
+    $(this).parent().toggleClass('open')
   })
 
   if ($(window).width() > 768) {
