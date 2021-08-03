@@ -9,13 +9,13 @@ module.exports = function () {
     return
   }
 
-  if (!is('.figBS')) {
-    $('.module-misc').remove()
-    return
-  }
-  else {
-    appendMisc()
-  }
+  // if (!is('.figBS')) {
+  //   $('.module-misc').remove()
+  //   return
+  // }
+  // else {
+  // }
+  appendMisc()
 
   $('.mpgtitle').show()
   $('.module-detail').addClass('blog_detail')

@@ -7,7 +7,15 @@
   @media #{$mobile}
     padding: 0 30px
   .mpgtitle
-    display: none
+    background: none
+    border-left: 5px solid $color-purple
+    padding-left: 15px
+    margin-bottom: 30px
+    h3
+      color: $color-purple
+      padding-top: 0
+      padding-bottom: 0
+      padding: 0
   .row
     margin: 0 -15px
   .title-content
@@ -16,11 +24,12 @@
       padding-left: 0
       padding-right: 0
     h4
-      color: $color-yellow
+      color: $color-purple
       font-size: 22px
-      border-left: 5px solid $color-yellow
+      border-left: 5px solid $color-purple
       padding-left: 15px
       line-height: 30px
+      display: none
       date
         float: right
         font-size: 14px
@@ -52,3 +61,9 @@
       color: $color-brown
     p
       font-size: 16px
+
+  .blog-news
+    .row
+      margin-bottom: 60px
+      @media #{$mobile}
+        margin-bottom: 30px
