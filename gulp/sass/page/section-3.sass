@@ -1,34 +1,52 @@
 .idx.section-3
-  padding-top: 25px
-  +max-width
-  margin-left: auto
-  margin-right: auto
+  padding-bottom: 50px
   @media #{$mobile}
-    padding-top: 15px
-  .module-title
-    margin-bottom: 25px
-  .row.list-content
-    @media screen and (min-width: 768px)
-      margin: 0 -30px
-    .col-sm-4
-      width: calc(100% / 3 - 20px)
-      margin: 0 10px 17px
-      padding: 0
-      +trans
+    padding-bottom: 25px
+  .row.info
+    +max-width
+    .img
+      @media screen and (min-width: 768px)
+        width: 462px
+    .text
+      @media screen and (min-width: 768px)
+        width: calc(100% - 462px)
+    .svg
+      position: absolute
+      right: -57px
+      bottom: 0
       @media #{$mobile}
-        width: 100%
-        margin-left: 0
-        margin-right: 0
-        margin-bottom: 15px
-      &:nth-child(5),
-      &:hover
-        +box-shadow
-        img
-          +box-shadow
-          opacity: 0.7
-      a
-        padding-top: 0
-        img
-          position: static
-          width: 100%
-          +trans
+        right: 0
+        bottom: -50px
+        opacity: 0.2
+    .mb
+      .listBS
+        &:nth-last-of-type(1)
+          .d-item
+            padding-bottom: 0
+            border: 0
+        .d-item
+          border-bottom: 1px solid rgba(#716558, .37)
+          padding: 7.5px 0
+          @media #{$mobile}
+            padding: 15px 0
+          .d-txt
+            .mdate
+              font-size: 13px
+              color: #808080
+              display: block
+            a
+              font-size: 20px
+              font-weight: 500
+              color: #603813
+            .mdetail
+              color: #404041
+              font-size: 14px
+      .more
+        margin-top: 90px
+        text-align: center
+        @media #{$mobile}
+          margin-top: 30px
+        a
+          +btn
+          font-size: 15px
+          padding: 7l.5px 60px

@@ -1,32 +1,14 @@
-.banner
+.mcarousel
   padding: 0
   width: 100%
   position: relative
   +trans
-  .col-xs-12
-    padding: 0
-  .row
-    position: relative
-
-
-  .text
-    position: absolute
-    top: 35%
-    left: 7.5%
-    width: 50%
-    height: auto
-    display: block
-    z-index: 3
-    @media #{$mobile}
-      top: 50%
-      left: 0
-      display: inline-block
-      height: auto
-  img
-    width: 100%
-  .ads-images
-    margin-bottom: 30px
-  // @media #{$mobile}
+  @media screen and (min-width: 768px)
+    margin-bottom: 0px
+    margin-bottom: 50px
+  @media #{$mobile}
+    margin-top: 0px
+    margin-bottom: 25px
   //   margin-top: 65px
   // .col-xs-12
   //   padding: 0
@@ -49,19 +31,18 @@
   //   z-index: 3
   .owl-dots
     position: absolute
-    bottom: 30px
     width: 100%
     text-align: center
     z-index: 9999
-    @media #{$mobile}
-      padding-right: 7.5px
-      padding-bottom: 5px
-      bottom: 0
+    bottom: 15px
+    // @media #{$mobile}
+    //   bottom: 0
     .owl-dot
       opacity: 1
       border-radius: 0
-      margin: 0 5px
+      margin: 0 7.5px
       border: 0
+      display: inline-block
       span
         opacity: 1
         border-radius: 0
@@ -69,47 +50,34 @@
         // background: url(#{$url}owl-dot.svg) center center no-repeat
         // background-size: contain
         // background-position: center
-        background: white
+        
         border-radius: 50%
-        $w: 10px
+        $w: 12px
         width: $w
         height: $w
         display: inline-block
+        opacity: 1
+        border: 0
         +trans
-        border: 2px solid white
-        background: $color-n
+        background: url(#{$url}dot.svg) center center no-repeat
         @media #{$mobile}
           $w: 10px
           width: $w
           height: $w
       &.active
         span
-          background: #fff
+          background: url(#{$url}dot-active.svg) center center no-repeat
           // background: url(#{$url}owl-dot-active.svg) center center no-repeat
-          $w: 10px
+          $w: 12px
           width: $w
           height: $w
-          transform: translateX(2.5px)
-          background: white
+          opacity: 1
           @media #{$mobile}
             $w: 10px
             width: $w
             height: $w
             top: 0
-  .find-out
-    width: 32%
-    height: 50%
-    position: absolute
-    bottom: 0
-    right: 0
-    background-size: cover!important
-    background-repeat: no-repeat!important
-    background-position: bottom!important
-    // background-color: #000!important
-    z-index: 2
-    @media #{$mobile}
-      width: 35%
-      height: 25%
+
 
 // .mads-li
 //   // margin-top: 112px

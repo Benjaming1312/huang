@@ -1,69 +1,20 @@
-.idx.section-1
-  background-size: cover!important
-  background-repeat: no-repeat!important
-  background-position: top center!important
-  padding-top: 60px
-  padding-bottom: 15px
-  .owl.row
-    max-width: 1280px
-    margin: 0 auto
-    .item
-      .row
-        position: relative
-        @media screen and (min-width: 768px)
-          display: flex
-          flex-wrap: wrap
-  .text
-    padding-top: 30px
-    @media #{$mobile}
-      padding-top: 15px
+.section-1
+  @media screen and (min-width: 768px)
+    padding-bottom: 50px
+  .row
+    &:first-child
+      .col-xs-12
+        padding: 0
+  .info
+    +max-width
     p
-      margin-top: 0px
+      text-align: center
+      color: $color-brown
       font-size: 16px
-      line-height: 40px
-      font-weight: 500
-      &:first-child
-        font-size: 19px
-    .readmore
-      position: absolute
-      right: 0
-      bottom: 0
-      @media #{$mobile}
-        position: static
-        text-align: center
-      .btn
-        @media screen and (min-width: 768px)
-          margin-right: 15px
-        &:hover
-        &:focus,
-        &:active
-          .svg
-            transform: translate(15px)
-      .svg
-        +trans
-        $w: 15px
-        width: $w
-        height: $w
-        margin-left: 7.5px
-        position: relative
-    
-  .owl-dots
-    margin-top: 30px
+      line-height: 30px
+      margin-bottom: 30px
+  .col-sm-4
     @media #{$mobile}
-      display: flex
-      flex-wrap: nowrap
-      justify-content: center
-    .owl-dot
-      span
-        width: 100px
-        border-radius: 0
-        height: 3px
-        background: #808080
-        +trans
-        opacity: 1
-        @media #{$mobile}
-          width: 50px
-      &.active
-        span
-          height: 5px
-          background:  #777ca8
+      margin-bottom: 15px
+    img
+      width: 100%

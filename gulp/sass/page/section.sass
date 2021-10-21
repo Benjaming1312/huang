@@ -6,8 +6,9 @@ a
 html
   overflow-x: hidden
 body
-  @media #{$mobile}
-    padding-bottom: 40px
+  background: url(#{$url}body-bg.png)
+  background-repeat: repeat
+  background-position: center
 .langbar
   display: none
 
@@ -37,20 +38,26 @@ body
   transition: $trans
 
 =btn
-  background: $color-n
-  border: 1px solid $color-b
-  font-size: 16px
-  color: $color-b
-  +trans
-  display: inline-flex
-  align-items: center
-  font-weight: 400
+  background: white
   border-radius: 0
+  border: 0
+  font-family: SourceHanSansTW, Regular-B5pc-H, "Noto Sans TC","微軟正黑體","sans-serif"
+  font-size: 8px
+  letter-spacing: 0.8px
+  color: #404041
+  padding: 7.5px 30px
+  box-shadow: 7px 7px 15px -1px rgba(#000, .3)
+  position: relative
+  z-index: 1
+  +trans
+  span
+    color: #404041
+    +trans
   &:hover,
   &:focus,
   &:active
-    background: $color-n
-    color: $color-b
+    background: #404041
+    color: white
 
 =title
   color: #343333
@@ -101,8 +108,9 @@ body
   small
     font-size: 16px
 
-// .mbtn, .btn
-//   +btn
+.mbtn.mbtn,
+.btn.btn
+  +btn
 //   border-color: $color-blue
 //   margin-left: auto
 //   margin-right: auto
@@ -182,13 +190,38 @@ body:not(.page_mobilehome)
         opacity: 1      
 
 .module-title
-  margin-bottom: 40px
+  display: flex
+  flex-wrap: nowrap
+  position: relative
+  align-items: center
+  margin-bottom: 56px
   @media #{$mobile}
-    margin-bottom: 20px
-  h4.title
-    +title
-  h4.sub-title
-    +sub-title
+    margin-bottom: 30px
+  .line
+    width: 50%
+    height: 1px
+    background: rgba(#716558, .26)
+    display: inline-block
+    @media #{$mobile}
+      width: 15px
+    // position: relative
+    // top: 40px
+  >.svg:not(.text)
+    margin: 0 15px
+  .text
+    display: inline-flex
+    flex-wrap: nowrap
+    white-space: nowrap
+    font-size: 30px
+    align-items: center
+    color: #968d85
+    @media #{$mobile}
+      font-size: 26px
+    .svg
+      margin-left: 15px
+      position: relative
+      top: 3.5px
+
 
 .page-title
   margin-top: 30px

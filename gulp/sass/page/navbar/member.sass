@@ -1,0 +1,28 @@
+.member.member
+  position: absolute
+  right: 0px
+  top: 7.5px
+  width: 150px
+  @media screen and (min-width: 768px)
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column-reverse
+  @media #{$mobile}
+    position: static
+    width: 100%
+    padding: 7.5px 0
+    padding-top: 15px
+  .user-append
+    width: 80%
+    display: flex
+    flex-wrap: nowrap
+    justify-content: center
+    @media #{$mobile}
+      width: 100%
+      justify-content: space-around
+    .svg
+      min-width: 20px
+      min-height: 20px
+      margin: 0 15px
+  .formBS
+    width: 100%

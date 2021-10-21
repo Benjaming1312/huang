@@ -1,114 +1,97 @@
+.footer
+  margin-top: -1px
+  border: 0
+  background: #968d85
+
 footer.foot
-  margin-top: 40px
+  margin-top: 0px
   padding: 0
   background: none
+  padding: 25px 0
+  padding-bottom: 15px
   .row
-    &:nth-child(2)
-      background-size: cover!important
-      background-position: center left!important
-      background-repeat: no-repeat!important
-      padding: 30px 0
-      @media screen and (min-width: 768px)
-        display: flex
-        align-items: flex-end
-      @media #{$mobile}
-        padding-top: 30px
-  .info
-    .col-sm-6:not(.social)
-      position: relative
-      &:nth-child(2)
-        @media screen and (min-width: 768px)
-          padding-left: 30px
-        &::before
-          @media screen and (min-width: 768px)
-            content: ''
-            border-left: 1px solid #c7c9ca
-            height: 55px
-            width: 1px
-            position: absolute
-            left: 12.5px
-            top: 12.5px
-      ul
-        padding: 7.5px 0
-        list-style: none
-        @media #{$mobile}
-          margin-bottom: 0
-          padding-bottom: 0
-        li
-          white-space: nowrap
-          margin-bottom: 15px
-          color: #231f20
-          display: flex
-          align-items: center
-          font-size: 16px
-          @media #{$mobile}
-            font-size: 16px
-          &:last-child
-            @media screen and (min-width: 768px)
-              margin-bottom: 0
-          *
-            color: #231f20
-            font-size: 16px
-            @media #{$mobile}
-              font-size: 16px
-          .svg
-            margin-right: 7.5px
-            min-width: 16px!important
-            height: 16px!important
-    .social
-      text-align: right
-      width: 100%
-      padding-right: 7.5px
-      @media #{$mobile}
-        padding-right: 0
-        text-align: center
-      .list-inline
-        margin-bottom: 0
-        margin: 0
-        margin-bottom: 7.5px        
-        a
-          +trans
-          &:hover
-            opacity: 0.3
-  iframe
-    max-height: 194px
+    padding: 0 30px
+    @media screen and (min-width: 768px)
+      display: flex
+      flex-wrap: nowrap
     @media #{$mobile}
-      width: 100%
-  //   display: flex
-  //   align-items: center
-  //   flex-wrap: nowrap
-  //   @media #{$mobile}
-  //     padding: 0 15px
-  //     flex-wrap: wrap
-  // .line
-  //   margin-left: 5px
-  //   margin-bottom: 14px
-  // .title-1
-  //   margin-left: 5px
-  // .title-2
-  //   margin-top: 30px
-  //   @media #{$mobile}
-  //     max-width: 100%
-  // .text-content
-  //   @media screen and (min-width: 768px)
-  //     margin-right: 56px
-  //   @media #{$mobile}
-  //     width: 100%
-  //     margin-bottom: 30px
-  
+      padding: 0px
+  .contact
+    .svg
+      min-width: 220px
+      min-height: 40px
+      margin-bottom: 20px
+      background-size: contain!important
+      background-repeat: no-repeat!important
+      background-position: left center!important
+    p
+      font-size: 16px
+      line-height: 25px
+      letter-spacing: 0.4px
+      color: #FFFFFF
+      *
+        font-size: 16px
+        line-height: 25px
+        letter-spacing: 0.4px
+        color: #FFFFFF
+  .list-link
+    display: flex
+    padding: 0
+    margin: 0
+    @media screen and (min-width: 768px)
+      flex-wrap: nowrap
+      margin-top: 60px
+      padding-right: 50px
+    @media #{$mobile}
+      flex-wrap: wrap
+    >li
+      list-style: none
+      text-align: center
+      @media screen and (min-width: 768px)
+        width: calc(100% / 6 - 30px)
+        margin: 0 15px
+      @media #{$mobile}
+        width: 50%
+        margin-bottom: 30px
+      >a
+        font-size: 18px
+        font-weight: bold
+      ul
+        list-style: none
+        padding: 0
+        margin: 0
+        text-align: center
+        li
+          a
+            font-size: 16px
+            line-height: 30px
+    .svg
+      position: absolute
+      bottom: 0
+      @media #{$mobile}
+        opacity: 0.3
+      &.svg-1
+        left: -30px
+        @media #{$mobile}
+          left: 0
+      &.svg-2
+        left: 30px
+        @media #{$mobile}
+          left: 50px
+      &.svg-3
+        right: 0
 
 div.design
-  padding-top: 7.5px
-  padding-bottom: 7.5px
-  background: white
+  padding: 0 30px
+  background: #968d85
   // background: url(#{$url}foot-bg.svg) center center no-repeat
   // background-size: cover
   // padding-top: 51px
   // padding-bottom: 22px
   // position: relative
   @media #{$mobile}
-    background-size: 1560px cover
     padding-bottom: 0
+    padding: 0 15px
     background-position: center
   .gotop-content
     position: absolute
@@ -116,6 +99,9 @@ div.design
     left: 0
     width: 100%
     text-align: center
+  .row
+    border-top: 1px solid rgba(white, .37)
+    padding: 7.5px 0
   p
     margin: 0
     padding: 0px 0
@@ -132,7 +118,7 @@ div.design
         text-align: center
     span, a
       font-size: 12px
-      color: $color-b
+      color: white
       letter-spacing: 0
       font-weight: normal
     a
@@ -145,7 +131,7 @@ div.design
         width: 100%
         margin-top: 5px
         float: left
-        margin-bottom: 15px
+        margin-bottom: 0px
 
 .right
   position: fixed
@@ -153,30 +139,12 @@ div.design
   width: 40px
   right: 5px
   z-index: 9999
-  @media #{$mobile}
-    bottom: 0
-    left: 0
-    right: initial
-    width: 100%
-    display: flex
-    flex-wrap: nowrap
-    background: white
   a
     +trans
     &:hover
       opacity: 0.7
       @media #{$mobile}
         opacity: 1
-  .svg
-    margin-bottom: 15px
-    @media #{$mobile}
-      $w: 40px
-      // width: $w!important
-      height: $w!important
-      width: calc(100% / 4)!important
-      margin-bottom: 0
-      background-size: contain!important
-      background-color: #fff
     // &:nth-of-type(1)
     //   background-color: #e9a24f!important
     // &:nth-of-type(2)
@@ -185,9 +153,6 @@ div.design
     //   background-color: #00a542!important
     // &:nth-of-type(4)
     //   background-color: #4c6bc1!important
-  .gotop
-    @media #{$mobile}
-      display: none
 
 .fb_customer_chat_icon
   bottom: 50px!important

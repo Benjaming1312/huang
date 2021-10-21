@@ -1,0 +1,56 @@
+// 搜尋
+.member .formBS
+  $inputHeight: 22px
+  margin-top: 15px
+  @media screen and (min-width: 768px)
+    transform: translateX(-20px)
+  @media #{$mobile}
+    margin-top: 0
+    width: 100%
+    display: flex
+    justify-content: center
+    margin-bottom: 15px
+
+  .input-group
+    height: $inputHeight
+    border-radius: 5px
+    display: flex
+    flex-wrap: nowrap
+    position: relative
+    @media #{$mobile}
+      width: 90%
+  .input-group-btn
+    display: inline-block
+    width: initial
+    z-index: 3
+    top: 0px
+    right: 3px
+    .btn
+      border: 0
+      $w: 20px
+      min-width: $w
+      min-height: $w
+      padding: 0 2.5px
+      margin-right: 0!important
+      position: absolute
+      right: 0
+      top: -1.5px
+      @media #{$mobile}
+        position: relative
+        right: -5px
+  input
+    height: $inputHeight
+    background: white
+    border: 0
+    border-bottom: 1px solid white
+    display: block
+    width: 150px
+    background: none
+    border-radius: 0
+    @media #{$mobile}
+      width: 100%
+      // max-width: 250px
+    &::placeholder
+      color: white
+      font-size: 18px
+      text-transform: uppercase
