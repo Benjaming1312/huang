@@ -27,9 +27,9 @@ module.exports = function () {
   //     window.location.href = url
   //   })
   // }
-  // if ($(window).width() < 768) {
-  //   $('.member').appendTo($('#navbar'))
-  // }
+  if ($(window).width() < 768) {
+    $('.member').appendTo($('#navbar'))
+  }
 
   // $('.dropdown-menu > li').each(function () {
   //   const url = window.location.href

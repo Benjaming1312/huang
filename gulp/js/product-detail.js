@@ -1,11 +1,19 @@
 const is = require('./is')
 
 module.exports = function () {
-  if (!is('.module-ecptdetail')) { // 商品明細
+  if (!is('.module-detail') && !is('.module-ecptdetail')) { // 商品明細
     return
   }
-  prodOwlCarousel()
-  appendProdInfo()
+  $('.mlarge').attr({
+    'data-aos': 'fade-right',
+    'data-aos-duration': 1000
+  })
+  $('.mpgdetail').attr({
+    'data-aos': 'fade-left',
+    'data-aos-duration': 1000
+  })
+  // prodOwlCarousel()
+  // appendProdInfo()
 
   // $('.module-relate').append(`<div class="owl-carousel"></div>`)
   // $('.module-relate .row.listBS').addClass('item')
@@ -42,6 +50,8 @@ module.exports = function () {
   //         },
   //     }
   // })
+  appendProdInfo()
+  prodOwlCarousel()
 }
 
 function appendProdInfo () {
@@ -56,10 +66,11 @@ function prodOwlCarousel () {
         <div class="swiper-container main">
           <div class="swiper-wrapper">
         </div>
+        
       </div>
         <div class="hash-link-container">
           <div class="hash-link swiper-container">
-            <div class="swiper-wrapper">
+            <div class="wrapper">
             </div>
             </div>
         </div>
@@ -70,8 +81,7 @@ function prodOwlCarousel () {
       const link = $(this).attr('src')
       $('.swiper-container.main .swiper-wrapper').append(`<div class="swiper-slide" data-hash="prodOwl-${idx}" style="background: url(${link});"></div>`)
 
-      $('.hash-link .swiper-wrapper').append(`<div class="swiper-slide"><a href="#prodOwl-${idx}" style="background: url(${link});" data-hash-src="${link}"></a></div>`)
-      // $('.hash-link .wrapper').append(`<div class="swiper-slide"><a href="#prodOwl-${idx}" style="background: url(${link});" data-hash-src="${link}"></a></div>`)
+      $('.hash-link .wrapper').append(`<div class="swiper-slide"><a href="#prodOwl-${idx}" style="background: url(${link});" data-hash-src="${link}"></a></div>`)
     })
 
     setTimeout(() => {
@@ -79,13 +89,9 @@ function prodOwlCarousel () {
         $(this).click(function (e) {
           e.preventDefault()
           e.stopPropagation()
-
-          $('.swiper-slide').removeClass('active')
-
           const link = $(this).data('hash-src')
 
           $('.swiper-container.main .swiper-wrapper .swiper-slide').eq(0).css('background', `url(${link})`)
-          $(this).parent().addClass('active')
         })
       })
       // const swiper = new Swiper('.swiper-container.main', {

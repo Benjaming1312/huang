@@ -5,11 +5,11 @@
   @media screen and (min-width: 768px)
     transform: translateX(-20px)
   @media #{$mobile}
-    margin-top: 0
+    margin-top: 20px
     width: 100%
     display: flex
     justify-content: center
-    margin-bottom: 15px
+    margin-bottom: 0
 
   .input-group
     height: $inputHeight
@@ -47,10 +47,14 @@
     width: 150px
     background: none
     border-radius: 0
+    color: white
+    padding-left: 3.25px
+    padding-bottom: 7.5px
+    font-size: 16px
     @media #{$mobile}
       width: 100%
       // max-width: 250px
     &::placeholder
       color: white
-      font-size: 18px
+      font-size: 16px
       text-transform: uppercase
