@@ -1,0 +1,82 @@
+.page.faq
+  >.row:not(.page-title)
+    max-width: 1100px
+    margin-left: auto
+    margin-right: auto
+
+.page.faq
+  .nav-tabs
+    border: 0
+    display: flex
+    justify-content: center
+    margin-top: 0px
+    @media #{$mobile}
+      flex-wrap: wrap
+      margin: 0 0px
+      padding-left: 0
+    li
+      margin: 0 15px
+      @media #{$mobile}
+        width: 50%
+        text-align: center
+        margin-bottom: 15px
+        margin-left: 0
+        margin-right: 0
+      &.active,
+      &:hover
+        a
+          color: $color-brown
+          border-bottom-color: $color-brown
+    a
+      border: 0
+      padding: 0
+      padding-bottom: 7.5px
+      border-top: 0!important
+      border-left: 0!important
+      border-right: 0!important
+      border-bottom: 1px solid $color-n
+      border-radius: 0
+      +trans
+      @media #{$mobile}
+        white-space: nowrap
+        font-size: 14px
+        padding: 7.5px
+      &:focus
+        border: 0
+        border-bottom: 1px solid $color-n
+  .panel
+    border: 0
+    margin-bottom: 30px
+    p
+      margin-bottom: 0px
+      margin-top: 0px
+    .panel-title
+      a
+        padding: 7.5px 15px
+        display: block
+        width: 100%
+        border-color: #ccc
+        color: $color-brown
+        font-weight: bold
+        &::after
+          content: "\f068"
+          display: inline-block
+          font: normal normal normal 14px/1 FontAwesome
+          font-size: inherit
+          text-rendering: auto
+          -webkit-font-smoothing: antialiased
+          -moz-osx-font-smoothing: grayscale
+          float: right
+      .collapsed
+        &::after
+          content: "\f067"
+  .panel-collapse
+    background: $color-brown-l
+    padding: 15px
+    *
+      color: white
+      line-height: 30px
+    ol
+      padding-left: 22px
+      li
+        margin-bottom: 7.5px

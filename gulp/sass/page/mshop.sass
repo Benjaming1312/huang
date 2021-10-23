@@ -35,10 +35,8 @@
 .module-,
 .md_middle,
 .module-favlist
-  +max-width
-  max-width: 750px!important
-  margin-left: auto
-  margin-right: auto
+  max-width: initial
+  width: 100%
   padding-bottom: 30px
   @media screen and (min-width: 768px)
     margin-top: 0px
@@ -46,50 +44,47 @@
     margin-top: 0px
     padding: 0px 15px
     padding-bottom: 30px
+  .mb
+    +max-width
+    max-width: 750px!important
+    margin-left: auto
+    margin-right: auto
   .mt
-    text-align: center
-    margin-top: 15px
     h3
-      color: #535353
-      font-size: 28px
-      font-weight: 400
-      text-align: center
-      letter-spacing: 0px
-      margin-bottom: 0
       border: 0
       @media #{$mobile}
         margin-bottom: 15px
   .form-btn
     margin-top: 30px
-  .mbtn,
-  .btn
-    background: $color-purple
-    border-color: $color-purple
-    color: white
-    display: inline-flex
-    align-items: center
-    justify-content: center
-    &:hover
-      color: $color-purple
-      background: none
-  a:focus
-    color: $color-purple
+  // .mbtn,
+  // .btn
+  //   background: $color-brown-l
+  //   border-color: $color-brown-l
+  //   color: white
+  //   display: inline-flex
+  //   align-items: center
+  //   justify-content: center
+  //   &:hover
+  //     color: $color-brown-l
+  //     background: none
+  // a:focus
+  //   color: $color-brown-l
   .mfield.eccons-name.eccons-name
     *
-      background: $color-purple
+      background: $color-brown-l
 
 .mbtn,
 .btn
   +btn
 
 
-.module-orderlist,
-.module-consignee,
-.module-billto,
-.module-viewcart
-  max-width: 900px!important
-  margin-left: auto
-  margin-right: auto
+// .module-orderlist,
+// .module-consignee,
+// .module-billto,
+// .module-viewcart
+//   max-width: 900px!important
+//   margin-left: auto
+//   margin-right: auto
 
 .module-forgetpsw,
 .module-changepwd
@@ -148,7 +143,7 @@
   a
     +trans
     &:hover
-      background: $color-purple
+      background: $color-brown-l
       color: white
 
 .module-billto
@@ -184,39 +179,31 @@
   .mbtn
     +btn
     width: 150px
-    background: $color-purple
-    border-color: $color-purple
+    background: $color-brown-l
+    border-color: $color-brown-l
     color: white
     &:hover
-      color: $color-purple
+      color: $color-brown-l
       background: none
       span
-        color: $color-purple
+        color: $color-brown-l
     span
       color: white
 .mcart-operate.mcart-operate
   .mbtn
     +btn
-    height: 40px
-    background: $color-purple
-    border-color: $color-purple
-    color: white
-    &:hover,
-    &:focus
-      background: none
-      color: $color-purple
 .ecconsignee-list li.defaultAddr .mtag
   white-space: nowrap
-.module-consignee
-  .mbtn
-    +btn
-    height: 40px
-    width: 150px
-    margin: 0
-    margin-bottom: 15px
-    span
-      color: white
-      white-space: nowrap
+// .module-consignee
+//   .mbtn
+//     +btn
+//     height: 40px
+//     width: 150px
+//     margin: 0
+//     margin-bottom: 15px
+//     span
+//       color: white
+//       white-space: nowrap
 
 .module-ecpay
   .mt
@@ -224,7 +211,7 @@
 
 .ecconsignee-list .consignee-info 
   .mfield.eccons-name.eccons-name.eccons-name
-    background: $color-brown-d
+    background: $color-brown-l
     *
       color: white
       margin-bottom: 0
@@ -235,6 +222,15 @@
     margin-top: 0
     .mbtn
       display: inline-block
+      box-shadow: none
+      &.ecbtn-addr-edit
+        &:hover
+          background-image: url(/plugin/mec/mobilestyle/images/edit.png)
+          background-size: 16px
+      &.mremove
+        &:hover
+          background-image: url(/plugin/mec/mobilestyle/images/delete.png)
+          background-size: 16px
 
 .ecconsignee-list li .form-btn
   position: static!important
@@ -250,7 +246,7 @@
 
 .showother ul > li.active,
 .ecpay-list ul > li.active > div
-  border-color: $color-purple
+  border-color: $color-brown-l
 .ecorder-form .showother > .mbox > div[class$="-add"] .form-btn .mbtn-top
   white-space: nowrap
 
@@ -258,13 +254,14 @@
   padding-top: 30px 
   margin-bottom: 15px
   padding-bottom: 0px
+  border-top: 0
   &:nth-of-type(1)
     padding-top: 15px
   > .mt h3
     font-weight: 600
     font-size: 18px
     line-height: 25px
-    border-left: 5px solid $color-purple
+    border-left: 5px solid $color-brown-l
     color: #535353
     padding-left: 7.5px
 
@@ -316,10 +313,15 @@
 
 .mpopdiv
   .mt
+    border: 0
+    margin-bottom: -30px
     h4
       color: $color-brown-d
+      white-space: nowrap
   .module-login
     margin-top: 0
+  .btn-toggle.close
+    position: absolute
 
 .module-cglist,
 .module-rcglist,
@@ -332,3 +334,31 @@
 .module-
   +max-width
   max-width: 1100px!important
+
+.mthide
+  display: none
+
+
+.module-ecorder,
+.module-ecconsignee,
+.module-ecdeliver,
+.module-ecpay
+  .mt
+    text-align: left
+    justify-content: start
+    margin-bottom: 15px
+  .line,
+  .svg
+    display: none
+
+#mecbillto .module-ecconsignee .consignee-btn-add
+  white-space: nowrap
+
+.module-ecconsignee .ecconsignee-add
+  height: auto!important
+
+  .form-btn
+    margin-top: 0!important
+
+.row.login-other
+  margin-top: 15px

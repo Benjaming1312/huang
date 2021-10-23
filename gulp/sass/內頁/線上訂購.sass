@@ -1,125 +1,51 @@
-.page.shop-list
-  margin-top: 60px
-  aside.col-sm-3
-    @media screen and (min-width: 768px)
-      padding-left: 0
-    @media #{$pad-vertical}
-      width: 30%
+.module-ptlist
+  margin-top: 0px
+  +max-width
+  @media #{$mobile}
+    padding: 0 15px
+  .listBS
+    margin: 0
     @media #{$mobile}
-      margin-bottom: 30px
-  main.col-sm-9
-    @media screen and (min-width: 768px)
-      padding-right: 0
-    @media #{$pad-vertical}
-      width: 70%
-    .mt
-      h3
-        border-bottom: 1px solid $color-brown-l
-        padding-bottom: 7.5px
-  .module-title
-    *
-      text-align: left
-    h5.title
-      margin-bottom: 20px
-  .panel
-    border: 0
-    border-bottom: 0
-    border-radius: 0
-    box-shadow: none
-    background: none
-    a
-      border: 0
-      color: #4a3023
-      font-size: 18px
+      display: flex
+      flex-wrap: wrap
+      justify-content: flex-start
+  .d-item
+    padding: 0.5px
+    margin-bottom: 30px
+    &:hover
+      .d-img
+        img
+          transform: scale(1.1)
+          opacity: 0.7
+    .d-img
+      +trans
       position: relative
       overflow: hidden
-      display: block
-      &:hover,
-      &.active
-        &::before
-          margin-left: 0
-      &::before
-        content: ''
-        width: 15px
-        height: 1px
-        background: $color-brown-l
-        display: inline-block
-        position: relative
-        top: -6.5px
-        margin-right: 7.5px
-        margin-left: -15px
+      img
         +trans
-    .panel-heading
+        transition-duration: 1s
+    .mbox
       background: none
-      border-radius: 0
-      border: 0
-      padding-left: 0
+      text-align: center
+      padding-bottom: 0px
+    .d-txt
+      h5
+        margin-bottom: 0px
       a
-        &.collapsed
-          .fa
-            &::before
-              content: '\f067'
-      .fa
-        float: right
-        position: relative
-        top: 5px
-        color: #4a3023
-        &::before
-          content: '\f068'
-    p
-      padding: 10px 15px
-      margin-bottom: 0
-      @media #{$pad-vertical}
-        padding: 5px 7.5px
-  .panel-body
-    background: none
-    padding-bottom: 0
-  .panel-group
-    margin-bottom: 0
-
-  .module-ptlist
-    margin-top: 15px
-    .listBS
-      margin: 0
-      @media #{$mobile}
-        display: flex
-        flex-wrap: wrap
-        justify-content: flex-start
-    .d-item
-      padding: 0.5px
-      margin-bottom: 30px
-      @media #{$mobile}
-        width: 49%
-      &:hover
-        .d-img
-          opacity: 0.7
-      .d-img
-        +trans
-      .mbox
-        background: none
-        text-align: center
-        padding-bottom: 0px
-      .d-txt
-        h5
-          margin-bottom: 15px
-        a
-          font-size: 16px
-          color: $color-brown
-      .mpro-price
-        *
-          font-size: 14px
-      .mpro-btns
-        margin-top: 15px
-      .mbtn
-        font-size: 14px
-        padding: 3.5px 15px
-        background: $color-brown
-        border: 0
-        font-weight: 300
-        &:hover
-          background: rgba($color-brown, .7)
-          color: white
-          opacity: 1          
-    a
-      border: 0
-  
+        font-size: 18px
+        color: $color-brown
+        font-weight: bold
+      .mdetail
+        font-size: 16px
+    .mpro-price
+      margin-top: 7.5px
+      *
+        font-size: 18px
+        color: $color-red
+        font-weight: bold
+    .mpro-btns
+      margin-top: 15px
+    .mbtn
+      font-size: 16px   
+  a
+    border: 0

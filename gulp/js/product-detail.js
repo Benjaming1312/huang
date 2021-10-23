@@ -4,6 +4,10 @@ module.exports = function () {
   if (!is('.module-detail') && !is('.module-ecptdetail')) { // 商品明細
     return
   }
+  if (is('.case-page')) {
+    return
+  }
+
   $('.mlarge').attr({
     'data-aos': 'fade-right',
     'data-aos-duration': 1000
