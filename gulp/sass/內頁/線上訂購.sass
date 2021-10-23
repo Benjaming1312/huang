@@ -1,4 +1,5 @@
-.module-ptlist
+.module-ptlist,
+.module-.module-
   margin-top: 0px
   +max-width
   @media #{$mobile}
@@ -12,6 +13,8 @@
   .d-item
     padding: 0.5px
     margin-bottom: 30px
+    @media screen and (min-width: 768px)
+      padding: 0 7.5px 15px
     &:hover
       .d-img
         img
@@ -41,7 +44,7 @@
       margin-top: 7.5px
       *
         font-size: 18px
-        color: $color-red
+        color: $color-red-2
         font-weight: bold
     .mpro-btns
       margin-top: 15px

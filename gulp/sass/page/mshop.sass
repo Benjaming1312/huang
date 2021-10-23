@@ -56,8 +56,9 @@
         margin-bottom: 15px
   .form-btn
     margin-top: 30px
-  // .mbtn,
-  // .btn
+  .mbtn,
+  .btn
+    font-size: 16px
   //   background: $color-brown-l
   //   border-color: $color-brown-l
   //   color: white
@@ -69,9 +70,9 @@
   //     background: none
   // a:focus
   //   color: $color-brown-l
-  .mfield.eccons-name.eccons-name
-    *
-      background: $color-brown-l
+  // .mfield.eccons-name.eccons-name
+  //   *
+  //     background: $color-brown-l
 
 .mbtn,
 .btn
@@ -97,13 +98,13 @@
 
 .mcart-item.d-item
   .mbox
-    @media screen and (min-width: 768px)
-      display: flex
-      align-items: center
+    // @media screen and (min-width: 768px)
+    //   display: flex
+    //   align-items: center
     // .d-img,
     .d-txt
-      @media screen and (min-width: 768px)
-        width: calc(100% - 12% - 360px)
+      // @media screen and (min-width: 768px)
+      //   width: calc(100% - 12% - 360px)
       h5
         @media screen and (min-width: 768px)
           margin-bottom: 0
@@ -192,6 +193,7 @@
 .mcart-operate.mcart-operate
   .mbtn
     +btn
+    font-size: 14px
 .ecconsignee-list li.defaultAddr .mtag
   white-space: nowrap
 // .module-consignee
@@ -210,7 +212,7 @@
     margin-bottom: 15px
 
 .ecconsignee-list .consignee-info 
-  .mfield.eccons-name.eccons-name.eccons-name
+  // .mfield.eccons-name.eccons-name.eccons-name
     background: $color-brown-l
     *
       color: white
@@ -241,6 +243,8 @@
 
 
 .module-viewcart
+  @media #{$mobile}
+    margin-bottom: 20px
   .form-btn
     margin-top: 0
 
@@ -312,6 +316,7 @@
     font-size: 14px
 
 .mpopdiv
+  top: 120px
   .mt
     border: 0
     margin-bottom: -30px
@@ -322,6 +327,10 @@
     margin-top: 0
   .btn-toggle.close
     position: absolute
+  &#_pop_login
+    .mbox
+      height: auto
+  //   height: auto
 
 .module-cglist,
 .module-rcglist,
@@ -362,3 +371,25 @@
 
 .row.login-other
   margin-top: 15px
+
+.uitable-th,
+.mcart-operate
+  background: #ddd
+
+
+.ecdeliver-list .deliver-desc .mval,
+.ecpay-list ul > li > div .control-label, .ecpay-list ul > li > div .mname
+  color: $color-red-2
+
+.ecconsignee-list li.defaultAddr .mtag
+  background: $color-brown
+  span
+    color: white
+
+.module-.module-
+  max-width: initial!important
+  .mb
+    max-width: 1100px!important
+  .msg
+    @media screen and (min-width: 768px)
+      padding: 0 7.5px

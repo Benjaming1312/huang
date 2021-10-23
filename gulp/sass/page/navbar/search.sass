@@ -9,7 +9,7 @@
     width: 100%
     display: flex
     justify-content: center
-    margin-bottom: 0
+    margin-bottom: 15px
 
   .input-group
     height: $inputHeight
@@ -38,6 +38,7 @@
       @media #{$mobile}
         position: relative
         right: -5px
+        top: 5px
   input
     height: $inputHeight
     background: white
@@ -53,6 +54,9 @@
     font-size: 16px
     @media #{$mobile}
       width: 100%
+      color: white
+      font-size: 16px
+      min-height: 30px
       // max-width: 250px
     &::placeholder
       color: white

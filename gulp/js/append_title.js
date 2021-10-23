@@ -30,4 +30,7 @@ module.exports = function () {
   $('.mpgtitle').prepend(`<span class="line"></span>`)
   $('.mpgtitle').append(`<span class="svg" style="background:url(/ezfiles/905/1905/img/2528/title-r.svg); width: 34px; height: 87px;"></span>`)
   $('.mpgtitle').append(`<span class="line"></span>`)
+
+  const ori_text = $('.module-viewcart h3').text()
+  $('.module-viewcart h3').text(ori_text.split('(')[0].trim())
 }
