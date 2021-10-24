@@ -394,3 +394,26 @@
   .msg
     @media screen and (min-width: 768px)
       padding: 0 7.5px
+
+.module-ecsale
+  width: auto
+  @media #{$mobile}
+    width: 90vw
+    height: 50vh
+    left: 5vw
+    top: 25vh
+  .ecsale-title
+    color: $color-brown
+    small
+      @media screen and (min-width: 768px)
+        white-space: nowrap
+      @media #{$mobile}
+        line-height: 25px
+  table
+    tr
+      th
+        text-align: left!important
+      // td
+      //   text-align: right
+      //   *
+      //     text-align: right!important
