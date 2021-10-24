@@ -316,7 +316,8 @@
     font-size: 14px
 
 .mpopdiv
-  top: 120px
+  @media #{$mobile}
+    top: 120px
   .mt
     border: 0
     margin-bottom: -30px
@@ -378,7 +379,7 @@
 
 
 .ecdeliver-list .deliver-desc .mval,
-.ecpay-list ul > li > div .control-label, .ecpay-list ul > li > div .mname
+.ecpay-list .pay-disc .mval
   color: $color-red-2
 
 .ecconsignee-list li.defaultAddr .mtag
