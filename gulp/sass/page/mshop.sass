@@ -6,7 +6,9 @@
 //   width: 100%
 //   background: none
 //   z-index: 1000
-
+body
+  @media #{$mobile}
+    padding-bottom: 40px
 .page_mobilehome .row .col .mcol
   @media #{$pad-vertical}
     padding: 0
@@ -417,3 +419,10 @@
       //   text-align: right
       //   *
       //     text-align: right!important
+
+.page_mobile_meccart
+  padding-bottom: 93px
+.page_mobile_mecbillto
+  padding-bottom: 113px
+.mcart-operate
+  bottom: 40px
