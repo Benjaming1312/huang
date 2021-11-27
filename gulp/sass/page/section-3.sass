@@ -1,55 +1,27 @@
 .idx.section-3
-  padding-top: 30px
-  padding-bottom: 50px
+  +max-width
+  @media screen and (min-width: 768px)
+    padding: 40px 75px
   @media #{$mobile}
-    padding-top: 15px
-    padding-bottom: 25px
-  .row.info
-    +max-width
-    .img
-      @media screen and (min-width: 768px)
-        width: 462px
+    padding: 20px 15px
+  .row
+    display: flex
+    align-items: flex-end
+    flex-wrap: wrap
+  a
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    +trans
+    &:hover
+      opacity: 0.6
+    @media #{$mobile}
+      max-width: 80%
+      margin: 0 auto 20px
     .text
-      @media screen and (min-width: 768px)
-        width: calc(100% - 462px)
-        padding-left: 45px
-    .svg
-      position: absolute
-      right: -57px
-      bottom: 0
-      @media #{$mobile}
-        right: 0
-        bottom: -50px
-        opacity: 0.2
-    .mb
-      .listBS
-        &:nth-last-of-type(1)
-          .d-item
-            padding-bottom: 0
-            border: 0
-        .d-item
-          border-bottom: 1px solid rgba(#716558, .37)
-          padding: 9px 0
-          @media #{$mobile}
-            padding: 15px 0
-          .d-txt
-            .mdate
-              font-size: 13px
-              color: #808080
-              display: block
-            a
-              font-size: 18px
-              font-weight: 500
-              color: #603813
-            .mdetail
-              color: #404041
-              font-size: 14px
-      .more
-        margin-top: 90px
-        text-align: center
-        @media #{$mobile}
-          margin-top: 30px
-        a
-          +btn
-          font-size: 15px
-          padding: 7l.5px 60px
+      +text
+      color: #3b2314
+      font-size: 18px
+      margin-top: 15px
+      letter-spacing: 0.9px
+      font-weight: 400

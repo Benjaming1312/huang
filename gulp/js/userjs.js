@@ -22,17 +22,14 @@ const product_detail = require('./product-detail.js')
 
 $('body').hide()
 $(function () {
-  navbar()
-  gotop()
-  // mshop()
-  // blog_detail()
-
   setTimeout(() => {
-    index()
+    navbar()
+    gotop()
+    // index()
     // product_list()
-    case_page()
-    product_detail()
-    mshop_title()
+    // case_page()
+    // product_detail()
+    // mshop_title()
     // about()
     // same_as_news()
     // collapseAside()

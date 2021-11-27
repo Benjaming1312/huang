@@ -1,100 +1,139 @@
-=text-module
+=text
   color: $color-b
-  font-size: 22px
-  padding: 0
-  margin: 0
-  border: 0
-  line-height: 25px
-  font-weight: 400
-  transition: .3s ease-in-out
-  @media #{$mobile}
-    border-bottom: 1px solid #ccc
-    margin-bottom: 12px
-    padding-bottom: 12px
-  &:hover
-    color: $color-blue
-    border-color: #ccc
+  font-size: 16px
+  font-weight: 500
 
-.navbar-nav
-  & > li
-    &:last-child
-      >a
-        padding-right: 0
-    & > a
-      +text-module
-      position: relative
+.navbar.navbar.navbar .navbar-nav
+  >li
+    >a
+      margin: 0 // Clear mshop default
+      padding: 0 // Clear mshop default
+      border: 0 // Clear mshop default
+      +text
+      +trans
+      letter-spacing: 0.8px
       @media screen and (min-width: 768px)
-        padding: 0 2.8vw
-        white-space: nowrap
-      @media #{$pad-horizantal}
-        padding: 0 2vw
-      @media #{$pad-vertical}
-        padding: 0 1vw
+        padding: 0 25px // 選單間距
+        padding-bottom: 15px
       @media #{$mobile}
-        border: 0!important
-
-  // 帳戶，購物車，搜尋
-  li.member
-    @media screen and (min-width: 768px)
-      display: flex
-      flex-wrap: nowrap
-    a
-      +text-module
-      padding: 0
-      white-space: nowrap
-      font-size: 16px
-      display: inline-block
-      @media #{$mobile}
-        border: 0
-    .content
-      @media screen and (min-width: 768px)
-        white-space: nowrap
-        margin-left: 15px
-      .svg
-        top: 5px
-        position: relative
-        margin-right: 5px
-
-// dropdown-menu
-.navbar-nav > li
-  .dropdown-menu
-    padding: 7.5px 15px
-    background: rgba(white, .3)!important
-    border: 0
-    box-shadow: none
-    @media #{$mobile}
-      padding-left: 7.5px
-      padding-right: 7.5px
-      margin-bottom: 15px
-    li
-      margin-bottom: 7.5px
-      &:last-child
-        @media #{$mobile}
-          margin-bottom: 0
-        a
-          @media #{$mobile}
-            margin-bottom: 0
-    a
-      +text-module
-      font-size: 18px
-      color: $color-brown
-      padding: 0
-      margin: 0
-      white-space: nowrap
-      @media #{$mobile}
-        padding-left: 7.5px!important
-        padding-right: 7.5px!important
-        color: white
+        padding: 7.5px 0
+        text-align: center
       &:hover
-        background: none
-  &:hover,
-  &.open
-    >.dropdown-menu
+        opacity: 0.6
+  .dropdown
+    &:hover
+      .dropdown-menu
+        @media screen and (min-width: 768px)
+          display: block
+    .dropdown-menu
+      border: 0 // Clear mshop default
+      box-shadow: none // Clear mshop default
+      background: none // Clear mshop default
+      min-width: initial // Clear mshop default
+      border-radius: 0
+      width: 100%
       @media screen and (min-width: 768px)
-        display: block
-        right: initial
-        left: 1vw       
-        
-  &.open
-    >.dropdown-menu
+        +box-shadow
+        background: rgba(white, .5)
       @media #{$mobile}
+        background: rgba($color-b, .5)
+      >li
+        >a
+          padding: 0 // Clear mshop default
+          background: none // Clear mshop default
+          +text
+          padding: 7.5px 0
+          text-align: center
+          +trans
+          @media #{$mobile}
+            color: white
+          &:hover
+            background: $color-b
+            color: white
+            @media #{$mobile}
+              background: white
+              color: $color-b
+
+// .navbar-nav
+//   & > li
+//     &:last-child
+//       >a
+//         padding-right: 0
+//     & > a
+//       +text-module
+//       position: relative
+//       @media screen and (min-width: 768px)
+//         padding: 0 2.8vw
+//         white-space: nowrap
+//       @media #{$pad-horizantal}
+//         padding: 0 2vw
+//       @media #{$pad-vertical}
+//         padding: 0 1vw
+//       @media #{$mobile}
+//         border: 0!important
+
+//   // 帳戶，購物車，搜尋
+//   li.member
+//     @media screen and (min-width: 768px)
+//       display: flex
+//       flex-wrap: nowrap
+//     a
+//       +text-module
+//       padding: 0
+//       white-space: nowrap
+//       font-size: 16px
+//       display: inline-block
+//       @media #{$mobile}
+//         border: 0
+//     .content
+//       @media screen and (min-width: 768px)
+//         white-space: nowrap
+//         margin-left: 15px
+//       .svg
+//         top: 5px
+//         position: relative
+//         margin-right: 5px
+
+// // dropdown-menu
+// .navbar-nav > li
+//   .dropdown-menu
+//     padding: 7.5px 15px
+//     background: rgba(white, .3)!important
+//     border: 0
+//     box-shadow: none
+//     @media #{$mobile}
+//       padding-left: 7.5px
+//       padding-right: 7.5px
+//       margin-bottom: 15px
+//     li
+//       margin-bottom: 7.5px
+//       &:last-child
+//         @media #{$mobile}
+//           margin-bottom: 0
+//         a
+//           @media #{$mobile}
+//             margin-bottom: 0
+//     a
+//       +text-module
+//       font-size: 18px
+//       color: $color-brown
+//       padding: 0
+//       margin: 0
+//       white-space: nowrap
+//       @media #{$mobile}
+//         padding-left: 7.5px!important
+//         padding-right: 7.5px!important
+//         color: white
+//       &:hover
+//         background: none
+//   &:hover,
+//   &.open
+//     >.dropdown-menu
+//       @media screen and (min-width: 768px)
+//         display: block
+//         right: initial
+//         left: 1vw       
+        
+//   &.open
+//     >.dropdown-menu
+//       @media #{$mobile}

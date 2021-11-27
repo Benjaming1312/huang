@@ -1,17 +1,18 @@
 const is = require('./is')
 module.exports = function () {
-  // const navHeight = calcNavHeight()
-  // $(window).on('scroll', function () {
-  //   const top = $(window).scrollTop()
-  //   if (top > navHeight) {
-  //     $('nav.navbar').addClass('scroll')
-  //   }
-  //   else {
-  //     if (is('.scroll')) {
-  //       $('nav.navbar').removeClass('scroll')
-  //     }
-  //   }
-  // })
+  $(window).on('scroll', function () {
+    setTimeout(() => {
+      const navHeight = calcNavHeight()
+      const top = $(window).scrollTop()
+      console.log('%c (／‵Д′)／~ ╧╧ top : ', 'padding: .25rem; font-size: 14px; background: #12bdba; color: #fff', [top, navHeight])
+      if (top > navHeight) {
+        $('nav.navbar').addClass('scroll')
+      }
+      else {
+        $('nav.navbar').removeClass('scroll')
+      }
+    });
+  })
 
   // $('.dropdown-submenu .sub-toggle').on('click', function (e) {
   //   e.preventDefault()
@@ -27,9 +28,9 @@ module.exports = function () {
   //     window.location.href = url
   //   })
   // }
-  if ($(window).width() < 768) {
-    $('.member').appendTo($('#navbar'))
-  }
+  // if ($(window).width() < 768) {
+  //   $('.member').appendTo($('#navbar'))
+  // }
 
   // $('.dropdown-menu > li').each(function () {
   //   const url = window.location.href

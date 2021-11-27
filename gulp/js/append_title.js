@@ -20,15 +20,15 @@ module.exports = function () {
   if (!exceptList.some((name => is(name)))) {
     return
   }
-  $('.mt').prepend(`<span class="svg" style="background:url(/ezfiles/905/1905/img/2528/title-l.svg); width: 34px; height: 87px;"></span>`)
+  $('.mt').prepend(`<span class="svg" style="background:url(/ezfiles/909/1909/img/2654/title-l.svg); width: 34px; height: 87px;"></span>`)
   $('.mt').prepend(`<span class="line"></span>`)
-  $('.mt').append(`<span class="svg" style="background:url(/ezfiles/905/1905/img/2528/title-r.svg); width: 34px; height: 87px;"></span>`)
+  $('.mt').append(`<span class="svg" style="background:url(/ezfiles/909/1909/img/2654/title-r.svg); width: 34px; height: 87px;"></span>`)
   $('.mt').append(`<span class="line"></span>`)
 
 
-  $('.mpgtitle').prepend(`<span class="svg" style="background:url(/ezfiles/905/1905/img/2528/title-l.svg); width: 34px; height: 87px;"></span>`)
+  $('.mpgtitle').prepend(`<span class="svg" style="background:url(/ezfiles/909/1909/img/2654/title-l.svg); width: 34px; height: 87px;"></span>`)
   $('.mpgtitle').prepend(`<span class="line"></span>`)
-  $('.mpgtitle').append(`<span class="svg" style="background:url(/ezfiles/905/1905/img/2528/title-r.svg); width: 34px; height: 87px;"></span>`)
+  $('.mpgtitle').append(`<span class="svg" style="background:url(/ezfiles/909/1909/img/2654/title-r.svg); width: 34px; height: 87px;"></span>`)
   $('.mpgtitle').append(`<span class="line"></span>`)
 
   const ori_text = $('.module-viewcart h3').text()
