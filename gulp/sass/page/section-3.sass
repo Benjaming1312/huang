@@ -1,27 +1,22 @@
 .idx.section-3
   +max-width
   @media screen and (min-width: 768px)
-    padding: 40px 75px
+    padding: 40px 60px
   @media #{$mobile}
     padding: 20px 15px
   .row
     display: flex
     align-items: flex-end
     flex-wrap: wrap
-  a
-    display: flex
-    justify-content: center
-    flex-wrap: wrap
-    +trans
-    &:hover
-      opacity: 0.6
-    @media #{$mobile}
-      max-width: 80%
-      margin: 0 auto 20px
-    .text
-      +text
-      color: #3b2314
-      font-size: 18px
-      margin-top: 15px
-      letter-spacing: 0.9px
-      font-weight: 400
+  img
+    display: block
+    margin: 0 auto
+  .text
+    +text
+    color: #3b2314
+    font-size: 18px
+    margin-top: 15px
+    letter-spacing: 0.9px
+    font-weight: 400
+    text-align: center
+    display: block

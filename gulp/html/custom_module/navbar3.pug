@@ -33,15 +33,6 @@ nav.navbar
 					a(href="") EN
 				a.svg(href="" style="background:url("+url+"social-icon-2.svg); width: 20px; height: 20px;") 
 				a.svg(href="" style="background:url("+url+"social-icon-3.svg); width: 20px; height: 20px;") 
-			.search.visible-xs
-				<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch&amp;Lang=zh-tw">
-					<div class="input-group">
-						<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
-						<span class="input-group-btn">
-							button.btn.svg(type="submit" style="background:url("+url+"search.svg); width: 11px; height: 11px;")
-						</span>
-					</div>
-				</form>
 			ul.nav.navbar-nav
 				li.dropdown(data-aos-delay="300", data-aos="fade-in")
 					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 商品介紹
@@ -110,3 +101,12 @@ nav.navbar
 							a(href="") 設計師
 						li
 							a(href="") 經銷商
+			.search.visible-xs
+				<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch&amp;Lang=zh-tw">
+					<div class="input-group">
+						<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
+						<span class="input-group-btn">
+							button.btn.svg(type="submit" style="background:url("+url+"search.svg); width: 11px; height: 11px;")
+						</span>
+					</div>
+				</form>
