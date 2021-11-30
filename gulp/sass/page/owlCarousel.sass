@@ -1,5 +1,7 @@
 .module-adv
   position: relative
+  @media #{$mobile}
+    padding-top: 61px
   &::before
     content: ''
     display: block
@@ -8,13 +10,14 @@
     top: 0
     z-index: 2
     width: 100%
-    height: 240px
+    height: 220px
     background: url(#{$url}header-bg.png)
     background-size: contain
     background-repeat: repeat-x
     background-position: top center
     @media #{$mobile}
       height: 150px
+      display: none
   .owl-controls
     position: absolute
     width: 100%
