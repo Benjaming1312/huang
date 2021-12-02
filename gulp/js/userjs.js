@@ -23,7 +23,7 @@ const append_form = require('./append_form')
 // const collapseAside = require('./collapseAside.js')
 
 $('body').hide()
-$(function () {
+$(document).ready(function () {
   setTimeout(() => {
     navbar()
     gotop()
@@ -42,7 +42,7 @@ $(function () {
   }, 100)
   setTimeout(() => {
     $('body').show()
-  }, 1000)
+  }, 1100)
 })
 
 // owlFn()

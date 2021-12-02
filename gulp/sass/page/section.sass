@@ -38,28 +38,29 @@ body
   transition: $trans
 
 =btn
-  background: white
   border-radius: 0
   border: 0
   font-family: SourceHanSansTW, Regular-B5pc-H, "Noto Sans TC","微軟正黑體","sans-serif"
-  font-size: 8px
+  font-size: 16px
   letter-spacing: 0.8px
-  color: #404041
   padding: 7.5px 30px
   box-shadow: 7px 7px 15px -1px rgba(#000, .3)
   position: relative
   z-index: 1
   +trans
+  background: #404041
+  color: white
   span
-    color: #404041
+    color: white
+    font-size: 16px
     +trans
   &:hover,
   &:focus,
   &:active
-    background: #404041
-    color: white
+    color: #404041
+    background: white
     span
-      color: white
+      color: #404041
 
 =title
   color: #343333

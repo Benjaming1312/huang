@@ -4,7 +4,6 @@ module.exports = function () {
     setTimeout(() => {
       const navHeight = calcNavHeight()
       const top = $(window).scrollTop()
-      console.log('%c (／‵Д′)／~ ╧╧ top : ', 'padding: .25rem; font-size: 14px; background: #12bdba; color: #fff', [top, navHeight])
       if (top > navHeight) {
         $('nav.navbar').addClass('scroll')
       }
