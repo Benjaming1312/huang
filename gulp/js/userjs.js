@@ -39,8 +39,10 @@ $(function () {
     // collapseAside()
 
     aosInit()
-    $('body').show()
   }, 100)
+  setTimeout(() => {
+    $('body').show()
+  }, 1000)
 })
 
 // owlFn()
