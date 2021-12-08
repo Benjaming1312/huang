@@ -1,83 +1,32 @@
-// .idx.section-2
-//   @media #{$mobile}
-//     padding: 0
-//   .row
-//     padding: 50px 0 50px
-//     background-size: cover!important
-//     background-repeat: no-repeat!important
-//     background-position: center!important
-//     @media #{$mobile}
-//       background-size: cover!important
-//       background-repeat: no-repeat!important
-//       background-position: center!important
-//   .col-xs-12:not(.col-sm-3)
-//     padding: 50px 0
-//     background: rgba(#000, .6)
-//     @media #{$mobile}
-//       padding: 25px 15px
-//   .module-title
-//     .line
-//       background: rgba(white, .37)
-//     .text
-//       white-space: nowrap
-//       font-size: 26px
-//       color: white
-//       padding: 0 30px
-//       @media #{$mobile}
-//         padding: 0 7.5px
-//   .row:not(.link-list)
-//     p:not(.more-btn)
-//       color: white
-//       line-height: 30px
-//       font-size: 18px
-//       margin-bottom: 60px
-//     p
-//       a
-//         +trans
-//         &:hover
-//           opacity: 0.7
-//       .svg
-//         border: 0
-//         padding: 0
-//         min-width: 140px
-//         min-height: 30px
-//         +trans
-//       span:not(.svg)
-//         color: white
-//         font-size: 22px
-//         font-weight: 500
-//         display: inline-block
-//         margin-top: -3.25px
-//   .row.link-list
-//     padding-top: 0
-//     padding-bottom: 0
-//     @media screen and (min-width: 768px)
-//       display: flex
-//       flex-wrap: nowrap
-//     .col-sm-3
-//       padding: 25px 30px
-//       @media #{$mobile}
-//         padding: 50px 30px
-//       &:nth-child(even)
-//         background: #aaa39d
-//       &:nth-child(odd)
-//         background: #a07660
-//     .tw
-//       color: white
-//       text-align: center
-//       font-size: 22px
-//       display: block
-//     .en
-//       color: white
-//       text-align: center
-//       font-size: 22px
-//       display: block
-//     hr
-//       margin: 0 auto
-//       margin-top: 7.5px
-//       margin-bottom: 7.5px
-//       border-color: rgba(white, .37)
-//       display: block
-//       width: 120px
-//     .more
-//       text-align: center
+.idx.section-2
+  +max-width
+  figure
+    margin-bottom: 60px
+    overflow: hidden
+    @media #{$mobile}
+      margin-bottom: 30px
+    img
+      width: 100%
+      @media #{$mobile}
+        height: 200px
+        width: initial
+        max-width: initial
+        transform: translateX(-25%)
+    figcaption
+      display: block
+      background: $color-red
+      padding: 18px 60px
+      color: white
+      font-size: 18px
+      font-weight: 500
+      display: block
+      line-height: 30px
+      @media #{$mobile}
+        padding: 15px
+      b
+        font-weight: bold
+        font-size: 20px
+        letter-spacing: 0.1rem
+        color: white
+        display: block
+        margin-bottom: 7.5px

@@ -1,22 +1,31 @@
 .idx.section-3
   +max-width
   @media screen and (min-width: 768px)
-    padding: 40px 60px
+    padding-top: 15px
   @media #{$mobile}
-    padding: 20px 15px
-  .row
-    display: flex
-    align-items: flex-end
-    flex-wrap: wrap
-  img
-    display: block
-    margin: 0 auto
-  .text
-    +text
-    color: #3b2314
-    font-size: 18px
-    margin-top: 15px
-    letter-spacing: 0.9px
-    font-weight: 400
-    text-align: center
-    display: block
+    padding: 15px 15px
+  .module-title
+    margin-bottom: 60px
+    @media #{$mobile}
+      margin-bottom: 30px
+  .row:nth-of-type(2)
+    @media screen and (min-width: 768px)
+      display: flex
+      flex-wrap: nowrap
+    .col
+      background: none
+      border: 0
+      @media screen and (min-width: 768px)
+        width: calc(100% / 5 - 30px)
+        margin: 0 30px
+      @media #{$mobile}
+        width: calc(100% / 2 - 7.5px)
+        margin: 0 3.25px 30px
+    .text
+      display: block
+      font-size: 18px
+      font-weight: bold
+      letter-spacing: 0.1rem
+      color: $color-b
+      text-align: center
+      margin-top: 15px

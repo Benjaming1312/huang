@@ -3,14 +3,13 @@
   position: fixed
   z-index: 9999
   width: 100%
+  border-top: 14px solid #c00d23
+  background: white
   @media screen and (min-width: 768px)
-    padding-top: 50px
+    padding-top: 36px
   // Logo 區塊
   .navbar-header
     @media screen and (min-width: 768px)
-      display: flex
-      justify-content: center
-      width: 100%
       padding-bottom: 20px
       border-bottom: 1px solid rgba(#969081, .25)
     @media #{$mobile}
@@ -39,22 +38,26 @@
       background: $color-b
       width: 30px
       margin-top: 7.5px
+  .container-fluid
+    max-width: 1200px
+    margin: 0 auto
 
   &.scroll
     @media screen and (min-width: 768px)
-      padding-top: 25px
+      padding-top: 15px
       background: white
       +box-shadow
   #navbar
     @media screen and (min-width: 768px)
-      float: left
-      width: 100%
+      display: flex!important
+      justify-content: space-around
+      // width: 100%
     @media #{$mobile}
       background: rgba(white, .9)
   .navbar-nav
-    @media screen and (min-width: 768px)
-      display: flex
-      justify-content: center
+    // @media screen and (min-width: 768px)
+    //   display: flex
+    //   justify-content: center
     @media #{$mobile}
       margin-top: 0 // Clear mshop default
       padding-bottom: 7.5px

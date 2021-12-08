@@ -38,10 +38,10 @@ $(document).ready(function () {
     // same_as_news()
     // collapseAside()
 
-    aosInit()
   }, 100)
   setTimeout(() => {
     $('body').show()
+    aosInit()
   }, 1100)
 })
 

@@ -5,6 +5,12 @@
 
 .navbar.navbar.navbar .navbar-nav
   >li
+    margin: 0 2vw
+    &:hover
+      a::after
+        @media screen and (min-width: 768px)
+          opacity: 1
+          transform: translateX(0)
     >a
       margin: 0 // Clear mshop default
       padding: 0 // Clear mshop default
@@ -18,6 +24,18 @@
       @media #{$mobile}
         padding: 7.5px 0
         text-align: center
+      &::after
+        content: ''
+        display: block
+        width: 100%
+        height: 2px
+        background: #c00d23
+        margin-top: 5px
+        +trans
+        opacity: 0
+        transform: translateX(-10px)
+        @media #{$mobile}
+          display: none
       &:hover
         opacity: 0.6
   .dropdown

@@ -1,71 +1,95 @@
 .footer
   margin-top: -1px
   border: 0
-  background: #969081
+  background: none
 
 footer.foot
-  margin-top: 35pxpx
+  margin-top: 60px
   padding: 0
   background: none
   padding: 25px 0
-  padding-bottom: 15px
+  padding-bottom: 0px
+  position: relative
+  @media #{$mobile}
+    padding-top: 0
+    margin-top: 0
+    padding-left: 0
+    padding-right: 0
+  
   .row
-    +max-width
     @media screen and (min-width: 768px)
       display: flex
       flex-wrap: nowrap
-      padding: 0 25px
+      padding: 0
     @media #{$mobile}
-      padding: 0px 15px
-  .list-link
-    display: flex
+      padding: 0px
+  .banner
     padding: 0
-    margin: 0
+    img
+      width: 100%
+  .module-title
     @media screen and (min-width: 768px)
-      flex-wrap: nowrap
-      padding-right: 50px
+      text-align: left
+      padding-right: 25%
     @media #{$mobile}
-      flex-wrap: wrap
-    >li
-      list-style: none
-      @media screen and (min-width: 768px)
-        width: calc(100% / 3 - 30px)
-        margin: 0 15px
+      margin-bottom: 30px
+    *
+      color: white
+      text-align: center
       @media #{$mobile}
-        width: 50%
-        margin-bottom: 30px
-      >a
-        font-size: 17px
-        font-weight: 500
-        display: block
-        margin-bottom: 7.5px
-      ul
-        list-style: none
-        padding: 0
-        margin: 0
-        li
-          color: white
-          white-space: nowrap
-          font-size: 14px
-          line-height: 30px
-          white-space: nowrap
-          a
-            font-size: 14px
-            line-height: 30px
-            white-space: nowrap
-    .svg
-      margin-right: 7.5px
+        color: $color-red
+  .row.info
+    @media screen and (min-width: 768px)
+      display: flex
+      flex-wrap: nowrap
+      padding: 50px 0
       position: relative
-      top: 1px
-      $w: 15px
-      max-width: $w
-      max-height: $w
-  .social-link
-    .list-inline
-      margin: 0
-      text-align: right
+    @media #{$mobile}
+      padding: 0 15px
+    &::before
+      content: ''
+      display: block
+      width: 50%
+      height: 279px
+      background: url(#{$url}footer-bg.png) center center no-repeat
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: right bottom
+      position: absolute
+      left: 0
+      top: 0
+      z-index: 0
+      @media #{$mobile}
+        display: none
+    .logo
+      @media screen and (min-width: 768px)
+        width: 150px
+        display: flex
+        align-items: center
+      @media #{$mobile}
+        text-align: center
+    .info
+      @media screen and (min-width: 768px)
+        margin-top: 15px
+      @media #{$mobile}
+        margin-top: 30px
+      p, a
+        font-size: 16px
+        color: $color-b
+        margin-bottom: 15px
+      p
+        padding-left: 27.5px
+      .svg
+        max-width: 18px
+        max-height: 18px
+        position: relative
+        top: 2px
+        margin-left: -27.5px
+        margin-right: 7.5px
+
 div.design
   padding: 0 30px
+  background: none
   // background: #968d85
   // background: url(#{$url}foot-bg.svg) center center no-repeat
   // background-size: cover
@@ -84,13 +108,13 @@ div.design
     text-align: center
   .row
     // border-top: 1px solid rgba(white, .37)
-    padding: 7.5px 0
+    padding: 0
   p
     margin: 0
-    padding: 0px 0
+    padding: 7.5px 0
     text-align: center
     font-size: 14px
-    color: white
+    color: #6d6e70
     @media #{$mobile}
       padding-bottom: 10px
     span
@@ -101,7 +125,7 @@ div.design
         text-align: center
     span, a
       font-size: 12px
-      color: white
+      color: #6d6e70
       letter-spacing: 0
       font-weight: normal
       line-height: 20px
