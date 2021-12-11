@@ -1,7 +1,7 @@
 const is = require('./is')
 
 module.exports = function () {
-  if (!is('.page.story')) {
+  if (!is('.page.aboutus')) {
     return
   }
 
@@ -15,7 +15,8 @@ module.exports = function () {
     }, 1000);
   }
 
-  $('.story-dropdown a').each(function () {
+  $('.aboutus-dropdown a').each(function () {
+    console.log('%c (／‵Д′)／~ ╧╧ click : ', 'padding: .25rem; font-size: 14px; background: #12bdba; color: #fff')
     $(this).click(function (e) {
       e.preventDefault()
       e.stopPropagation()
@@ -28,20 +29,20 @@ module.exports = function () {
     })
   })
 
-  $('.page.story .owl-carousel').owlCarousel({
-    items: 1,
-    autoplay:true,
-    nav: false,
-    dots: true,
-    loop: true,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
-    autoPlaySpeed: 5000,
-    autoPlayTimeout: 1500,
-    smartSpeed: 1500,
-    navText: [''],
-    autoplayHoverPause: true
-  })
+  // $('.page.story .owl-carousel').owlCarousel({
+  //   items: 1,
+  //   autoplay:true,
+  //   nav: false,
+  //   dots: true,
+  //   loop: true,
+  //   animateOut: 'fadeOut',
+  //   animateIn: 'fadeIn',
+  //   autoPlaySpeed: 5000,
+  //   autoPlayTimeout: 1500,
+  //   smartSpeed: 1500,
+  //   navText: [''],
+  //   autoplayHoverPause: true
+  // })
 }
 
 function scrollTo (target) {
