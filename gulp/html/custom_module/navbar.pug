@@ -1,4 +1,4 @@
-- var url = '/ezfiles/912/1912/img/2680/'
+- var url = '/ezfiles/777/1777/img/338/'
 nav.navbar
 	//- .search.hidden-xs
 	//- 	<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch&amp;Lang=zh-tw">
@@ -9,11 +9,11 @@ nav.navbar
 	//- 			</span>
 	//- 		</div>
 	//- 	</form>
-	.user-profile.hidden-xs
-		.lang
-			span.svg(style="background:url("+url+"lang-icon.svg); width: 20px; height: 20px;")
-			a(href="") 繁中
-			a(href="") EN
+	//- .user-profile.hidden-xs
+	//- 	.lang
+	//- 		span.svg(style="background:url("+url+"lang-icon.svg); width: 20px; height: 20px;")
+	//- 		a(href="") 繁中
+	//- 		a(href="") EN
 		//- a.svg(href="" style="background:url("+url+"social-icon-2.svg); width: 20px; height: 20px;") 
 		//- a.svg(href="" style="background:url("+url+"social-icon-3.svg); width: 20px; height: 20px;") 
 	.container-fluid
@@ -24,31 +24,53 @@ nav.navbar
 				span.icon-bar
 				span.icon-bar
 			// LOGO放置處
-			a.navbar-brand.svg(href='/' style="background: url("+url+"logo.svg); width: 78px; height: 47px;")
+			a.navbar-brand.svg(href='/' style="background: url("+url+"logo.svg); width: 229px; height: 33px;")
 		#navbar.navbar-collapse.collapse
-			.user-profile.visible-xs
-				.lang
-					span.svg(style="background:url("+url+"lang-icon.svg); width: 20px; height: 20px;")
-					a(href="") 繁中
-					a(href="") EN
+			//- .user-profile.visible-xs
+			//- 	.lang
+			//- 		span.svg(style="background:url("+url+"lang-icon.svg); width: 20px; height: 20px;")
+			//- 		a(href="") 繁中
+			//- 		a(href="") EN
 				//- a.svg(href="" style="background:url("+url+"social-icon-2.svg); width: 20px; height: 20px;") 
 				//- a.svg(href="" style="background:url("+url+"social-icon-3.svg); width: 20px; height: 20px;") 
 			ul.nav.navbar-nav
-				li.dropdown(data-aos="fade-in")
-					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 關於東居
+				li(data-aos="fade-in")
+					a(href="") 首頁
+				li(data-aos="fade-in" data-aos-delay="50")
+					a(href="") 關於我們
+				li.dropdown(data-aos="fade-in" data-aos-delay="100")
+					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 醫療床專區
 					ul.dropdown-menu(role='menu')
 						li
-							a(href="") 公司簡介
+							a(href="") 三馬達電動床
 						li
-							a(href="") 組織架構
-				li(data-aos="fade-in" data-aos-delay="100")
-					a(href="") 服務項目
-				li(data-aos="fade-in" data-aos-delay="150")
-					a(href="") 最新消息
+							a(href="") 二馬達電動床
+						li
+							a(href="") 舒適型電動床
+						li
+							a(href="") 復健式電動床
+						li
+							a(href="") 周邊商品
+				li.dropdown(data-aos="fade-in" data-aos-delay="150")
+					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 銀髮族專區
+					ul.dropdown-menu(role='menu')
+						li
+							a(href="") 三馬達電動床
+						li
+							a(href="") 二馬達電動床
 				li(data-aos="fade-in" data-aos-delay="200")
-					a(href="") 國際趨勢
-				li(data-aos="fade-in" data-aos-delay="250")
 					a(href="") 聯絡我們
+				li(data-aos="fade-in" data-aos-delay="250")
+					a(href="") 客戶實績
+			.search
+				<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch&amp;Lang=zh-tw">
+					<div class="input-group">
+						<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
+						<span class="input-group-btn">
+							button.btn.svg(type="submit" style="background:url("+url+"search.svg); width: 11px; height: 11px;")
+						</span>
+					</div>
+				</form>
 
 			//- 	li.dropdown(data-aos-delay="300", data-aos="fade-in")
 			//- 		a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 商品介紹
@@ -117,12 +139,3 @@ nav.navbar
 			//- 				a(href="") 設計師
 			//- 			li
 			//- 				a(href="") 經銷商
-			//- .search.visible-xs
-			//- 	<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch&amp;Lang=zh-tw">
-			//- 		<div class="input-group">
-			//- 			<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
-			//- 			<span class="input-group-btn">
-			//- 				button.btn.svg(type="submit" style="background:url("+url+"search.svg); width: 11px; height: 11px;")
-			//- 			</span>
-			//- 		</div>
-			//- 	</form>

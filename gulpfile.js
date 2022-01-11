@@ -16,6 +16,7 @@ const
 	// terser = require('rollup-plugin-terser')
 	del = require('del')
 	plumber = require('gulp-plumber')
+	exec = require('child_process').exec
 
 
 	gulp.task('clean', function() {
@@ -24,6 +25,7 @@ const
 
 // 監看JS
 gulp.task('watch',function(){
+	exec('rm -rd dist/html')
 	gulp.watch('gulp/**/**',['scripts','styles','views']) //(‘原始路徑’,['執行的名稱']) **代表路徑的所有檔案轉換
 })
 
@@ -55,6 +57,7 @@ gulp.task('scripts',function(){
 				includeContent: false,
 				sourceRoot: 'gulp/js'
 			}))
+			.pipe(gulp.dest('dist/ec011.so-buy.com/ezfiles/777/1777/img/340/')) //翻譯後的路徑
 			.pipe(gulp.dest('dist/js')) //輸出路徑
 			.pipe(connect.reload())
 })
@@ -71,7 +74,7 @@ gulp.task('styles',function(){
 					includeContent: false,
 					sourceRoot: 'gulp/sass'
 			})) //sourceMap寫入在一樣的地方  
-			.pipe(gulp.dest('dist/css/ec078.so-buy.com/ezfiles/912/1912/img/2678/')) //翻譯後的路徑
+			.pipe(gulp.dest('dist/ec011.so-buy.com/ezfiles/777/1777/img/339/')) //翻譯後的路徑
 			.pipe(gulp.dest('dist/css/')) //翻譯後的路徑
 			.pipe(connect.reload())
 })
@@ -88,7 +91,7 @@ gulp.task('views',function(){
 	gulp.src('gulp/html/page/**.pug')
 			.pipe(plumber())
 			.pipe(pug({pretty: true}))
-			.pipe(gulp.dest('./'))
+			.pipe(gulp.dest('./dist/html'))
 			.pipe(connect.reload())
 })
 
