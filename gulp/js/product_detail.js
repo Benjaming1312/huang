@@ -1,61 +1,55 @@
 const is = require('./is')
 
 module.exports = function () {
-  if (!is('.module-detail') && !is('.module-ecptdetail')) { // 商品明細
+  if (!is('.module-ecptdetail')) { // 商品明細
     return
   }
-  if (is('.case-page')) {
-    return
-  }
-
-  $('.mlarge').attr({
-    'data-aos': 'fade-right',
-    'data-aos-duration': 1000
-  })
-  $('.mpgdetail').attr({
-    'data-aos': 'fade-left',
-    'data-aos-duration': 1000
-  })
-  // prodOwlCarousel()
-  // appendProdInfo()
-
-  // $('.module-relate').append(`<div class="owl-carousel"></div>`)
-  // $('.module-relate .row.listBS').addClass('item')
-  // $('.module-relate .row.listBS').appendTo($('.module-relate .owl-carousel'))
-  // $('.module-relate .owl-carousel').owlCarousel({
-  //     items: 1,
-  //     autoplay:true,
-  //     nav: true,
-  //     dots: false,
-  //     loop: true,
-  //     animateOut: 'fadeOut',
-  //     animateIn: 'fadeIn',
-  //     autoPlaySpeed: 5000,
-  //     autoPlayTimeout: 5000,
-  //     navText: [],
-  //     smartSpeed: 1500,
-  //     autoplayHoverPause: false,
-  //     responsiveClass: true,
-  //     responsive: {
-  //         0: {
-  //             items: 2,
-  //             nav: true,
-  //             margin: 15
-  //         },
-  //         440: {
-  //             items: 2,
-  //             nav: true,
-  //             margin: 15
-  //         },
-  //         768: {
-  //             items: 4,
-  //             nav: true,
-  //             margin: 15
-  //         },
-  //     }
-  // })
-  appendProdInfo()
   prodOwlCarousel()
+  appendProdInfo()
+
+  $('.nav-tabs a').click(function () {
+    const target = $(this).attr('href')
+    const top = $(target).offset().top
+    $('html, body').animate({
+      scrollTop: top
+    }, 1000)
+  })
+
+  $('.module-relate').append(`<div class="owl-carousel"></div>`)
+  $('.module-relate .row.listBS').addClass('item')
+  $('.module-relate .row.listBS').appendTo($('.module-relate .owl-carousel'))
+  $('.module-relate .owl-carousel').owlCarousel({
+      items: 1,
+      autoplay:true,
+      nav: true,
+      dots: false,
+      loop: true,
+      animateOut: 'fadeOut',
+      animateIn: 'fadeIn',
+      autoPlaySpeed: 5000,
+      autoPlayTimeout: 5000,
+      navText: [],
+      smartSpeed: 1500,
+      autoplayHoverPause: false,
+      responsiveClass: true,
+      responsive: {
+          0: {
+              items: 2,
+              nav: true,
+              margin: 15
+          },
+          440: {
+              items: 2,
+              nav: true,
+              margin: 15
+          },
+          768: {
+              items: 4,
+              nav: true,
+              margin: 15
+          },
+      }
+  })
 }
 
 function appendProdInfo () {

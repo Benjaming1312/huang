@@ -2,9 +2,6 @@
   +max-width
   @media #{$mobile}
     padding: 0 15px
-  .desc
-    margin-bottom: 30px
-    font-size: 16px
   .form-group
     @media screen and (min-width: 768px)
       margin-bottom: 15px
@@ -18,7 +15,7 @@
     margin-bottom: 15px
   .col-sm-9
     @media screen and (min-width: 768px)
-      width: calc(100% - 120px)
+      width: calc(100% - 200px)
       padding-right: 0!important
     @media #{$mobile}
       padding-left: 7.5px
@@ -27,7 +24,7 @@
     font-size: 16px
     padding-left: 7.5px
     @media screen and (min-width: 768px)
-      width: 120px
+      width: 200px
   .required
     .col-sm-3
       &::before
@@ -61,6 +58,12 @@
         border: 0
       b
         font-size: 16px
+  .desc
+    text-align: center
+    font-size: 16px
+    margin-bottom: 60px
+    @media #{$mobile}
+      margin-bottom: 30px
 
 .contact
   iframe
@@ -80,15 +83,22 @@
       li
         color: #59595c
         white-space: nowrap
-        font-size: 14px
-        line-height: 30px
+        font-size: 16px
+        line-height: 60px
         white-space: nowrap
-        a
-          font-size: 14px
+        @media screen and (min-width: 768px)
+          position: relative
+          left: -5px
+        @media #{$mobile}
           line-height: 30px
+        a
+          font-size: 16px
+          line-height: 60px
           white-space: nowrap
           color: #59595c
           border: 0
+          @media #{$mobile}
+            line-height: 30px
         .svg
           position: relative
           top: 3px
