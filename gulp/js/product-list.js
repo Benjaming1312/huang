@@ -15,8 +15,8 @@ module.exports = function () {
   $('.module-ptlist').appendTo($('.shop-list .append'))
   $('.module-ecptdetail').appendTo($('.shop-list .append'))
 
-  const title = $('head title').text()
-  $('.module-title h4').text(title)
+  // const title = $('head title').text()
+  // $('.module-title h4').text(title)
 
   // $('.d-img').each(function () {
   //   const src = $(this).find('img').attr('src')
