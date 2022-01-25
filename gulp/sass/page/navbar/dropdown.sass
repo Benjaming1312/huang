@@ -1,6 +1,6 @@
 =text
-  color: $color-b
-  font-size: 18px
+  color: white
+  font-size: 17px
   font-weight: 500
 
 .navbar.navbar.navbar .navbar-nav
@@ -11,6 +11,20 @@
         @media screen and (min-width: 768px)
           opacity: 1
           transform: translateX(0)
+    &.social
+      display: inline-flex
+      flex-wrap: nowrap
+      @media screen and (min-width: 768px)
+        margin-left: -30px
+        margin-top: -3.25px
+      @media #{$mobile}
+        display: flex
+        justify-content: center
+        padding: 7.5px 0
+      a
+        margin: 0 7.5px
+        @media #{$mobile}
+          margin: 0 15px
     a
       text-transform: initial
       @media screen and (min-width: 768px)
@@ -24,22 +38,10 @@
       letter-spacing: 0.8px
       @media screen and (min-width: 768px)
         padding: 0 15px // 選單間距
-        padding-bottom: 15px
+        padding-bottom: 7.5px
       @media #{$mobile}
         padding: 15px 0
         text-align: center
-      &::after
-        content: ''
-        display: block
-        width: 100%
-        height: 2px
-        background: $color-green
-        margin-top: 5px
-        +trans
-        opacity: 0
-        transform: translateX(-10px)
-        @media #{$mobile}
-          display: none
       &:hover
         opacity: 0.6
   .dropdown
@@ -56,9 +58,9 @@
       width: 100%
       @media screen and (min-width: 768px)
         +box-shadow
-        background: rgba($color-green, .9)
+        background: rgba(#221e1f, .78)
       @media #{$mobile}
-        background: rgba($color-green, .9)
+        background: rgba(#221e1f, .78)
       >li
         >a
           padding: 0 // Clear mshop default

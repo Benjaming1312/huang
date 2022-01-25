@@ -1,75 +1,74 @@
 .footer
   margin-top: -1px
   border: 0
-  background: #d5e9ea
+  background: url(#{$url}foot-bg.png) center center no-repeat
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
 
 footer.foot
-  margin-top: 60px
+  margin-top: 15px
   padding: 0
   background: none
-  padding: 30px 0
-  padding-bottom: 0px  
+  padding: 50px 0 30px
   position: relative
   +max-width
   @media #{$mobile}
-    padding-top: 30px
-    margin-top: 30px
-    padding-left: 0
-    padding-right: 0
-  .gotop
-    position: absolute
-    left: calc((100% - 50px) / 2)
-    top: -25px
-    z-index: 1
-    cursor: pointer
-    +trans
-    &:hover
-      opacity: 0.7
-  
+    padding-top: 15px
+    margin-top: 0px
+    padding-left: 15px
+    padding-right: 15px
   .row
     @media screen and (min-width: 768px)
       display: flex
       flex-wrap: nowrap
-      align-items: center
-      padding: 0
+      padding: 0 5%
     @media #{$mobile}
       padding: 0px
   .module-title
     white-space: nowrap
     text-align: center
     @media screen and (min-width: 768px)
-      text-align: left
-      padding-right: 25%
-      margin-top: 30px
+      text-align: center
     @media #{$mobile}
       margin-bottom: 30px
   .info
+    border: 1px solid white
+    padding: 15px
+    @media #{$mobile}
+      margin-bottom: 15px
     p
-      font-size: 15px
-      color: #404041
+      font-size: 16px
+      color: white
       font-weight: 500
+      text-align: center
+      line-height: 26px
+      @media screen and (min-width: 768px)
+        white-space: nowrap
+        margin-bottom: 7.5px
       .svg
         margin-right: 15px
         position: relative
         top: 5px
       a
-        font-size: 15px
-        color: #404041
+        font-size: 16px
+        color: white
         font-weight: 500
-      b
-        display: block
-        font-weight: 500
-        font-size: 20px
-        color: #404041
-        margin-bottom: 20px
   .map
+    height: 100%
+    @media screen and (min-width: 768px)
+      position: relative
+      right: -60px
+    @media #{$mobile}
+      padding: 0
     iframe
       max-width: 100%
+      @media screen and (min-width: 768px)
+        height: 295px
 
 div.design
   padding: 0 30px
   background: none
-  background: #01787e
   // background: url(#{$url}foot-bg.svg) center center no-repeat
   // background-size: cover
   // padding-top: 51px
@@ -77,7 +76,7 @@ div.design
   // position: relative
   @media #{$mobile}
     padding-bottom: 0
-    padding: 0 15px
+    padding: 0 15px 15px
     background-position: center
   .gotop-content
     position: absolute

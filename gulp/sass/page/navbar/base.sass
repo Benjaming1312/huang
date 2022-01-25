@@ -5,26 +5,27 @@
   position: fixed
   z-index: 9999
   width: 100%
-  border-top: 14px solid $color-green
-  background: white
+  border-top: 0
+  background: rgba(#221e1f, .78)
   @media screen and (min-width: 768px)
-    padding-top: 18px
+    padding: 0px 0 7.5px
   // Logo 區塊
   .navbar-header
     @media screen and (min-width: 768px)
       padding-bottom: 0px
     @media #{$mobile}
-      background: rgba(white, .5)
-    @media #{$mobile}
       padding: 7.5px 15px
       border-bottom: 1px solid rgba(#969081, .25)
     .navbar-brand
       margin-left: 0 // clear mshop default
+      +trans
+  .hidden-xs .svg
+    +trans
   .navbar-toggle
     background: none // Clear mshop default
     border: 0 // Clear mshop default
     border-radius: 0 // Clear mshop default
-    margin-top: 3.25px
+    margin-top: 20px
     margin-right: 0
     .sr-only
       display: none
@@ -38,7 +39,7 @@
           opacity: 0
     .icon-bar
       +trans
-      background: $color-green
+      background: white
       width: 30px
       margin-top: 7.5px
   .container-fluid
@@ -47,22 +48,30 @@
 
   &.scroll
     @media screen and (min-width: 768px)
-      padding-top: 15px
-      background: white
+      padding: 0
+      padding-bottom: 3.25px
       +box-shadow
+    .navbar-brand,
+    .hidden-xs .svg
+      $w: 65px
+      width: $w!important
+      height: $w!important
   #navbar
     @media screen and (min-width: 768px)
       display: flex!important
-      justify-content: flex-start
-      align-items: flex-start
+      justify-content: space-around
+      align-items: center
+      width: 100%
     @media #{$mobile}
-      background: rgba(white, .9)
       box-shadow: 0px 5px 5px -1px rgba(#ccc, .3)
   .navbar-nav
     @media screen and (min-width: 768px)
       display: flex
       flex-wrap: nowrap
-      margin-top: 7.5px
+      margin: 0
+      width: 100%
+      justify-content: space-around
+      align-items: center
     //   justify-content: flex-start
     @media #{$mobile}
       margin-top: 0 // Clear mshop default

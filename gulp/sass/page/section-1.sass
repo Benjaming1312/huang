@@ -1,78 +1,28 @@
 .idx.section-1
   +max-width
   @media screen and (min-width: 768px)
-    padding-bottom: 60px
-  @media #{$mobile}
-    padding-bottom: 20px
+    padding-bottom: 15px
   .module-title
     margin-bottom: 40px
     @media #{$mobile}
       margin-bottom: 20px
-  p
-    line-height: 36px
-    color: $color-b
-    font-size: 18px
-    letter-spacing: 0.1rem
-    @media #{$mobile}
-      font-size: 16px
-      line-height: 30px
-  .col-sm-4
+  .row
     @media screen and (min-width: 768px)
-      padding: 0 25px
-    @media #{$mobile}
-      margin-bottom: 25px
+      margin: 0 -15px
   a
     display: block
-    position: relative
     width: 100%
-    border-radius: 35px
-    overflow: hidden
     height: 100%
-    +box-shadow
-    +trans
+    @media #{$mobile}
+      margin-bottom: 15px
     &:hover
-      .text
-        img
-          opacity: 0
-    img
+      span
+        opacity: 0.6
+    span
+      display: block
       width: 100%
-    .text
-      position: absolute
-      left: 0
-      top: 0
-      width: 100%
-      height: 100%
-      display: flex
-      align-items: center
-      justify-content: center
-      flex-wrap: wrap
-      padding: 25% 0
-      img
-        position: absolute
-        left: 0
-        top: 0
-        +trans
-      p
-        width: 100%
-        text-align: center
-        position: relative
-        z-index: 2
-        font-size: 23px
-        font-weight: 500
-        letter-spacing: 0.1em
-        color: #404041
-        margin-bottom: 0
-        &.readmore
-          span
-            background: #01787e
-            color: white
-            box-shadow: none
-            border-radius: 10px
-            padding: 3.25px 30px
-            font-size: 12px
-            font-weight: bold
-            letter-spacing: 0
-            display: inline-flex
-            align-items: center
-            justify-content: center
-            line-height: 20px
+      padding-top: 100%
+      background-size: cover!important
+      background-repeat: no-repeat!important
+      background-position: center!important
+      +trans

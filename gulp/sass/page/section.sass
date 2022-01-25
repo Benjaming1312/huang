@@ -44,23 +44,23 @@ body
   font-size: 16px
   letter-spacing: 0.8px
   padding: 7.5px 30px
-  box-shadow: 7px 7px 15px -1px rgba(#000, .3)
+  // box-shadow: 7px 7px 15px -1px rgba(#000, .3)
   position: relative
   z-index: 1
   +trans
-  background: $color-green
-  color: white
+  background: white
+  color: #b66166
   span
-    color: white
+    color: #b66166
     font-size: 16px
     +trans
   &:hover,
   &:focus,
   &:active
-    color: $color-green
-    background: white
+    color: white
+    background: #b66166
     span
-      color: $color-green
+      color: white
 
 =title
   color: #343333
@@ -195,36 +195,18 @@ body:not(.page_mobilehome)
 .module-title,
 .mt
   text-align: center
-  margin-bottom: 60px
-  .content
-    position: relative
-    padding: 0 60px
-    display: inline-block
-    &::before,
-    &::after
-      content: '/'
-      display: inline-block
-      color: #5cb330
-      font-size: 22px
-      position: absolute
-      top: 35%
-      font-weight: bolder
-      font-family: 'Dubai Bold', 'sans-serif'
-    &::before
-      left: 0
-    &::after
-      right: 0
-  h3
-    color: #01787e
-    font-size: 28px
+  margin-bottom: 30px
+  h4
+    color: white
+    font-size: 26px
     font-weight: 500
     letter-spacing: 0.1rem
     margin-bottom: 7.5px
     text-align: center
-    margin-bottom: 0
-  h4
-    font-size: 22px
-    color: #01787e
+    margin-bottom: 7.5px
+  h5
+    font-size: 18px
+    color: white
     letter-spacing: 0.2rem
     text-align: center
     margin-top: 0
