@@ -20,7 +20,9 @@
     color: white
     font-size: 16px
     line-height: 32px
-  .content
+    @media #{$mobile}
+      text-align: center
+  .content  
     display: flex
     justify-content: center
     flex-wrap: wrap
