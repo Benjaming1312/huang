@@ -1,18 +1,44 @@
-.footer
+div.footer
   margin-top: -1px
   border: 0
-  background: url(#{$url}foot-bg.png) center center no-repeat
+  background: none
   background-size: cover
   background-repeat: no-repeat
   background-position: center
+  position: relative
+  padding-bottom: 132px
+  @media #{$mobile}
+    padding-bottom: 120px
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: -1
+    width: 100vw
+    height: 43vw
+    background: url(#{$url}foot-bg.png) center center no-repeat
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: right top
+    @media #{$mobile}
+      background-size: 1280px 550px!important
+      background-position: top right!important
+      height: 550px
 
 footer.foot
-  margin-top: 15px
+  margin-top: 0
   padding: 0
   background: none
-  padding: 50px 0 30px
-  position: relative
-  +max-width
+  padding: 7.5px 0 7.5px
+  position: fixed
+  z-index: 3
+  left: 0
+  bottom: 0
+  width: 100%
+  border-top: 1px solid rgba(#b7b9bb, .25)
+  background: rgba(white, .7)
   @media #{$mobile}
     padding-top: 15px
     margin-top: 0px
@@ -20,55 +46,31 @@ footer.foot
     padding-right: 15px
   .row
     @media screen and (min-width: 768px)
-      display: flex
-      flex-wrap: nowrap
-      padding: 0 5%
+      width: calc(100% - 100px)
+      margin: 0 auto
+  .list-inline
+    margin-bottom: 0
+    display: inline-flex
+    align-items: center
     @media #{$mobile}
-      padding: 0px
-  .module-title
-    white-space: nowrap
-    text-align: center
-    @media screen and (min-width: 768px)
+      justify-content: center
       text-align: center
-    @media #{$mobile}
-      margin-bottom: 30px
-  .info
-    border: 1px solid white
-    padding: 15px
-    @media #{$mobile}
-      margin-bottom: 15px
-    p
-      font-size: 16px
-      color: white
-      font-weight: 400
-      text-align: center
-      line-height: 26px
-      @media screen and (min-width: 768px)
-        white-space: nowrap
-        margin-bottom: 7.5px
-      .svg
-        margin-right: 15px
-        position: relative
-        top: 5px
-      a
-        font-size: 16px
-        color: white
-        font-weight: 400
-  .map
-    height: 100%
-    @media screen and (min-width: 768px)
-      position: relative
-      right: -60px
-    @media #{$mobile}
-      padding: 0
-    iframe
-      max-width: 100%
-      @media screen and (min-width: 768px)
-        height: 295px
+      margin: 0 auto
+      margin-bottom: 7.5px
+      width: 100%
+    a
+      margin-right: 7.5px
+  a:not(.svg)
+    color: $color-b
+    font-size: 12px
+    line-height: 25px
+    border-bottom: 1px solid rgba($color-b, .7)
 
 div.design
   padding: 0 30px
+  display: inline-block
   background: none
+  float: right
   // background: url(#{$url}foot-bg.svg) center center no-repeat
   // background-size: cover
   // padding-top: 51px
@@ -76,7 +78,7 @@ div.design
   // position: relative
   @media #{$mobile}
     padding-bottom: 0
-    padding: 0 15px 15px
+    padding: 0 15px 0px
     background-position: center
   .gotop-content
     position: absolute
@@ -89,7 +91,7 @@ div.design
     padding: 0
   p
     margin: 0
-    padding: 7.5px 0
+    padding: 0px 0
     text-align: center
     font-size: 14px
     color: white
@@ -103,7 +105,7 @@ div.design
         text-align: center
     span, a
       font-size: 12px
-      color: white
+      color: $color-b
       letter-spacing: 0
       font-weight: normal
       line-height: 20px

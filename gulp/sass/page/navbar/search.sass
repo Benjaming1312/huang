@@ -2,14 +2,20 @@
   .search
     @media screen and (min-width: 768px)
       position: absolute
-      right: 22.5px
-      top: 20px
+      top: 0
+      right: -150px
+      // right: 22.5px
+      // top: 20px
     @media #{$mobile}
       margin-bottom: 15px
+      padding: 0 15px
     .formBS
       .input-group
         display: flex // Clear mshop default
-        border-bottom: 1px solid #6d6e70
+        @media screen and (min-width: 768px)
+          border-bottom: 0
+        @media #{$mobile}
+          border-bottom: 1px solid #6d6e70
         input.form-control
           border: 0 // Clear mshop default
           border-radius: 0 // Clear mshop default
@@ -18,7 +24,7 @@
           +text
           font-size: 14px
           @media screen and (min-width: 768px)
-            width: 120px
+            width: 135px
       .input-group-btn
         width: initial // Clear mshop default
         display: inline-flex
@@ -30,6 +36,9 @@
           box-shadow: none // Clear mshop default
           min-width: 15px
           min-height: 15px
+      input
+        &::placeholder
+          color: $color-n
 
   // .member .formBS
   //   $inputHeight: 22px

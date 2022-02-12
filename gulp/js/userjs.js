@@ -6,6 +6,7 @@
 // })
 // import owl from 'owlCarousel.js'
 // const owlFn = require('./owlCarousel')
+const idx = require('./index/index')
 const aosInit = require('./aos')
 const gotop = require('./scrollTo')
 const index = require('./index/index.js')
@@ -29,8 +30,9 @@ $(document).ready(function () {
   setTimeout(() => {
     navbar()
     gotop()
-    product_list()
-    product_detail()
+    idx()
+    // product_list()
+    // product_detail()
     // page_banner()
     // append_form()
     // append_news()

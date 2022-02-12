@@ -1,7 +1,8 @@
 =text
-  color: white
-  font-size: 17px
-  font-weight: 500
+  color: #231f20
+  font-size: 14px
+  font-weight: 400
+  letter-spacing: 0.2rem
 
 .navbar.navbar.navbar .navbar-nav
   >li
@@ -37,9 +38,8 @@
       border: 0 // Clear mshop default
       +text
       +trans
-      letter-spacing: 0.8px
       @media screen and (min-width: 768px)
-        padding: 0 15px // 選單間距
+        padding: 0 30px // 選單間距
         padding-bottom: 7.5px
         position: relative
         top: 3.25px
@@ -62,9 +62,9 @@
       width: 100%
       @media screen and (min-width: 768px)
         +box-shadow
-        background: rgba(#221e1f, .78)
+        background: rgba(#231f20, .78)
       @media #{$mobile}
-        background: rgba(#221e1f, .78)
+        background: rgba(#231f20, .1)
       >li
         >a
           padding: 0 // Clear mshop default
@@ -73,15 +73,15 @@
           padding: 7.5px 0
           text-align: center
           +trans
+          font-size: 14px
           color: white
-          font-size: 16px
           @media #{$mobile}
-            color: white
+            color: #231f20
           &:hover
             background: #ccc
-            color: white
+            color: #231f20
             @media #{$mobile}
-              background: white
+              background: #231f20
               color: #ccc
 
 // .navbar-nav

@@ -1,10 +1,10 @@
 .module-adv
   position: relative
-  margin-bottom: 30px
-  padding-top: 84px
+  margin-bottom: 50px
+  padding-top: 137px
   @media #{$mobile}
-    margin-bottom: 20px
-    padding-top: 94px
+    margin-bottom: 30px
+    padding-top: 97px
   &::before
     content: ''
     display: block
@@ -38,28 +38,29 @@
   .owl-dots
     text-align: right
     padding-right: 60px
-    padding-bottom: 30px
+    padding-bottom: 15px
     @media #{$mobile}
-      padding-right: 7.5px
+      padding-right: 15px
       padding-bottom: 12.5px
     .owl-dot
       opacity: 1
       border-radius: 0
-      $w: 12px
+      $w: 27px
       span
         opacity: .7 // Clear mshop default
         border-radius: 0        
         background: white
         border: 0
-        border-radius: 50%
+        border-radius: 0%
         width: $w
-        height: $w
+        height: 2.4px
         margin-right: 5px
         margin-left: 5px
         // border-radius: 50%
         +trans
       &.active
         span
+          background: #808080
           opacity: 1
 // .mcarousel
 //   padding: 0

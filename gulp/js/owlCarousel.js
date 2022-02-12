@@ -23,7 +23,7 @@ function calcBannerMarginTop () {
 }
 
 module.exports = function () {
-	calcBannerMarginTop()
+	// calcBannerMarginTop()
 
 	if (is('.idx')) {
 		console.log('%c (／‵Д′)／~ ╧╧ owl : ', 'padding: .25rem; font-size: 14px; background: #12bdba; color: #fff')

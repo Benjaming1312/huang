@@ -6,15 +6,21 @@
   z-index: 9999
   width: 100%
   border-top: 0
-  background: rgba(#221e1f, .78)
+  background: rgba(white, .78)
   @media screen and (min-width: 768px)
-    padding: 0px 0 7.5px
+    padding: 0px 0px 7.5px
   // Logo 區塊
   .navbar-header
+    +trans
     @media screen and (min-width: 768px)
-      padding-bottom: 0px
+      padding-bottom: 30px
+      padding-top: 15px
+      width: 100%
+      display: flex
+      justify-content: center
+      text-align: center
     @media #{$mobile}
-      padding: 7.5px 15px
+      padding: 0px 15px 7.5px
       border-bottom: 1px solid rgba(#969081, .25)
     .navbar-brand
       margin-left: 0 // clear mshop default
@@ -25,7 +31,7 @@
     background: none // Clear mshop default
     border: 0 // Clear mshop default
     border-radius: 0 // Clear mshop default
-    margin-top: 20px
+    margin-top: 50px
     margin-right: 0
     .sr-only
       display: none
@@ -39,29 +45,34 @@
           opacity: 0
     .icon-bar
       +trans
-      background: white
+      background: #231f20
       width: 30px
       margin-top: 7.5px
   .container-fluid
-    max-width: 1200px
+    max-width: 100%
     margin: 0 auto
 
   &.scroll
+    position: fixed
+    background: rgba(white, .9)
     @media screen and (min-width: 768px)
       padding: 0
-      padding-bottom: 3.25px
+      padding-bottom: 7.5px
       +box-shadow
-    .navbar-brand,
-    .hidden-xs .svg
-      $w: 65px
-      width: $w!important
-      height: $w!important
+    .navbar-header
+      @media screen and (min-width: 768px)
+        padding-top: 7.5px
+        padding-bottom: 7.5px
   #navbar
     @media screen and (min-width: 768px)
       display: flex!important
-      justify-content: space-around
-      align-items: center
+      // justify-content: space-around
+      // align-items: center
       width: 100%
+      border-top: 1px solid rgba(#cccecf, .5)
+      border-bottom: 1px solid rgba(#cccecf, .5)
+      padding: 7.5px 2vw
+      padding-right: 135px
     @media #{$mobile}
       box-shadow: 0px 5px 5px -1px rgba(#ccc, .3)
   .navbar-nav
