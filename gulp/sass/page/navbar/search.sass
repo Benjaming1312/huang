@@ -3,7 +3,7 @@
     @media screen and (min-width: 768px)
       position: absolute
       top: 0
-      right: -150px
+      right: -100px
       // right: 22.5px
       // top: 20px
     @media #{$mobile}
@@ -15,7 +15,7 @@
         @media screen and (min-width: 768px)
           border-bottom: 0
         @media #{$mobile}
-          border-bottom: 1px solid #6d6e70
+          border-bottom: 1px solid #daab62
         input.form-control
           border: 0 // Clear mshop default
           border-radius: 0 // Clear mshop default
@@ -23,8 +23,13 @@
           display: flex // Clear mshop default
           +text
           font-size: 14px
+          height: 30px
           @media screen and (min-width: 768px)
-            width: 135px
+            width: 100px
+            +trans
+        &.active
+          input
+            border-bottom: 1px solid rgba(#daab62, 1)
       .input-group-btn
         width: initial // Clear mshop default
         display: inline-flex

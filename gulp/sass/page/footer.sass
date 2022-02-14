@@ -80,6 +80,9 @@ div.design
     padding-bottom: 0
     padding: 0 15px 0px
     background-position: center
+    display: block
+    width: 100%
+    text-align: center
   .gotop-content
     position: absolute
     top: -19px
@@ -97,11 +100,16 @@ div.design
     color: white
     @media #{$mobile}
       padding-bottom: 10px
+      display: flex
+      flex-wrap: nowrap
+      white-space: nowrap
+      justify-content: center
+      text-align: center
+      width: 100%
     span
       @media #{$mobile}
         float: left!important
-        display: block
-        width: 100%
+        display: inline-block
         text-align: center
     span, a
       font-size: 12px
