@@ -2,10 +2,10 @@
   .search
     @media screen and (min-width: 768px)
       position: absolute
-      top: 0
+      top: 0px
       right: -100px
-      // right: 22.5px
-      // top: 20px
+    @media #{$pad-vertical}
+      right: -110px
     @media #{$mobile}
       margin-bottom: 15px
       padding: 0 15px
@@ -27,9 +27,12 @@
           @media screen and (min-width: 768px)
             width: 100px
             +trans
+          @media #{$pad-vertical}
+            width: 70px
         &.active
           input
             border-bottom: 1px solid rgba(#daab62, 1)
+            height: 20px
       .input-group-btn
         width: initial // Clear mshop default
         display: inline-flex
