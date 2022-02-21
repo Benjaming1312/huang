@@ -25,8 +25,8 @@ function calcBannerMarginTop () {
 module.exports = function () {
 	// calcBannerMarginTop()
 
-	if (is('.idx')) {
-		console.log('%c (／‵Д′)／~ ╧╧ owl : ', 'padding: .25rem; font-size: 14px; background: #12bdba; color: #fff')
+	console.log('%c (／‵Д′)／~ ╧╧ is(banner) : ', 'padding: .25rem; font-size: 14px; background: #12bdba; color: #fff', is('.banner'))
+	if (is('.banner')) {
 		$('.banner .owl-carousel').owlCarousel({
 			items: 1,
 			autoplay:true,
@@ -35,7 +35,7 @@ module.exports = function () {
 			loop: true,
 			animateOut: 'fadeOut',
 			animateIn: 'fadeIn',
-			autoPlaySpeed: 5000,
+			autoPlaySpeed: 6500,
 			autoPlayTimeout: 1500,
 			smartSpeed: 1500,
 			autoplayHoverPause: false,

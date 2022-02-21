@@ -41,7 +41,9 @@ gulp.task('connect',function(){
 
 gulp.task('default',['clean', 'watch','connect']) //gulp 直接執行
 
-const base_domain = 'ec084.so-buy.com'
+const base_domain = 'ec001.ina9.win'
+const js_path = '/js'
+const css_path = '/css'
 // 執行轉換JS
 gulp.task('scripts',function(){
 	gulp.src('gulp/js/userjs.js') //輸入路徑 **代表路徑的所有檔案轉換
@@ -57,7 +59,7 @@ gulp.task('scripts',function(){
 				includeContent: false,
 				sourceRoot: 'gulp/js'
 			}))
-			.pipe(gulp.dest(`dist/${base_domain}/ezfiles/922/1922/img/3018/`)) //翻譯後的路徑
+			.pipe(gulp.dest(`dist/${base_domain}${js_path}`)) //翻譯後的路徑
 			.pipe(gulp.dest('dist/js')) //輸出路徑
 			.pipe(connect.reload())
 })
@@ -74,7 +76,7 @@ gulp.task('styles',function(){
 					includeContent: false,
 					sourceRoot: 'gulp/sass'
 			})) //sourceMap寫入在一樣的地方  
-			.pipe(gulp.dest(`dist/${base_domain}/ezfiles/922/1922/img/3017/`)) //翻譯後的路徑
+			.pipe(gulp.dest(`dist/${base_domain}${css_path}`)) //翻譯後的路徑
 			.pipe(gulp.dest('dist/css/')) //翻譯後的路徑
 			.pipe(connect.reload())
 })

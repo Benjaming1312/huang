@@ -1,4 +1,4 @@
-- var url = '/ezfiles/922/1922/img/3019/'
+- var url = '/images/'
 nav.navbar
 	//- .search.visible-xs
 	//- 	<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch&amp;Lang=zh-tw">
@@ -17,14 +17,14 @@ nav.navbar
 		//- a.svg(href="" style="background:url("+url+"social-icon-2.svg); width: 20px; height: 20px;") 
 		//- a.svg(href="" style="background:url("+url+"social-icon-3.svg); width: 20px; height: 20px;") 
 	.container-fluid
-		.navbar-header
+		.navbar-header.visible-xs
 			button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
 				span.sr-only Toggle navigation
 				span.icon-bar
 				span.icon-bar
 				span.icon-bar
 			// LOGO放置處
-			a.navbar-brand.svg(href='/' style="background: url("+url+"logo.svg); width: 122px; height: 40px;")
+			a.navbar-brand.svg(href='/' style="background: url("+url+"logo.svg); width: 84px; height: 73px;")
 		#navbar.navbar-collapse.collapse
 			//- .user-profile.visible-xs
 			//- 	.lang
@@ -34,78 +34,32 @@ nav.navbar
 				//- a.svg(href="" style="background:url("+url+"social-icon-2.svg); width: 20px; height: 20px;") 
 				//- a.svg(href="" style="background:url("+url+"social-icon-3.svg); width: 20px; height: 20px;") 
 			ul.nav.navbar-nav
-				li.dropdown(data-aos="fade-in")
-					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 手部護理
-					ul.dropdown-menu(role='menu')
-						li
-							a(href="") 護手霜
-						li
-							a(href="") 乾洗手
-						li
-							a(href="") 潔手露
-				li.dropdown(data-aos="fade-in" data-aos-delay="50")
-					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 身體保養
-					ul.dropdown-menu(role='menu')
-						li
-							a(href="") 潤膚乳
-						li
-							a(href="") 身體油
-				li.dropdown(data-aos="fade-in" data-aos-delay="100")
-					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 沐浴清潔
-					ul.dropdown-menu(role='menu')
-						li
-							a(href="") 沐浴露
-						li
-							a(href="") 磨砂沐浴露
-				li.dropdown(data-aos="fade-in" data-aos-delay="150")
-					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 頭髮護理
-					ul.dropdown-menu(role='menu')
-						li
-							a(href="") 洗髮露
-						li
-							a(href="") 護髮乳
-						li
-							a(href="") 護髮油
-						li
-							a(href="") 髮香噴霧
-				li.dropdown(data-aos="fade-in" data-aos-delay="200")
-					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 精緻香氛
-					ul.dropdown-menu(role='menu')
-						li
-							a(href="") 香水
-						li
-							a(href="") 抗菌噴霧
-						li
-							a(href="") 室內噴霧
-						li
-							a(href="") 香氛蠟燭
-						li
-							a(href="") 擴香
-				li.dropdown(data-aos="fade-in" data-aos-delay="250")
-					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 關於Ksolite
-					ul.dropdown-menu(role='menu')
-						li
-							a(href="") 品牌故事
-						li
-							a(href="") 核心價值
-						li
-							a(href="") 明星商品
-						li
-							a(href="") 精選護膚成分
-						li
-							a(href="") 銷售據點
+				li(data-aos="fade-in")
+					a(href="") 公司介紹
+				li(data-aos="fade-in" data-aos-delay="50")
+					a(href="") 產品介紹
+				li(data-aos="fade-in" data-aos-delay="100")
+					a(href="") 品質政策
+				li.logo.hidden-xs
+					a.navbar-brand.svg(href='/' style="background: url("+url+"logo.svg); width: 84px; height: 73px;")
+				li(data-aos="fade-in" data-aos-delay="150")
+					a(href="") 環安政策
+				li(data-aos="fade-in" data-aos-delay="200")
+					a(href="") 最新消息
+				li(data-aos="fade-in" data-aos-delay="250")
+					a(href="") 聯絡我們
 				//- li.social(data-aos="fade-in" data-aos-delay="250")
 				//- 	a.svg(href="https://www.instagram.com/tortoise16888/" target="_blank" style="background:url("+url+"social-1.svg); width: 20px; height: 20px;") 
 				//- 	a.svg(href="https://www.facebook.com/tortoise16888/" target="_blank" style="background:url("+url+"social-2.svg); width: 20px; height: 20px;") 
-				li.search
-					<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch&amp;Lang=zh-tw">
-						<div class="input-group">
-							<span class="input-group-btn">
-								button.btn.svg(type="submit" style="background:url("+url+"search.svg); width: 15px; height: 15px;")
-							</span>
-							<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
-						</div>
-					</form>
+				//- li.search
+				//- 	<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch&amp;Lang=zh-tw">
+				//- 		<div class="input-group">
+				//- 			<span class="input-group-btn">
+				//- 				button.btn.svg(type="submit" style="background:url("+url+"search.svg); width: 15px; height: 15px;")
+				//- 			</span>
+				//- 			<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
+				//- 		</div>
+				//- 	</form>
 
 			//- 	li.dropdown(data-aos-delay="300", data-aos="fade-in")
 			//- 		a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 商品介紹

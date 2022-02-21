@@ -1,76 +1,63 @@
-div.footer
-  margin-top: -1px
-  border: 0
-  background: none
-  background-size: cover
-  background-repeat: no-repeat
-  background-position: center
-  position: relative
-  padding-bottom: 132px
-  @media #{$mobile}
-    padding-bottom: 120px
-  &::before
-    content: ''
-    display: block
-    position: absolute
-    bottom: 0
-    left: 0
-    z-index: -1
-    width: 100vw
-    height: 43vw
-    background: url(#{$url}foot-bg.png) center center no-repeat
-    background-size: cover
-    background-repeat: no-repeat
-    background-position: right top
-    @media #{$mobile}
-      background-size: 1280px 550px!important
-      background-position: top right!important
-      height: 550px
-
 footer.foot
-  margin-top: 0
-  padding: 0
   background: none
-  padding: 7.5px 0 7.5px
-  position: fixed
-  z-index: 3
-  left: 0
-  bottom: 0
-  width: 100%
-  border-top: 1px solid rgba(#b7b9bb, .25)
-  background: rgba(white, .7)
+  padding: 35px 0
   @media #{$mobile}
     padding-top: 15px
     margin-top: 0px
     padding-left: 15px
     padding-right: 15px
-  .row
+  >.row
+    +max-width
+    display: flex
     @media screen and (min-width: 768px)
-      width: calc(100% - 100px)
-      margin: 0 auto
-  .list-inline
-    margin-bottom: 0
-    display: inline-flex
-    align-items: center
+      flex-wrap: nowrap
+      align-items: center
     @media #{$mobile}
-      justify-content: center
-      text-align: center
-      margin: 0 auto
-      margin-bottom: 7.5px
-      width: 100%
-    a
+      flex-wrap: wrap
+  .logo
+    @media #{$mobile}
+      margin-bottom: 30px
+  .info
+    .svg
       margin-right: 7.5px
-  a:not(.svg)
-    color: $color-b
-    font-size: 12px
-    line-height: 25px
-    border-bottom: 1px solid rgba($color-b, .7)
-
+    td 
+      vertical-align: top
+      line-height: 30px
+      @media #{$mobile}
+        padding: 7.5px 3.25px
+      &:first-child
+        @media #{$mobile}
+          white-space: nowrap
+    p,td 
+      color: $color-b
+      @media screen and (min-width: 768px)
+        white-space: nowrap
+    a
+      color: $color-b
+    .row
+      @media screen and (min-width: 768px)
+        display: flex
+        flex-wrap: nowrap
+      .col-sm-6
+        @media screen and (min-width: 768px)
+          width: auto
+        @media #{$mobile}
+          padding: 0
+        &:first-child
+          @media screen and (min-width: 768px)
+            border-right: 1px solid rgba(#9fa0a0, .5)
+            padding-right: 30px
+            margin-right: 15px
+          @media #{$mobile}
+            border-bottom: 1px solid rgba(#9fa0a0, .5)
+            padding-bottom: 15px
+            margin-bottom: 15px
 div.design
-  padding: 0 30px
-  display: inline-block
-  background: none
-  float: right
+  padding: 7.5px 30px
+  display: block
+  background: #005e7b
+  text-align: center
+  width: 100%
   // background: url(#{$url}foot-bg.svg) center center no-repeat
   // background-size: cover
   // padding-top: 51px
@@ -78,7 +65,7 @@ div.design
   // position: relative
   @media #{$mobile}
     padding-bottom: 0
-    padding: 0 15px 0px
+    padding: 7.5px
     background-position: center
     display: block
     width: 100%
@@ -99,9 +86,9 @@ div.design
     font-size: 14px
     color: white
     @media #{$mobile}
-      padding-bottom: 10px
+      padding-bottom: 0px
       display: flex
-      flex-wrap: nowrap
+      flex-wrap: wrap
       white-space: nowrap
       justify-content: center
       text-align: center
@@ -113,10 +100,12 @@ div.design
         text-align: center
     span, a
       font-size: 12px
-      color: $color-b
+      color: white
       letter-spacing: 0
       font-weight: normal
       line-height: 20px
+      @media #{$mobile}
+        display: block
     a
       position: absolute
       right: 30px

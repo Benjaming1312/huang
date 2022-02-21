@@ -1,4 +1,4 @@
-- var url = '/ezfiles/922/1922/img/3019/'
+- var url = '/images/'
 include ../custom_module/title.pug
 <!DOCTYPE html>
 html(lang="zh-hant")
@@ -6,7 +6,11 @@ html(lang="zh-hant")
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		// jquery
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js")
+		// Bootstrap
 		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js")
 		// font-awesome
 		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
 		// owlCarousel
@@ -40,32 +44,29 @@ html(lang="zh-hant")
 		//- // lodash
 		//- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js" integrity="sha256-VeNaFBVDhoX3H+gJ37DpT/nTuZTdjYro9yBruHjVmoQ=" crossorigin="anonymous"></script>
 
-
-		//- script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js")
-		//- script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js")
 		//- <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.0/masonry.pkgd.min.js"></script>
 		//- script(src="https://unpkg.com/vue")
 		//- script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js")
 
 		// user defined
-		link(rel="stylesheet", href="/ezfiles/843/1843/img/1310/usercss.css")
-		script(src="/ezfiles/843/1843/img/1311/userjs.js")
+		link(rel="stylesheet", href="/css/usercss.css")
+		script(src="/js/userjs.js")
 
 		//- // test scenario
 		//- link(href="/dist/css/usercss.css", rel="stylesheet")
 		//- script(src="/dist/js/userjs.js")
 		
 		
-
-		title Document
+		link(rel="SHORTCUT ICON", href=url + "fav.png", type="image/x-icon")
+		title 歐普仕化學科技股份有限公司
 	body
 		include ../custom_module/navbar.pug
-		//- include ../custom_module/owlcarousel.pug
+		include ../custom_module/owlcarousel.pug
 		//- include ../custom_module/swiper.pug
 
 		include ../custom_module/section-1.pug
 		include ../custom_module/section-2.pug
-		//- include ../custom_module/section-3.pug
+		include ../custom_module/section-3.pug
 		//- include ../custom_module/section-4.pug
 		include ../custom_module/footer.pug
 		include ../custom_module/gotop.pug

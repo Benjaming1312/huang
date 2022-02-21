@@ -6,6 +6,7 @@
 // })
 // import owl from 'owlCarousel.js'
 // const owlFn = require('./owlCarousel')
+
 const idx = require('./index/index')
 const aosInit = require('./aos')
 const gotop = require('./scrollTo')
@@ -20,6 +21,7 @@ const append_form = require('./append_form')
 const append_news = require('./append_news')
 const aboutus = require('./aboutus')
 const search = require('./search')
+const owl = require('./owlCarousel')
 // const about = require('./aboutus.js')
 // const mshop = require('./mshop.js')
 // const same_as_news = require('./same_as_news.js')
@@ -30,9 +32,10 @@ $('body').hide()
 $(document).ready(function () {
   setTimeout(() => {
     navbar()
-    gotop()
-    idx()
-    search()
+    owl()
+    // gotop()
+    // idx()
+    // search()
     // product_list()
     // product_detail()
     // page_banner()
@@ -52,7 +55,7 @@ $(document).ready(function () {
   setTimeout(() => {
     $('body').show()
     aosInit()
-  }, 1100)
+  }, 100)
 })
 
 // owlFn()

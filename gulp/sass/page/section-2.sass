@@ -1,55 +1,26 @@
 .idx.section-2
-  padding-top: 30px
-  @media screen and (min-width: 768px)
-    width: calc(100% - 100px)
-  @media #{$pad-vertical}
-    width: calc(100% - 15px)
-  @media #{$pad-horizantal}
-    width: calc(100% - 15px)
-  .img
-    @media screen and (min-width: 768px)
-      padding-right: 30px
-    img
-      width: 100%
-  .text
-    text-align: center
-    @media screen and (min-width: 768px)
-      padding-top: 80px
-      margin-right: -50px
-    @media #{$pad-vertical}
-      padding-top: 15px
-    @media #{$pad-horizantal}
-      padding-top: 15px
+  padding: 60px 15px 60px
+  +max-width
+  @media #{$mobile}
+    padding: 30px 15px 15px
+  .list-inline
+    display: flex
+    justify-content: center
+    width: 100%
+    margin: 0
+    padding: 0
     @media #{$mobile}
-      margin-top: 30px
-    .svg
+      flex-wrap: wrap
+    a
+      +trans
+      display: block
+      &:hover
+        opacity: 0.7
+    li
+      @media screen and (min-width: 768px)
+        margin: 0 7.5px
       @media #{$mobile}
-        max-width: 100%
-      @media #{$pad-horizantal}
-        max-width: 300px
-      @media #{$pad-vertical}
-        max-width: 300px
-      &.more
-        margin-top: 20px
-    p
-      color: $color-b
-      font-size: 14px
-      font-weight: 400
-      line-height: 30px
-      @media #{$pad-vertical}
-        font-size: 12px
-      @media #{$pad-horizantal}
-        font-size: 12px
-      &::before
-        content: ''
-        display: block
-        margin: 0 auto 50px
-        background: $color-b
-        height: 3px
-        width: 118px
-        @media #{$pad-vertical}
-          margin-bottom: 10px
-        @media #{$pad-horizantal}
-          margin-bottom: 10px
-        @media #{$mobile}
-          margin-bottom: 30px
+        width: calc(100% / 2 - 7.5px)
+        margin: 0 3.25px 15px
+      img
+        width: 100%

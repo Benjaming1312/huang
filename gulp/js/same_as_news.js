@@ -11,7 +11,7 @@ module.exports = function () {
   $('.module-rcglist').addClass('same_as_news')
   $('.d-item').each(function () {
     const url = $(this).find('.d-img a').attr('href')
-    $(this).find('.d-txt').append(`<p class="readmore"><a href="${url}">READ MORE<span class="svg" style="background:url(/ezfiles/922/1922/img/3019/readmore.svg);"></span></a></p>`)
+    $(this).find('.d-txt').append(`<p class="readmore"><a href="${url}">READ MORE<span class="svg" style="background:url(/images/readmore.svg);"></span></a></p>`)
   })
 }
 
