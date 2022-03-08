@@ -1,5 +1,52 @@
-.aboutus
-  .media
-    padding: 30px 0
+.abouts-navs,
+.prod-navs
+  margin: 30px 0
+  @media #{$mobile}
+    margin: 15px 0
+  .nav-tabs
+    margin: 0
     display: flex
     justify-content: center
+    border: 0
+    padding: 0
+    li
+      margin: 0 15px
+      @media #{$mobile}
+        margin: 7.5px
+      &.active a
+        background: $color-blue
+        color: white
+      a
+        +btn
+        background: $color-n
+        color: $color-blue
+        @media #{$mobile}
+          white-space: nowrap
+          padding-left: 15px
+          padding-right: 15px
+        &:hover,
+        &:focus
+          background: $color-blue
+          color: white
+
+.aboutus,
+.rules
+  .row
+    display: flex
+    margin-bottom: 60px
+    align-items: center
+    @media #{$mobile}
+      margin-bottom: 30px
+      flex-wrap: wrap
+    &.reverse
+      @media screen and (min-width: 768px)
+        flex-direction: row-reverse
+    .img
+      @media #{$mobile}
+        margin-bottom: 30px
+      img
+        +box-shadow
+    p
+      font-size: 16px
+      line-height: 32px
+      color: $color-b

@@ -7,6 +7,9 @@
 // import owl from 'owlCarousel.js'
 // const owlFn = require('./owlCarousel')
 
+const news = require('./news')
+const global = require('./global')
+const nav_tabs = require('./nav_tabs')
 const idx = require('./index/index')
 const aosInit = require('./aos')
 const gotop = require('./scrollTo')
@@ -33,6 +36,9 @@ $(document).ready(function () {
   setTimeout(() => {
     navbar()
     owl()
+    nav_tabs()
+    global()
+    news()
     // gotop()
     // idx()
     // search()

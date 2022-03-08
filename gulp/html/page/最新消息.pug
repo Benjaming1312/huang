@@ -1,0 +1,24 @@
+- var url = '/images/'
+
+
+.page.container-fluid.page-title
+  .row
+    .col-xs-12
+      .module-title
+        h4 最新消息
+        h5 NEWS
+
+.page.container-fluid.news-list
+  .row
+    .title-content
+      p 名稱
+    .date-content
+      p 日期
+  #insert_data
+    .row(v-for="(news, idx) in data" :key="idx")
+      a(:href="news.href") 
+        .title-content
+          p {{news.Title}}
+        .date-content
+          p {{news.Date}}
+        .news-content(v-html="news.Content")
