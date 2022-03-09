@@ -16,7 +16,7 @@
       p 日期
   #insert_data
     .row(v-for="(news, idx) in data" :key="idx")
-      a(:href="news.href") 
+      a(:href="`/p/newsinfo?id=${news.__Id}`") 
         .title-content
           p {{news.Title}}
         .date-content

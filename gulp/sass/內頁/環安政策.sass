@@ -29,7 +29,7 @@
     @media screen and (min-width: 768px)
       padding-left: 30px
   .owl-carousel
-    max-width: 750px
+    max-width: 500px
     margin: 0 auto
     +box-shadow
     img
@@ -54,6 +54,11 @@
       @media #{$mobile}
         font-size: 22px
     .owl-prev
+      position: absolute
+      @media screen and (min-width: 768px)
+        left: -50px
+      @media #{$mobile}
+        left: -12px
       &::before
         content: '\e257'
     .owl-next

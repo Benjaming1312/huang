@@ -4,11 +4,12 @@
   @media #{$mobile}
     padding: 0 15px
   >.row
-    background: rgba($color-blue, .1)
+    background: $color-blue
     padding: 15px 30px
     border-bottom: 1px solid #ccc
     p
       margin-bottom: 0
+      color: white
     .title-content
       display: inline-block
     .date-content
@@ -28,12 +29,7 @@
         padding-right: 0
         padding-left: 7.5px
       &:hover
-        background: $color-blue
-        *
-          color: white
-        .date-content
-          p
-            color: white
+        background: rgba($color-blue, .1)
     p
       margin-bottom: 0
     .title-content

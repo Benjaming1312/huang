@@ -7,7 +7,9 @@
 // import owl from 'owlCarousel.js'
 // const owlFn = require('./owlCarousel')
 
+const form = require('./contact')
 const news = require('./news')
+const news_detail = require('./newsDetail')
 const global = require('./global')
 const nav_tabs = require('./nav_tabs')
 const idx = require('./index/index')
@@ -39,6 +41,8 @@ $(document).ready(function () {
     nav_tabs()
     global()
     news()
+    news_detail()
+    form()
     // gotop()
     // idx()
     // search()

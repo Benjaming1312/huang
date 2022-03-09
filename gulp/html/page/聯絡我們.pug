@@ -9,28 +9,30 @@
 
 .page.container-fluid.contact
 	.row
-		.col-sm-6.col-xs-12.form
+		.col-sm-6.col-xs-12#form
 			.form-group
 				label 姓名
-				input#name(type="text" placeholder="姓名")
+				input#name(type="text" placeholder="姓名" v-model="name")
 			.form-group
 				label 性別  
 				.options
 					label.radio-inline
-						input(type="radio" name="男" checked)
+						input(type="radio" v-model="date" value="男" name="男" checked)
 						| 男
 					label.radio-inline
-						input(type="radio" name="男" checked)
+						input(type="radio" v-model="date" value="女" name="女")
 						| 女
 			.form-group
 				label E-mail
-				input#mail(type="text" placeholder="E-mail")
+				input#mail(type="text" placeholder="E-mail" v-model="mail")
 			.form-group
 				label 電話
-				input#tel(type="number" placeholder="電話")
+				input#tel(type="number" placeholder="電話" v-model="phone")
 			.form-group
 				label 留言
-				textarea#textarea(type="number" placeholder="留言") 留言
+				textarea#textarea(type="number" placeholder="留言" v-model="textarea") 留言
+			.form-group
+				button.btn(type="button" @click="submit") 送出
 		.col-sm-6.col-xs-12.info
 			.content
 					p
