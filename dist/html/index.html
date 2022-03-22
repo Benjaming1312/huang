@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <!-- jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <!-- owlCarousel-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+    <!-- noto sans tc-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css"/>
+    <!-- aos--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- swiper--><script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js" integrity="sha256-NiMdnMv0WBAps3M8mcB7WHzlanETt0rnwMCgg67DgCk=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css" integrity="sha256-kGupfJ4zZb4/m0GPPVY0ng7FwSjZm1E0wMWG1aRYbwk=" crossorigin="anonymous" />
+    <!-- gsap--><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js" integrity="sha256-XDWrid8aGX+NZwSY7JzTu6oWArI71Sw+aUZ9Hd0P5mo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/TextPlugin.min.js" integrity="sha256-ueVAnnZLQzTgupbVzZ98US77GlFMzWhqWJ+i8oqO4O8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js" integrity="sha256-VOmGZIiFXM1EqfqanRqwQ/1JfzredGUMk/M6AAPMdRw=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollToPlugin.min.js" integrity="sha256-dIqkGRmOeTpe7Zxq1vdIDcQonrVWrzXHo1tRuo5fEr0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/PixiPlugin.min.js" integrity="sha256-A9jCDXQhTsPDKUP8/HHoRBI9MKpRJmjKalOnqt3PBXY=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/MotionPathPlugin.min.js" integrity="sha256-3qQZGNeXc42t1E5iyn5XA92eBXFJevVtshE8aWBE0Xs=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/EaselPlugin.min.js" integrity="sha256-eQgQne4nbpnHXQAgqqkIz/bUmdYbUUyJxV9OXS1XCpo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/EasePack.min.js" integrity="sha256-YYZMCUSiShKxzX6n63C7BBttMsgswc/NkXc4WdCK/ro=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/CSSRulePlugin.min.js" integrity="sha256-c73GnBat1qBHmg9/ttdWrVUwzwj5U8MVqacscUi1tGY=" crossorigin="anonymous"></script>
+    <!-- fancy-box--><script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" />
+    <script src="https://unpkg.com/vue"></script>
+    <!-- user defined-->
+    <link rel="stylesheet" href="/css/usercss.css"/>
+    <script src="/js/userjs.js"></script>
+    <link rel="SHORTCUT ICON" href="/images/fav.png" type="image/x-icon"/>
+    <title>歐普仕化學科技股份有限公司</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header visible-xs">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          <!-- LOGO放置處--><a class="navbar-brand svg" href="/" style="background: url(/images/logo.svg); width: 98px; height: 79px;"></a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li data-aos="fade-in"><a href="">關於凰馳</a></li>
+            <li data-aos="fade-in"><a href="">經營理念</a></li>
+            <li data-aos="fade-in"><a href="">產品優勢</a></li>
+            <li data-aos="fade-in"><a href="">產品介紹</a></li>
+            <li data-aos="fade-in"><a href="">聯絡我們</a></li>
+            <li class="social"><a class="svg" href="" style="background:url(/images/social-1.svg); width: 35px; height: 35px;"></a><a class="svg" href="" style="background:url(/images/social-2.svg); width: 35px; height: 35px;"></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="banner container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="owl-carousel hidden-xs">
+            <div class="item"><img class="visible-xs" src="/images/banner.png" alt=""/><img class="hidden-xs" src="/images/banner-m.png" alt=""/></div>
+            <div class="item"><img class="visible-xs" src="/images/banner.png" alt=""/><img class="hidden-xs" src="/images/banner-m.png" alt=""/></div>
+            <div class="item"><img class="visible-xs" src="/images/banner.png" alt=""/><img class="hidden-xs" src="/images/banner-m.png" alt=""/></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="idx container-fluid section-1">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="module-title">
+            <h4>綠色環保概念</h4>
+          </div>
+          <p><b>您的選擇，凰馳重視</b></p>
+          <p>響應國際減碳、配合政府減廢，秉持「綠色環保概念」、「資源回收政策」對生態環境的重視及再投資塑膠的相關領域及環保防污的計劃，以創新為目標，品質價值創造永續經營的在地文化，我們秉持品質、技術、責任、道德及服務的經營理念，以環保為重，整合為工作效率、創新技術、品牌價值、客戶服務、品質穩定提供循環經濟、綠色能源、企業公司治理、社會責任等觀點永續經營。</p>
+        </div>
+      </div>
+    </div>
+    <div class="idx container-fluid section-2">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <p class="img"><img class="img-responsive center-block" src="/images/section-2-img-1.png" alt=""/></p>
+          <div class="content">
+            <p><b>產品特色</b><br/>耐酸鹼、抗腐蝕、耐衝擊、韌性佳、重量輕、易搬運、易堆疊</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+          <p class="img"><img class="img-responsive center-block" src="/images/section-2-img-2.png" alt=""/></p>
+          <div class="content">
+            <p><b>最佳選擇</b><br/>高安全性、通過檢測、重複利用、品質保證、一體成型、清洗再生 、愛護地球       </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="idx container-fluid section-3">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="content" style="background:url(/images/section-4-img.png);"><img class="img-responsive center-block hidden-xs" src="/images/section-4-img.png" alt=""/></div>
+        </div>
+      </div>
+    </div>
+    <footer class="foot">
+      <div class="row">
+        <div class="col-sm-4 col-xs-12 title-content">
+          <div class="module-title">
+            <h4>聯絡我們</h4>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12 info">
+          <p>電話： <a href="tel: 04-887-6896">04-887-6896</a></p>
+          <p>傳真： 04-887-6896</p>
+          <p>E-mail：<a href="mailto: huangchi6896@gmail.com">huangchi6896@gmail.com</a></p>
+          <p>地址：彰化縣北斗鎮中新路56巷48號</p>
+        </div>
+        <div class="col-sm-4 col-xs-12 map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.8694540742786!2d120.53767531498336!3d23.858768984536116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469354e23ed02ef%3A0xc55ef414fff70942!2zNTIx5b2w5YyW57ij5YyX5paX6Y6u5Lit5paw6LevNTYtMuiZnw!5e0!3m2!1szh-TW!2stw!4v1647950980350!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+      </div>
+    </footer>
+    <div class="design">
+      <div class="row">
+        <div class="social"><a class="svg" href="" style="background:url(/images/foot-icon-1.svg); width: 20px; height: 20px;"> </a><a class="svg" href="" style="background:url(/images/foot-icon-2.svg); width: 20px; height: 20px;"> </a><a class="svg" href="" style="background:url(/images/foot-icon-3.svg); width: 20px; height: 20px;"> </a></div>
+        <div class="col-xs-12">
+          <p class="text-center"><span>Copyright © 2022鳳馳企業股份有限公司</span><span>All rights reserved.</span><a href="http://www.e-creation.com.tw" target="_blank">Designed by 藝創媒體</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="right"><a class="svg gotop" href="javascript: void(0);" style="background:url(/images/gotop.svg); width: 8px; height: 47px;"></a></div>
+  </body>
+</html>
