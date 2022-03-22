@@ -18,8 +18,11 @@
         top: 15px
     a
       text-transform: initial
+      +trans
       @media screen and (min-width: 768px)
         white-space: nowrap
+      &:hover
+        opacity: 0.5
     >a
       margin: 0 // Clear mshop default
       padding: 0 // Clear mshop default
@@ -36,19 +39,19 @@
       @media #{$mobile}
         padding: 15px 0
         text-align: center
-      &::after
-        @media screen and (min-width: 768px)
-          content: ''
-          +tr3($color-n, $color-n, $color-blue, $color-n)
-          border-width: 0 5px 12.5px 5px
-          padding: 0
-          margin: 0
-          position: absolute
-          bottom: -7.5px
-          left: calc(50% - 2.5px)
-          opacity: 0
-          transform: translateY(10px)
-          +trans
+      // &::after
+      //   @media screen and (min-width: 768px)
+      //     content: ''
+      //     +tr3($color-n, $color-n, $color-blue, $color-n)
+      //     border-width: 0 5px 12.5px 5px
+      //     padding: 0
+      //     margin: 0
+      //     position: absolute
+      //     bottom: -7.5px
+      //     left: calc(50% - 2.5px)
+      //     opacity: 0
+      //     transform: translateY(10px)
+      //     +trans
       &:hover
         &::after
           transform: translateY(0)
