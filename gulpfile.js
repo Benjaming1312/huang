@@ -94,6 +94,7 @@ gulp.task('views',function(){
 			.pipe(plumber())
 			.pipe(pug({pretty: true}))
 			.pipe(gulp.dest('./dist/html'))
+			.pipe(gulp.dest('./'))
 			.pipe(connect.reload())
 })
 
