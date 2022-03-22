@@ -12,6 +12,24 @@ module.exports = function () {
       }
     });
   })
+  $('.navbar li').each(function () {
+    if ($(this).hasClass('social')) {
+      return
+    }
+    $(this).find('a').click(function (e) {
+      e.preventDefault()
+      e.stopPropagation()
+      const target = $(this).attr('href')
+      const target_top = $(target).offset().top
+      const nav_height = calcNavHeight()
+      $('html, body').animate({
+        scrollTop: target_top - nav_height
+      }, 1000)
+      if ($(window).width() < 768) {
+        $('.navbar-toggle').click()
+      }
+    })
+  })
 
   // $('.dropdown-submenu .sub-toggle').on('click', function (e) {
   //   e.preventDefault()

@@ -13,6 +13,7 @@
     padding: 15px 0
   @media #{$mobile}
     padding-top: 15px
+    background: rgba(white, .75)
   // Logo 區塊
   .navbar-header
     +trans
@@ -58,8 +59,14 @@
     flex-wrap: nowrap
     @media screen and (min-width: 768px)
       position: absolute
-      top: 22.5px
+      top: 38px
       right: 15px
+    @media #{$mobile}
+      justify-content: center
+      padding: 15px 0
+    .svg
+      @media #{$mobile}
+        margin: 0 15px
 
   // &.scroll
   //   position: fixed
@@ -79,7 +86,7 @@
       // width: 100%
       padding: 0
       padding-left: 60px
-      margin-top: 15px
+      margin-top: 30px
     @media #{$mobile}
       box-shadow: 0px 5px 5px -1px rgba(#ccc, .3)
   // .navbar-nav
