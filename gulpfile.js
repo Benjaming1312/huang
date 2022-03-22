@@ -41,9 +41,9 @@ gulp.task('connect',function(){
 
 gulp.task('default',['clean', 'watch','connect']) //gulp 直接執行
 
-const base_domain = 'ec001.ina9.win'
-const js_path = '/js'
-const css_path = '/css'
+const base_domain = 'benjaming1312.github.io/huang'
+const js_path = '/dist/js'
+const css_path = '/dist/css'
 // 執行轉換JS
 gulp.task('scripts',function(){
 	gulp.src('gulp/js/userjs.js') //輸入路徑 **代表路徑的所有檔案轉換
