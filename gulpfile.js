@@ -25,7 +25,7 @@ const
 
 // 監看JS
 gulp.task('watch',function(){
-	exec('rm -rd dist/html')
+	// exec('rm -rd dist/html')
 	gulp.watch('gulp/**/**',['scripts','styles','views']) //(‘原始路徑’,['執行的名稱']) **代表路徑的所有檔案轉換
 })
 
