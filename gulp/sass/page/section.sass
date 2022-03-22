@@ -31,7 +31,7 @@ body
   margin-right: auto
 
 =box-shadow
-  box-shadow: 1px 1px 15px -3px rgba(#221e1f, .25)
+  box-shadow: 7px 7px 15px -3px rgba(#221e1f, .25)
 =text-shadow
   text-shadow: 1px 1px 30px rgba(#000, 1)
 =trans
@@ -199,17 +199,22 @@ body:not(.page_mobilehome)
   text-align: center
   margin-bottom: 30px
   padding-bottom: 30px
-  border-bottom: 1px solid rgba(#9fa0a0, .5)
+  // border-bottom: 1px solid rgba(#9fa0a0, .5)
   @media #{$mobile}
     padding-bottom: 15px
   h4
-    color: #005e7b
-    font-size: 26px
-    font-weight: 400
+    color: $color-blue
+    font-size: 24px
+    font-weight: 500
     margin-bottom: 7.5px
     text-align: center
     letter-spacing: 0
     margin-bottom: 3.25px
+    border-bottom: 2px solid $color-blue
+    display: inline-block
+    padding-bottom: 7.5px
+    padding-left: 7.5px
+    padding-right: 7.5px
   h5
     font-size: 20px
     color: #005e7b

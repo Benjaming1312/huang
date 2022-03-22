@@ -1,49 +1,16 @@
 .idx.section-1
-  padding: 60px 0
-  background: #efeee9
+  padding-top: 60px
+  padding-bottom: 60px
+  max-width: 1200px
   @media #{$mobile}
-    padding: 30px 15px
-  .row
-    +max-width
-    display: flex
-    @media screen and (min-width: 768px)
-      align-items: center
-      justify-content: center
-    @media #{$mobile}
-      flex-direction: column-reverse
-      flex-wrap: wrap
-      justify-content: center
-  .info
-    text-align: center
-    @media #{$mobile}
-      margin-top: 30px
-    .module-title
-      @media screen and (min-width: 768px)
-        max-width: 500px
-        margin-left: auto
-        margin-right: auto
-    p
-      font-size: 16px
-      line-height: 30px
-      @media screen and (min-width: 768px)
-        max-width: 500px
-        margin: 0 auto
-    .btn
-      @media screen and (min-width: 768px)
-        margin-top: 45px
-      @media #{$mobile}
-        margin-top: 30px
-
-  .img
-    @media screen and (min-width: 768px)
-      width: calc(100% - 500px)
-      text-align: center
-    @media #{$mobile}
-      text-align: center
-    .content
-      background: white
-      padding: 12.5px
-      width: auto
-      display: inline-block
-    img
-      display: inline-block
+    padding-bottom: 30px
+    padding-top: 30px
+  p
+    line-height: 32px
+    color: $color-b
+    font-size: 16px
+    b
+      font-size: 22px
+      font-weight: 500
+      color: #000
+      display: block
