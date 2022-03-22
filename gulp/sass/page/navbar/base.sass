@@ -10,25 +10,20 @@
   // border-bottom: 10px solid #efefef
   margin-bottom: 0
   @media screen and (min-width: 768px)
-    padding: 20px 0
+    padding: 15px 0
   @media #{$mobile}
     padding-top: 15px
   // Logo 區塊
   .navbar-header
     +trans
-    @media screen and (min-width: 768px)
-      padding-bottom: 30px
-      padding-top: 15px
-      width: 100%
-      display: flex
-      justify-content: center
-      text-align: center
     @media #{$mobile}
       padding: 0px 15px 7.5px
       border-bottom: 1px solid rgba(#969081, .25)
     .navbar-brand
       margin-left: 0 // clear mshop default
       +trans
+      @media screen and (min-width: 768px)
+        margin-left: 60px
       @media #{$mobile}
         max-height: 60px
         padding-bottom: 0
@@ -58,36 +53,42 @@
   .container-fluid
     max-width: 100%
     margin: 0 auto
-
-  &.scroll
-    position: fixed
-    background: rgba(white, .9)
+  .social
+    display: flex
+    flex-wrap: nowrap
     @media screen and (min-width: 768px)
-      padding: 7.5px
-      padding-bottom: 7.5px
-      +box-shadow
-    .navbar-header
-      @media screen and (min-width: 768px)
-        padding-top: 7.5px
-        padding-bottom: 7.5px
+      position: absolute
+      right: 35px
+
+  // &.scroll
+  //   position: fixed
+  //   background: rgba(white, .9)
+  //   @media screen and (min-width: 768px)
+  //     padding: 7.5px
+  //     padding-bottom: 7.5px
+  //     +box-shadow
+  //   .navbar-header
+  //     @media screen and (min-width: 768px)
+  //       padding-top: 7.5px
+  //       padding-bottom: 7.5px
   #navbar
     @media screen and (min-width: 768px)
       display: flex!important
-      // justify-content: space-around
       // align-items: center
-      width: 100%
+      // width: 100%
       padding: 0
+      margin-top: 15px
     @media #{$mobile}
       box-shadow: 0px 5px 5px -1px rgba(#ccc, .3)
-  .navbar-nav
-    @media screen and (min-width: 768px)
-      display: flex
-      flex-wrap: nowrap
-      margin: 0
-      width: 100%
-      justify-content: center
-      align-items: center
-    //   justify-content: flex-start
-    @media #{$mobile}
-      margin-top: 0 // Clear mshop default
-      padding-bottom: 7.5px
+  // .navbar-nav
+  //   // @media screen and (min-width: 768px)
+  //   //   display: flex
+  //   //   flex-wrap: nowrap
+  //   //   margin: 0
+  //   //   width: 100%
+  //   //   justify-content: center
+  //   //   align-items: center
+  //   //   justify-content: flex-start
+  //   @media #{$mobile}
+  //     margin-top: 0 // Clear mshop default
+  //     padding-bottom: 7.5px
