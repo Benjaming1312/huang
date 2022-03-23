@@ -19,15 +19,22 @@ module.exports = function () {
     $(this).find('a').click(function (e) {
       e.preventDefault()
       e.stopPropagation()
-      const target = $(this).attr('href')
-      const target_top = $(target).offset().top
-      const nav_height = calcNavHeight()
-      $('html, body').animate({
-        scrollTop: target_top - nav_height
-      }, 1000)
       if ($(window).width() < 768) {
         $('.navbar-toggle').click()
       }
+      const target = $(this).attr('href')
+      const target_top = $(target).offset().top
+      const nav_height = $(window).width() < 768 ? 85 : calcNavHeight()
+      $('html, body').animate({
+        scrollTop: target_top - nav_height
+      }, 1000)
+    })
+    $('.navbar-brand').click(function (e) {
+      e.preventDefault()
+      e.stopPropagation()
+      $('html, body').animate({
+        scrollTop: 0
+      }, 1000)
     })
   })
 
